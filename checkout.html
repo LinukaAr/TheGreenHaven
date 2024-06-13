@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="personal-details">
+            <form id="personal-details-form">
+                <div >
+                <h1 class="head">Almost there!</h1>
+                <P>Please Provide your shipping details</P>
+                </div>
+                 <h1>Personal Details</h1>
+                <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    <span class="error-message" id="first-name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                    <span class="error-message" id="last-name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+            </form>
+        </div>
+        <div class="billing-details">
+            <form id="billing-details-form">
+                <h1>Billing Details</h1>
+                <div class="form-group">
+                    <label for="address">Address *</label>
+                    <input type="text" id="address" name="address" required>
+                    <span class="error-message" id="address-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="city">City *</label>
+                    <input type="text" id="city" name="city" required>
+                    <span class="error-message" id="city-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="state">State *</label>
+                    <input type="text" id="state" name="state" required>
+                    <span class="error-message" id="state-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code *</label>
+                    <input type="text" id="zip" name="zip" required>
+                    <span class="error-message" id="zip-error"></span>
+                </div>
+            </form>
+        </div>
+        <button type="submit" class="checkout-button">Save Details</button>  
+        <a href="shop.html" >Go back</a> 
+        <div id="order-confirmation" class="order-confirmation">
+            <p>Thank you for your order! Your order has been successfully placed.</p>
+        </div>
+    </div>
+    <div>
+        
+        <div class="order-summary">
+            <h2 class="order">Order Summary</h2>
+            <p>Total<span id="total-price"></span></p>
+            <p>Shipping(5%)<span id="shipping-price"></span></p>
+            <p>Tax<span id="tax-price"></span></p>
+            <p>Sub total <span id="subtotal-price"></span></p>  
+            <button href="#" class="checkout-button">Proceed to Pay:</button>
+            <div>
+                <h3>Choose Payment Option</h3>
+                <i id="amex" class="fa fa-cc-amex payment-option" style="font-size:36px" ></i>
+                <i id="visa" class="fa fa-cc-visa payment-option" style="font-size:36px"></i>
+                <i id="mastercard" class="fa fa-cc-mastercard payment-option" style="font-size:36px"></i>
+                <i id="paypal" class="fa fa-cc-paypal payment-option" style="font-size:36px"></i>
+            </div>
+            <input type="hidden" id="selected-payment-method" name="selected-payment-method">
+        </div>
+    </div>
+    <script defer src="assets/js/script.js"></script>
+</body>
+</html>

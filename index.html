@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="splash-screen">
+        <div class="splash-content">
+            <div class="text-content">
+                <h1>Life on Land</h1>
+                <p>"Our mission is to promote the conservation and sustainable use of terrestrial ecosystems, ensuring the protection and restoration of biodiversity for a healthier planet and future generations."</p>
+                <div class="team">
+                    <h2>Group Members:</h2>
+                    <ul class="members">
+                        <li>Niruthmi Chandrasekara</li>
+                        <li>Saadaru Malshan</li>
+                        <li>Anton Luckshman</li>
+                        <li>Linuka Arambawela</li>
+                    </ul>
+                </div> 
+                <img src="assets/images/loading2.gif" alt="Loading..." class="loader-image">
+                     
+            </div>
+          
+        </div>
+    </div>
+    <div id="home-page" style="display: none;"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('splash-screen').classList.add('fade-out');
+            }, 3500); // Start fade-out after 2 seconds
+
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 4000); // Redirect after 4 seconds
+        });
+
+    </script>
+
+</body>
+</html>

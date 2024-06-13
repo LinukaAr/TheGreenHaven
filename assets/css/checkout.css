@@ -1,0 +1,132 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.checkout-container {
+    background-color: #f5f5f5;
+    padding: 60px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    margin-top: 200px;
+    margin-left: 0px;
+    float: left; 
+    width: 50%; 
+}
+  .order-summary {
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: fit-content;
+    float: right; 
+    margin: 20px 10px; 
+  }
+  
+.order{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.head{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875em;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+.order-confirmation {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    color: #155724;
+}
+
+.order-summary p {
+    display: flex;
+    justify-content: space-between
+}
+
+@media (max-width: 768px) {
+    .checkout-container {
+        padding: 10px;
+    }
+
+    .personal-details,
+    .billing-details {
+        width: 100%;
+    }
+
+    .checkout-button,
+    .order-summary button {
+        width: 100%;
+    }
+
+    .payment-options {
+        flex-direction: column;
+    }
+
+    .order-summary {
+        width: 90%;
+        position: absolute;
+        margin-right:10px;
+        margin-left:10px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    
+}
