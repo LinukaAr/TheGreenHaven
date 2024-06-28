@@ -1,0 +1,55 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(35, 250, 161);
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.team-member {
+    background-color: rgb(240, 240, 240);
+    border: 2px ridge rgb(35, 250, 161);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail img {
+    width: 100%;
+    transition: opacity 0.3s;
+}
+.resize img {
+    width: 150px;
+    height: 200px;
+}
+.thumbnail img:hover {
+    opacity: 0.7;
+}
+
+.details {
+    padding: 10px;
+    display: none;
+    background-color: #ffffff;
+}
+
+.team-member:hover .details {
+    display: block;
+}
