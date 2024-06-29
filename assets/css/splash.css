@@ -13,12 +13,16 @@ body {
     color: white;
 }
 
+.logo{
+    width: 100px;
+}
+
 #splash-screen {
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-	background-image: url(../images/BG3.jpg);  
+	background-image: url(../images/BG..jpg);  
     background-repeat: no-repeat; 
     background-position: center;  
     background-size: cover;
@@ -33,18 +37,16 @@ body {
     padding: 20px;
 	display: inline;
     align-items: left;
-    max-width: 800px;
-	max-height: 600px;
     text-align: center; 
-	margin-top: 35px;
+	margin-top: 20px;
 	margin-left: 20px;
 }
 
 .loader-image {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     display: block;
-	margin-top: 10px;
+	margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -53,22 +55,27 @@ h1 {
     color: rgb(255, 255, 255);
 	font-family: "Archivo Black", sans-serif;
 	font-size: 90px;
-	margin-top: 60px;
+	margin-top: 10px;
+}
+
+h2{
+    padding-bottom: 15px;
 }
 
 .members,h2 {
 	padding-top: 10px;
 	padding-left: 20px;
     text-align: left;
+    font-size: 20px;
 	color: white;
 }
 
-p {
+.mission {
     color: rgb(255, 255, 255);
-	font-size: 20px;
+	font-size: 30px;
 	font-style: italic;
-	padding-bottom: 10px;
-	margin-top: 30px;
+	margin-top: 5px;
+    margin-bottom: 40px;
 }
 
 li {
@@ -85,7 +92,10 @@ li {
 	padding-bottom: 5px;
 	padding-left: 20px;
 	margin-top: 50px;
+    margin: auto;
 	text-align: center;
+    max-width: 800px;
+   
 }
 
 
@@ -96,7 +106,7 @@ li {
         margin-top: 20px; 
     }
 
-    p {
+    .mission {
         font-size: 20px; 
         margin-top: 30px; 
     }
@@ -117,7 +127,7 @@ li {
         margin-top: 20px;
     }
 
-    p {
+    .mission {
         font-size: 20px; 
         margin-top: 30px; 
     }

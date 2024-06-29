@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
     <title>Welcome</title>
     <link rel="stylesheet" href="assets/css/splash.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,35 +14,38 @@
     <div id="splash-screen">
         <div class="splash-content">
             <div class="text-content">
-                <h1>Life on Land</h1>
-                <p>"Our mission is to promote the conservation and sustainable use of terrestrial ecosystems, ensuring the protection and restoration of biodiversity for a healthier planet and future generations."</p>
+                <img src="assets/images/logo.png" alt="Life on Land Logo" class="logo">
+                <h1>The Green Haven</h1>
+                <p class="mission">"Green Earth Better Life"</p>
                 <div class="team">
                     <h2>Group Members:</h2>
                     <ul class="members">
                         <li>Niruthmi Chandrasekara</li>
-                        <li>Saadaru Malshan</li>
+                        <li>Sadaru Malshan</li>
                         <li>Anton Luckshman</li>
                         <li>Linuka Arambawela</li>
                     </ul>
                 </div> 
-                <img src="assets/images/loading2.gif" alt="Loading..." class="loader-image">        
+                <img src="assets/images/loading1.gif" alt="Loading..." class="loader-image">        
             </div>
           
         </div>
     </div>
     <div id="home-page" style="display: none;"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                document.getElementById('splash-screen').classList.add('fade-out');
-            }, 3500); 
+       document.addEventListener('DOMContentLoaded', function() {
+       document.getElementById('splash-screen').style.display = 'block';
 
-            setTimeout(function() {
+  
+        setTimeout(function() {
+            document.getElementById('splash-screen').classList.add('fade-out');
+        }, 3500);
 
-                window.location.href = 'home.html';
-
-            }, 4000);
-        });
+    
+        setTimeout(function() {
+            window.location.href = 'home.html';
+        }, 4000);
+    });
 
     </script>
 
