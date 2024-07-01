@@ -6,12 +6,41 @@
     <title>Product Showcase</title>
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/shop.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo"><img src="../assets/images/logo.png" alt="Logo"></a>
+            <div class="hamburger" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="/home.html" class="active">Home</a></li>
+                <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
+                <li class="nav-item"><a href="#">Gallery</a></li>
+                <li class="nav-item"><a href="../pages/shop.html">Shop</a></li>
+            </ul>
+            <div class="contact-and-search">
+                <div class="contact-number">
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </div>
+                <div class="search-icon" onclick="toggleSearch()">
+                    <img src="../assets/images/search-icon.png" alt="Search">
+                </div>
+            </div>
+        </div>
+        <div class="search-box" id="searchBox">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
+    
 	<h1 class="title">Shop</h1>
     <div id="product-showcase">
        
@@ -191,6 +220,48 @@
         </div>
     <button class="checkout-button">Proceed to Checkout</button>
 	</div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Privacy Policy</h3>
+                <a href="#">Delivery Policy</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="footer-column">
+                <h3>Branches</h3>
+                <p>Colombo 5</p>
+                <p>Nugegoda</p>
+                <p>Kandy</p>
+                <p>Matara</p>
+                <p>Welisara</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
+                <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
+                <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
+            </div>
+            <div class="footer-column footer-logo">
+                <img src="../assets/images/logo.png" alt="Logo">
+            </div>
+            <div class="footer-column footer-icons">
+                <a href="#"><img src="../assets/images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../assets/images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Green Heven All Rights Reserved</p>
+            <div class="payment-methods">
+                <img src="../assets/images/visa.png" alt="Visa">
+                <img src="../assets/images/mastercard.png" alt="MasterCard">
+                <img src="../assets/images/paypal.png" alt="PayPal">
+                <img src="../assets/images/amex.png" alt="American Express">
+                <img src="../assets/images/discover.png" alt="Discover">
+            </div>
+        </div>
+    </footer>
     <script  src="../assets/js/scriptL.js"></script>
+    <script  src="../assets/js/nav.js"></script>
 </body>
 </html>
