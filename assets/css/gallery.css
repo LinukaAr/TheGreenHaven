@@ -1,63 +1,69 @@
-.body{
+.body {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-    
+
 
 }
-.parallax{
+
+.parallax {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
-    background: url("https://i.pinimg.com/originals/e3/07/77/e307778e2def26c31231e2075a38f88a.gif") no-repeat;
+    /* background: url("https://i.pinimg.com/originals/e3/07/77/e307778e2def26c31231e2075a38f88a.gif") no-repeat */
+    background: url("../images/gallery/lion.gif") no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 
 }
-#text{
+
+#text {
     position: absolute;
     font-size: 5em;
     color: white;
     text-shadow: 2px 4px 5px #f9f9f9;
     margin-left: -100px;
 }
-.parallax img{
+
+.parallax img {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     pointer-events: none;
 }
-.sec{
+
+.sec {
     position: relative;
     background: black;
     padding: 30px 100px;
     background-size: cover;
-    
-    
-}
-.sec h2{
-    font-size: 3em;
-    color: #fff;
-    
+
+
 }
 
-.container{
+.sec h2 {
+    font-size: 3em;
+    color: #fff;
+
+}
+
+.container {
     position: absolute;
-    
-    left:50%;
+
+    left: 50%;
     transform: translate(-50%);
     width: 1000px;
     height: 600px;
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
-    
+
 }
-.container .slide .item{
+
+.container .slide .item {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -71,57 +77,65 @@
     display: inline-block;
     transition: 0.5s;
     font-size: smaller;
-    
+
 
 }
+
 .slide .item:nth-child(1),
-.slide .item:nth-child(2){
+.slide .item:nth-child(2) {
     top: 0;
     left: 0;
-    transform: translate(0,0);
+    transform: translate(0, 0);
     border-radius: 0;
     width: 100%;
     height: 100%;
-    
-}
-.slide .item:nth-child(3){
-    left: 50% ;
 
 }
-.slide .item:nth-child(4){
+
+.slide .item:nth-child(3) {
+    left: 50%;
+
+}
+
+.slide .item:nth-child(4) {
     left: calc(50% + 220px);
-    
-}
-.slide .item:nth-child(5){
-    left: calc(50% + 440px);
-    
-}
-.slide .item:nth-child(6){
-    left: calc(50% + 440px);
-    
+
 }
 
-.slide .item:nth-child(n+7){
+.slide .item:nth-child(5) {
+    left: calc(50% + 440px);
+
+}
+
+.slide .item:nth-child(6) {
+    left: calc(50% + 440px);
+
+}
+
+.slide .item:nth-child(n+7) {
     left: calc(50% + 440px);
     opacity: 0;
-    
+
 }
-.item.content{
+
+.item.content {
     position: absolute;
     top: 50%;
     left: 100px;
     width: 300px;
     text-align: left;
     color: #eee;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     font-family: system-ui;
     display: none;
 }
-.slide .item:nth-child(2) .content{
+
+.slide .item:nth-child(2) .content {
     display: block;
 
 }
-.content .name{
+
+.content .name {
     font-size: 40px;
     text-transform: uppercase;
     font-weight: bold;
@@ -131,19 +145,21 @@
     opacity: 0;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
-.content .des{
-    
+
+.content .des {
+
     margin-left: 80px;
     color: white;
     font-size: large;
-    width:200px;
+    width: 200px;
     height: 50px;
     margin-top: 100px;
     margin-bottom: 20px;
     opacity: 0;
     animation: animate 1s ease-in-out 0.7s 1 forwards;
 }
-.content .button{
+
+.content .button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -151,26 +167,28 @@
     animation: animate 1s ease-in-out 1 forwards;
 }
 
-@keyframes animate{
-    from{
+@keyframes animate {
+    from {
         opacity: 0;
-        transform: translate(0,100px);
+        transform: translate(0, 100px);
         filter: blur(33px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translate(0);
         filter: blur(0);
     }
 }
 
-.button{
+.button {
     width: 100%;
     text-align: center;
     position: absolute;
     bottom: 20px;
 }
-.button button{
+
+.button button {
     width: 40px;
     height: 35px;
     border-radius: 8px;
@@ -179,16 +197,17 @@
     margin: 0 5px;
     border: 1px solid #000;
     transition: 0.3s;
-    
+
 }
 
-.button button:hover{
+.button button:hover {
     background: #ababab;
     color: #fff;
-    
+
 
 }
-.box{
+
+.box {
     background-color: white;
     width: 200px;
     height: 200px;
@@ -199,20 +218,23 @@
     transition: 1s;
     background-color: green;
     color: white;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: medium;
 
 }
-.mainBox{
-    height:40vh;
+
+.mainBox {
+    height: 40vh;
     width: 100vw;
-    
+
 }
-.box:hover{
+
+.box:hover {
     transform: scale(1.2);
 
 }
-.section1{
+
+.section1 {
     background-color: #000;
     width: 100vw;
     height: 800px;
@@ -230,10 +252,10 @@
 
 
 
-.container2{
+.container2 {
     position: relative;
     margin-top: 800px;
-    left:50%;
+    left: 50%;
     transform: translate(-50%);
     width: 1000px;
     height: 600px;
@@ -241,7 +263,7 @@
     box-shadow: 0 30px 50px #dbdbdb;
 }
 
-.container2 .slide2 .item2{
+.container2 .slide2 .item2 {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -255,56 +277,64 @@
     display: inline-block;
     transition: 0.5s;
     font-size: smaller;
-    
+
 
 }
+
 .slide2 .item2:nth-child(1),
-.slide2 .item2:nth-child(2){
+.slide2 .item2:nth-child(2) {
     top: 0;
     left: 0;
-    transform: translate(0,0);
+    transform: translate(0, 0);
     border-radius: 0;
     width: 100%;
     height: 100%
 }
-.slide2 .item2:nth-child(3){
-    left: 50% ;
+
+.slide2 .item2:nth-child(3) {
+    left: 50%;
 
 }
-.slide2 .item2:nth-child(4){
+
+.slide2 .item2:nth-child(4) {
     left: calc(50% + 220px);
-    
-}
-.slide2 .item2:nth-child(5){
-    left: calc(50% + 440px);
-    
-}
-.slide2 .item2:nth-child(6){
-    left: calc(50% + 440px);
-    
+
 }
 
-.slide2 .item2:nth-child(n+7){
+.slide2 .item2:nth-child(5) {
+    left: calc(50% + 440px);
+
+}
+
+.slide2 .item2:nth-child(6) {
+    left: calc(50% + 440px);
+
+}
+
+.slide2 .item2:nth-child(n+7) {
     left: calc(50% + 440px);
     opacity: 0;
-    
+
 }
-.item2.content{
+
+.item2.content {
     position: absolute;
     top: 50%;
     left: 100px;
     width: 300px;
     text-align: left;
     color: #eee;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     font-family: system-ui;
     display: none;
 }
-.slide2 .item2:nth-child(2) .content{
+
+.slide2 .item2:nth-child(2) .content {
     display: block;
 
 }
-.content .name{
+
+.content .name {
     font-size: 40px;
     text-transform: uppercase;
     font-weight: bold;
@@ -314,19 +344,21 @@
     opacity: 0;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
-.content .des{
-    
+
+.content .des {
+
     margin-left: 80px;
     color: white;
     font-size: large;
-    width:200px;
+    width: 200px;
     height: 50px;
     margin-top: 100px;
     margin-bottom: 20px;
     opacity: 0;
     animation: animate 1s ease-in-out 0.7s 1 forwards;
 }
-.content .button{
+
+.content .button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -334,26 +366,28 @@
     animation: animate 1s ease-in-out 1 forwards;
 }
 
-@keyframes animate{
-    from{
+@keyframes animate {
+    from {
         opacity: 0;
-        transform: translate(0,100px);
+        transform: translate(0, 100px);
         filter: blur(33px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translate(0);
         filter: blur(0);
     }
 }
 
-.button1{
+.button1 {
     width: 100%;
     text-align: center;
     position: absolute;
     bottom: 20px;
 }
-.button1 button{
+
+.button1 button {
     width: 40px;
     height: 35px;
     border-radius: 8px;
@@ -362,22 +396,20 @@
     margin: 0 5px;
     border: 1px solid #000;
     transition: 0.3s;
-    
-    
+
+
 }
 
-.button1 button:hover{
+.button1 button:hover {
     background: #ababab;
     color: #fff;
-    
+
 
 }
-.section2{
+
+.section2 {
     background-color: #000;
     width: 100vw;
-    height:1100px;
+    height: 1100px;
     margin-top: -800px;
 }
-
-
-
