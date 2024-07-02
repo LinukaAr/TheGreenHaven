@@ -123,19 +123,19 @@ input[type="text"], input[type="email"], input[type="tel"] {
 @media (max-width: 768px) {
     .checkout-container {
         width: 80%;
-        margin-right: auto; /* Adjusted for centering */
-        margin-left: auto; /* Adjusted for centering */
-        margin-top: 20px; /* Reduced from 600px to a more reasonable value */
+        margin-right: auto; 
+        margin-left: auto; 
+        margin-top: 20px; 
     }
 
     .order-summary {
-        width: 90%; /* Adjusted to a percentage of the screen width */
-        position: relative; /* Changed from absolute to relative */
-        margin: 20px auto; /* Center the element horizontally */
+        width: 90%; 
+        position: relative; 
+        margin: 20px auto; 
         border-radius: 0;
         box-shadow: none;
-        top: 0; /* Reset top position */
-        right: 0; /* Reset right position */
+        top: 0; 
+        right: 0; 
     }
 
     .footer {
