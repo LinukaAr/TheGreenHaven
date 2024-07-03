@@ -3,38 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HOME PAGE</title>
     <style>
         body {
-            background-color: brown;
+            margin: 0;
             font-family: Arial, sans-serif;
-            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        h1 {
-            text-align: center;
-            margin-top: 50px;
+        .navbar {
+            background-color: #001a33;
+            color: #fff;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
-        a {
-            display: block;
-            margin: 10px 0;
-            text-align: center;
-            color: yellow;
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .brand-logo img {
+            height: 70px;
+        }
+        .nav-items {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-item {
+            margin-left: 1rem;
+        }
+        .nav-item a {
+            color: #fff;
             text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s, background-color 0.3s;
+            padding: 0.5rem;
         }
-        a:hover {
-            color: white;
-            background-color: darkred;
-            padding: 5px;
+        .nav-item a:hover,
+        .nav-item a.active {
+            background-color: #4a4950;
+            border-radius: 5px;
+            color: red;
+        }
+        .contact-number a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+        .search-icon img,
+        .cart-icon img {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            margin-left: 3rem;
+        }
+        
+        .search-box {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .search-box input {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .bar {
+            height: 3px;
+            width: 25px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+        .content {
+            flex: 1;
+            padding-top: 80px; /* Height of the fixed navbar */
+        }
+        .new-section {
+            background: url('background.gif') no-repeat center center/cover;
+            padding: 2rem;
+            color: #fff;
+            position: relative;
+        }
+        .new-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+            z-index: 1;
+        }
+        .new-section .main-heading,
+        .new-section .sub-heading,
+        .new-section .buttons {
+            position: relative;
+            z-index: 2;
+        }
+        .new-section .main-heading {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: black;
+        }
+        .new-section .sub-heading {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: black;
+        }
+        .new-section .buttons {
+            margin-top: 1rem;
+        }
+        .new-section .buttons a {
+            background-color: #fff;
+            color: #001a33;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border: 2px solid #001a33;
+            margin-right: 1rem;
+            border-radius: 5px;
+        }
+        .targets-section {
+            background-color: #fff;
+            color: #000;
+            padding: 2rem;
+        }
+        .targets-section h2 {
+            margin-bottom: 1rem;
+        }
+        .targets-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .target {
+            display: flex;
+            flex: 1 1 calc(50% - 2rem);
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+        .target img {
+            margin-right: 1rem;
+            width: 100px; /* Adjust icon size */
+            height: auto;
+        }
+        .target-content {
+            max-width: calc(100% - 120px); /* Adjust based on icon size */
+        }
+        .things-to-do {
+            background-color: #fff;
+            color: #000;
+            padding: 2rem;
+        }
+        .things-to-do h2 {
+            margin-bottom: 1rem;
+        }
+        .things-to-do ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .things-to-do ul li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            flex: 1 1 calc(50% - 1rem);
+            box-sizing: border-box;
+        }
+        .things-to-do ul li img {
+            margin-right: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .navbar-container {
+                justify-content: space-between;
+            }
+            .nav-items {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                align-items: center;
+                display: none;
+            }
+            .nav-items.active {
+                display: flex;
+            }
+            .nav-item {
+                margin: 1rem 0;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .contact-and-search {
+                display: flex;
+                align-items: center;
+            }
+        }
+        @media (min-width: 769px) {
+            .nav-items {
+                flex: 1;
+                justify-content: center;
+                display: flex;
+            }
+            .contact-and-search {
+                display: flex;
+                align-items: center;
+                margin-right:3rem;
+            }
+            .contact-number {
+                margin-left: 3rem;
+            }
+        }
+        /* Footer styles */
+        .footer {
+            background-color: #001a33;
+            color: #fff;
+            padding: 2rem 1rem;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin: 1rem;
+        }
+        .footer-column h3 {
+            margin-bottom: 1rem;
+        }
+        .footer-column p, .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+        .footer-logo img {
+            height: 80px;
+            width: 80px;
+        }
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .footer-icons a {
+            margin: 0 0.5rem;
+        }
+        .footer-icons img {
+            width: 50px;
+            height: 50px;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 1rem;
+            border-top: 1px solid #4a4a4a;
+            padding-top: 1rem;
+        }
+        .payment-methods img {
+            width: 40px;
+            margin: 0 0.5rem;
         }
     </style>
 </head>
 <body>
-    <h1>home-page</h1>
-    <a href="pages/shop.html">shop</a>
-    <a href="pages/teampage.html">team</a>
-    <a href="pages/userform.html">user form</a>
-    <a href="pages/gallery.html">Gallery</a>
-</body>
-</html>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo"><img src="logo.png" alt="Logo"></a>
+            <div class="hamburger" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#home" class="active">Home</a></li>
+                <li class="nav-item"><a href="#services">Services</a></li>
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="contact-and-search">
+                <div class="contact-number">
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </div>
+                <div class="search-icon" onclick="toggleSearch()">
+                    <img src="search-icon.png" alt="Search">
+                </div>
+                <div class="cart-icon">
+                    <a href="cart.html"><img src="cart_icon.png" alt="cart"></a>
+                </div>
+            </div>
+        </div>
+        <div class="search-box" id="searchBox">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="new-section">
+            <div class="main-heading">PROTECT, RESTORE AND PROMOTE SUSTAINABLE USE OF TERRESTRIAL ECOSYSTEMS, SUSTAINABLY MANAGE FORESTS, COMBAT DESERTIFICATION, AND HALT AND REVERSE LAND DEGRADATION AND HALT BIODIVERSITY LOSS.</div>
+            <div class="sub-heading">A flourishing life on land is the foundation for our life on this planet. We are all part of the planet’s ecosystem and we have caused severe damage to it through deforestation, loss of natural habitats and land degradation. Promoting a sustainable use of our ecosystems and preserving biodiversity is not a cause. It is the key to our own survival.</div>
+            <div class="buttons">
+                <a href="#">TAKE ACTION</a>
+                <a href="#">THINGS TO DO</a>
+            </div>
+        </div>
+        <div class="targets-section">
+            <h2>THE TARGETS</h2>
+            <p>Everyone can help to make sure that we meet the Global Goals. Use these twelve targets to create action to protect and restore life on land.</p>
+            <div class="targets-container">
+                <div class="target">
+                    <img src="target-15-1.png" alt="Target 15.1">
+                    <div class="target-content">
+                        <h3>CONSERVE AND RESTORE TERRESTRIAL AND FRESHWATER ECOSYSTEMS</h3>
+                        <p>By 2020, ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and drylands, in line with obligations under international agreements.</p>
+                    </div>
+                </div>
+                <div class="target">
+                    <img src="target-15-2.png" alt="Target 15.2">
+                    <div class="target-content">
+                        <h3>END DEFORESTATION AND RESTORE DEGRADED FORESTS</h3>
+                        <p>By 2020, promote the implementation of sustainable management of all types of forests, halt deforestation, restore degraded forests and substantially increase afforestation and reforestation globally.</p>
+                    </div>
+                </div>
+                <!-- Add more targets here -->
+            </div>
+        </div>
+        <div class="things-to-do">
+            <h2>THINGS TO DO</h2>
+            <ul>
+                <li><img src="icon.png" alt="Icon">Find a Goal 15 charity you want to support. Any donation, big or small, can make a difference!</li>
+                <li><img src="icon.png" alt="Icon">Reduce your use of paper. Avoid printing and substitute it with electronic devices or carriers.</li>
+                <li><img src="icon.png" alt="Icon">Don’t shop for pets! Visit your local animal shelter and adopt an animal there.</li>
+                <li><img src="icon.png" alt="Icon">Don’t buy products tested on animals: Check the labels on the products you buy.</li>
+                <li><img src="icon.png" alt="Icon">Recycle paper, glass, plastic, metal and old electronics.</li>
+                <li><img src="icon.png" alt="Icon">Compost. Composting food scraps can reduce climate impact while also recycling nutrients.</li>
+                <li><img src="icon.png" alt="Icon">Clean your local parks and forests. Organize your own or join an existing clean-up event to sustain the ecosystem of your local green space.</li>
+                <li><img src="icon.png" alt="Icon">Don’t use pesticides. To protect and sustain the quality of soil, don’t use chemicals while growing plants.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Privacy Policy</h3>
+                <a href="#">Delivery Policy</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="footer-column">
+                <h3>Branches</h3>
+                <p>Colombo 5</p>
+                <p>Nugegoda</p>
+                <p>Kandy</p>
+                <p>Matara</p>
+                <p>Welisara</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
+                <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
+                <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
+            </div>
+            <div class="footer-column footer-logo">
+                <img src="logo.png" alt="Supplement Warehouse Logo">
+            </div>
+            <div class="footer-column footer-icons">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Green Heven All Rights Reserved</p>
+            <div class="payment-methods">
+                <img src="visa.png" alt="Visa">
+                <img src="mastercard.png" alt="MasterCard">
+                <img src="paypal.png" alt="PayPal">
+                <img src="amex.png" alt="American Express">
+                <img src="discover.png" alt="Discover">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSearch() {
+            const searchBox = document.getElementById('searchBox');
+            searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function toggleNav() {
+            const navItems = document.querySelector('.nav-items');
+            navItems.classList.toggle('active');
+        }
+
+        // Adding active class to the current link
+        const navLinks = document.querySelectorAll('.nav-item a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</
