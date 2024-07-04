@@ -89,7 +89,7 @@ input[type="text"], input[type="email"], input[type="tel"] {
     font-size: 0.875em;
 }
 
-.checkout-button {
+.save-button, .checkout-button{
     width: 100%;
     padding: 10px;
     background-color: #28a745;
@@ -100,7 +100,7 @@ input[type="text"], input[type="email"], input[type="tel"] {
     font-size: 1em;
 }
 
-.checkout-button:hover {
+.save-button:hover, .checkout-button:hover{
     background-color: #218838;
 }
 
