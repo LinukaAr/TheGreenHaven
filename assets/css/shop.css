@@ -11,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: #ccc;
+    background-color: #fff;
 }
 
 .title {
@@ -49,10 +49,9 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
     width: 275px;
     text-align: center;
-    background-color: rgba(177, 186, 179, 0.8);
+    background-color: #ccc;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -89,7 +88,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #ccc;
     height: fit-content;
     position: absolute; 
     top: 225px; 
@@ -123,6 +122,22 @@ select{
     justify-content: space-between;
     margin-top: 10px;
     font-size: 1.2em;
+}
+
+.main-container, .product-card {
+    animation: zoomIn 0.8s ease-in-out;
+}
+
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 

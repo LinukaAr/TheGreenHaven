@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
-    <title>Life on Land</title>
+    <title>Human-Wildlife Conflict</title>
     <link rel="stylesheet" href="../assets/css/contentL.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
 </head>
@@ -24,9 +24,6 @@
                 <li class="nav-item"><a href="../pages/shop.html">Shop</a></li>
             </ul>
             <div class="contact-and-search">
-                <div class="contact-number">
-                    <a href="tel:+1234567890">+1 (234) 567-890</a>
-                </div>
                 <div class="search-icon" onclick="toggleSearch()">
                     <img src="../assets/images/search-icon.png" alt="Search">
                 </div>
@@ -38,25 +35,37 @@
     </nav>
     <main>
         <section id="introduction">
-            <h2>Introduction</h2>
-            <p>Life on land encompasses a vast array of ecosystems, from dense rainforests to arid deserts, supporting a diverse range of flora and fauna...</p>
+            <h2>Human-Wildlife Conflict</h2>
+            <p>In the heart of Sri Lanka, the age-old coexistence between humans and elephants is fracturing. As the woods are cut down, farmers’ plots are established at random and huge development plans encroach on forests where elephants live, these great animals begin leaving their ancient homes for people’s towns. As such there is a lot of human-elephant conflict with terrified farmers fighting back for their food and lives leading to fatalities from both sides. Nevertheless, conservationists have been working towards new methods of ensuring coexistence is more harmonious. This article looks at the conflict escalation and attempts made towards sustainable answers in Sri Lanka.</p>
         </section>
-        <section id="biodiversity">
-            <h2>Biodiversity</h2>
-            <p>The biodiversity found on land includes millions of species, each playing a crucial role in maintaining ecosystem balance...</p>
-            <p>For more detailed information on specific species, check out our <a href="species.html">Species Gallery</a>.</p>
-        </section>
-        <section id="conservation">
-            <h2>Conservation Efforts</h2>
-            <p>Efforts to conserve terrestrial ecosystems involve various strategies such as protected areas, sustainable land management, and community involvement...</p>
-        </section>
-        <section id="challenges">
-            <h2>Challenges</h2>
-            <p>Despite conservation efforts, life on land faces numerous challenges including habitat loss, climate change, poaching, and invasive species...</p>
-        </section>
-        <section id="future">
-            <h2>Future Perspectives</h2>
-            <p>The future of life on land depends on global cooperation, innovative conservation practices, and sustainable development...</p>
+        <section id="human-wildlife-conflict">
+            <article id="causes">
+                <h2>Causes and Consequences</h2>
+                <img src="../assets/images/elephant1.png" alt="Human-Wildlife Conflict" class="responsive-img">
+                <p>Human-wildlife conflict arises due to various factors such as habitat loss, competition for resources, and human encroachment into wildlife territories...</p>
+                <button class="read-more-btn" onclick="toggleReadMore('causes')">Read More</button>
+                <div class="read-more-content" id="causes-read-more">
+                    <p>Consequences include loss of life, injury to both humans and animals, and economic losses for communities dependent on agriculture and livestock...</p>
+                </div>
+            </article>
+            <article id="strategies">
+                <h2>Conflict Mitigation Strategies</h2>
+                <img src="../assets/images/electricfence.webp" alt="Mitigation Strategies" class="responsive-img">
+                <p>Effective strategies for mitigating human-wildlife conflict involve community engagement, use of technology, and creating buffer zones...</p>
+                <button class="read-more-btn" onclick="toggleReadMore('strategies')">Read More</button>
+                <div class="read-more-content" id="strategies-read-more">
+                    <p>Examples include setting up wildlife corridors, using non-lethal deterrents, and promoting sustainable land-use practices...</p>
+                </div>
+            </article>
+            <article id="success-stories">
+                <h2>Success Stories of Coexistence</h2>
+                <img src="../assets/images/pinnawala.jpg" alt="Success Stories" class="responsive-img">
+                <p>There are numerous success stories where communities have learned to coexist with wildlife, benefiting both humans and animals...</p>
+                <button class="read-more-btn" onclick="toggleReadMore('success-stories')">Read More</button>
+                <div class="read-more-content" id="success-stories-read-more">
+                    <p>For instance, community-based conservation projects in Africa and Asia have shown positive outcomes in reducing conflict and promoting wildlife conservation...</p>
+                </div>
+            </article>
         </section>
     </main>
     <footer class="footer">
@@ -99,6 +108,19 @@
             </div>
         </div>
     </footer>
-    <script  src="../assets/js/scriptL.js"></script>
+    <script src="../assets/js/nav.js"></script>
+    <script>
+
+        function toggleReadMore(section) {
+            const readMoreContent = document.getElementById(`${section}-read-more`);
+            readMoreContent.classList.toggle('active');
+            const btn = document.querySelector(`#${section} .read-more-btn`);
+            if (readMoreContent.classList.contains('active')) {
+                btn.textContent = 'Read Less';
+            } else {
+                btn.textContent = 'Read More';
+            }
+        }
+    </script>
 </body>
 </html>
