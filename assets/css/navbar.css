@@ -37,7 +37,7 @@
 .nav-item a.active {
     background-color: #4a4950;
     border-radius: 5px;
-    color: red;
+    color: white;
 }
 .contact-number a {
     color: #fff;
