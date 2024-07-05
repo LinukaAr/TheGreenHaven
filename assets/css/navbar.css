@@ -180,3 +180,12 @@
     width: 40px;
     margin: 0 0.5rem;
 }
+
+footer p{
+    margin-bottom: 10px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #12a1e8;
+}
