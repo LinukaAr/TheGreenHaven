@@ -41,6 +41,17 @@ body {
     right: 20px; 
 }
 
+.proceed-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
 .back{
     padding-top: 20px;
     text-decoration: none;

@@ -1,6 +1,4 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-
 
 * {
   box-sizing: border-box;
@@ -10,14 +8,15 @@
 
 body {
   font-family: var(--body-font);
-  background-color: hsl(0, 0%, 95%);
+  background-color: #f1f1f1;
   color: rgb(3, 3, 23);
+  
 }
 
 .header {
   text-align: center;
   align-items: center;
-  padding-block: 5px;
+  padding-block: 10px;
   color: white;
   background-color:#15101e;
 }
@@ -31,35 +30,36 @@ img {
 .container {
   display: grid;
   place-items: center;
-  margin-inline: 1.5rem;
-  padding-block: 5rem;
 }
 
 .card__container {
   display: grid;
-  row-gap: 3.5rem;
-  
+  row-gap: 56px;
 }
 
 .card__article {
   position: relative;
   overflow: hidden;
+  
 }
 
 .card__img {
-  width: 400px;
-  border-radius: 1.5rem;
-  
+  width: 500px;
+  height: 200px;
+  border-radius: 24px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid;
 }
 
 .card__data {
   width: 280px;
   background-color: var(--container-color);
-  padding: 1.5rem 2rem;
-  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
-  border-radius: 1rem;
+  padding: 24px 32px;
+  box-shadow: 0 8px 24px hsla(0, 0%, 7%, 0.15);
+  border-radius: 16px;
+  border: 1px solid;
   position: absolute;
-  bottom: -9rem;
+  bottom: -144px;
   left: 0;
   right: 0;
   margin-inline: auto;
@@ -69,20 +69,20 @@ img {
 
 .card__description {
   display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: .25rem;
+  font-size: 13px;
+  margin-bottom: 4px;
 }
 
 .card__title {
-  font-size: var(--h2-font-size);
+  font-size: 20px;
   font-weight: 500;
   color: var(--title-color);
-  margin-bottom: .75rem;
+  margin-bottom: 12px;
 }
 
 .card__button {
   text-decoration: none;
-  font-size: var(--small-font-size);
+  font-size: 13px;
   font-weight: 500;
   color: darkblue;
 }
@@ -113,10 +113,10 @@ img {
 /* Card animation */
 @keyframes show-data {
   50% {
-    transform: translateY(-10rem);
+    transform: translateY(-160px);
   }
   100% {
-    transform: translateY(-7rem);
+    transform: translateY(-112px);
   }
 }
 
@@ -128,13 +128,13 @@ img {
 
 @keyframes remove-data {
   0% {
-    transform: translateY(-7rem);
+    transform: translateY(-112px);
   }
   50% {
-    transform: translateY(-10rem);
+    transform: translateY(-160px);
   }
   100% {
-    transform: translateY(.5rem);
+    transform: translateY(8px);
   }
 }
 
@@ -149,36 +149,31 @@ img {
 }
 
 :root {
-  
-    --first-color: hsl(82, 60%, 28%);
-    --title-color: hsl(0, 0%, 15%);
-    --text-color: hsl(0, 0%, 35%);
-    --body-color: hsl(0, 0%, 95%);
-    --container-color: hsl(0, 0%, 100%);
-  
-  
-    --body-font: "Poppins", sans-serif;
-    --h2-font-size: 1.25rem;
-    --small-font-size: .813rem;
-  }
-  
-  
-  @media screen and (min-width: 1120px) {
-    :root {
-      --h2-font-size: 1.5rem;
-      --small-font-size: .875rem;
-    }
-  }
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 20px;
+  --small-font-size: 13px;
+}
 
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 24px;
+    --small-font-size: 14px;
+  }
+}
 
 @media screen and (max-width: 340px) {
   .container {
-    margin-inline: 1rem;
+    margin-inline: 16px;
   }
 
   .card__data {
     width: 250px;
-    padding: 1rem;
+    padding: 16px;
   }
 }
 
@@ -186,7 +181,7 @@ img {
 @media screen and (min-width: 768px) {
   .card__container {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
+    column-gap: 24px;
   }
 }
 
@@ -204,6 +199,6 @@ img {
   }
   .card__data {
     width: 316px;
-    padding-inline: 2.5rem;
+    padding-inline: 40px;
   }
 }

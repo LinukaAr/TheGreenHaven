@@ -40,6 +40,10 @@ body {
     width: 61%;
 }
 
+select{
+    border-radius: 15px;
+}
+
 .product-card {
     border: 1px solid #ccc;
     border-radius: 10px;
