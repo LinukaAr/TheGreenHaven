@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Showcase</title>
+    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
+    <title>Shop</title>
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/shop.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
@@ -22,15 +23,12 @@
                 <div class="bar"></div>
             </div>
             <ul class="nav-items">
-                <li class="nav-item"><a href="/home.html" class="active">Home</a></li>
+                <li class="nav-item"><a href="../home.html">Home</a></li>
                 <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
-                <li class="nav-item"><a href="#">Gallery</a></li>
-                <li class="nav-item"><a href="../pages/shop.html">Shop</a></li>
+                <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
+                <li class="nav-item"><a href="../pages/shop.html" class="active">Shop</a></li>
             </ul>
             <div class="contact-and-search">
-                <div class="contact-number">
-                    <a href="tel:+1234567890">+1 (234) 567-890</a>
-                </div>
                 <div class="search-icon" onclick="toggleSearch()">
                     <img src="../assets/images/search-icon.png" alt="Search">
                 </div>
@@ -45,7 +43,7 @@
     <div id="product-showcase">
        
         <div class="product-card">
-            <img src="../assets/images/product1.jpg" alt="shirt" class="product-image">
+            <img src="../assets/images/product1.PNG" alt="shirt" class="product-image">
             <h3 class="product-title">T-shirt</h3>
             <p class="product-description">Cotton unisex t-shirt</p>
             <p class="product-price">$25.00</p>
@@ -62,13 +60,79 @@
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
                 </select>
+                <label for="quantity">Quantity</label>
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-card">
-            <img src="../assets/images/product2.jpeg" alt="cap" class="product-image">
-            <h3 class="product-title">UN Cap</h3>
-            <p class="product-description">cap with UN logo</p>
+            <img src="../assets/images/product2.PNG" alt="ong Sleeve T-shirt" class="product-image">
+            <h3 class="product-title">Long Sleeve </h3>
+            <p class="product-description">Cotton Long Sleeve T-shirt</p>
+            <p class="product-price">$30.00</p>
+            <div class="product-options">
+                <label for="size1">Size:</label>
+                <select id="size1" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="color1">Color:</label>
+                <select id="color1" name="color">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                <label for="quantity">Quantity</label>
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product-card">
+            <img src="../assets/images/product3.PNG" alt="Women's T-shirt" class="product-image">
+            <h3 class="product-title"> V-Neck T-shirt</h3>
+            <p class="product-description">New Era Women's T-shirt</p>
+            <p class="product-price">$35.00</p>
+            <div class="product-options">
+                <label for="size1">Size:</label>
+                <select id="size1" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="color1">Color:</label>
+                <select id="color1" name="color">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                <label for="quantity">Quantity</label>
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product-card">
+            <img src="../assets/images/product4.PNG" alt="cap" class="product-image">
+            <h3 class="product-title">Cap</h3>
+            <p class="product-description">Unisex Cap</p>
             <p class="product-price">$10.00</p>
             <div class="product-options">
                 <label for="size1">Size:</label>
@@ -83,14 +147,51 @@
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
                 </select>
+                <label for="quantity">Quantity</label>
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
         </div>
 		<div class="product-card">
-            <img src="../assets/images/product3.webp" alt="mug" class="product-image">
+            <img src="../assets/images/product5.PNG" alt="mug" class="product-image">
             <h3 class="product-title">Mug</h3>
-            <p class="product-description">UN goals Mug</p>
+            <p class="product-description">GreenHaven Mug</p>
             <p class="product-price">$5.00</p>
+            <div class="product-options">
+                <label for="size1">Size:</label>
+                <select id="size1" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="color1">Color:</label>
+                <select id="color1" name="color">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                <label for="quantity">Quantity</label>
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+		<div class="product-card">
+            <img src="../assets/images/product6.PNG" alt="Product" class="product-image">
+            <h3 class="product-title">Clock</h3>
+            <p class="product-description">Wall clock</p>
+            <p class="product-price">$10.00</p>
             <div class="product-options">
                 <label for="size1">Size:</label>
                 <select id="size1" name="size">
@@ -104,68 +205,13 @@
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
                 </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-		<div class="product-card">
-            <img src="../assets/images/cs.png" alt="Product" class="product-image">
-            <h3 class="product-title">Product</h3>
-            <p class="product-description">Description</p>
-            <p class="product-price">$00.00</p>
-            <div class="product-options">
-                <label for="size1">Size:</label>
-                <select id="size1" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-                <label for="color1">Color:</label>
-                <select id="color1" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-		<div class="product-card">
-            <img src="../assets/images/cs.png" alt="Product" class="product-image">
-            <h3 class="product-title">Product</h3>
-            <p class="product-description">Description</p>
-            <p class="product-price">$00.00</p>
-            <div class="product-options">
-                <label for="size1">Size:</label>
-                <select id="size1" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-                <label for="color1">Color:</label>
-                <select id="color1" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-		<div class="product-card">
-            <img src="../assets/images/cs.png" alt="Product" class="product-image">
-            <h3 class="product-title">Product</h3>
-            <p class="product-description">Description</p>
-            <p class="product-price">$00.00</p>
-            <div class="product-options">
-                <label for="size1">Size:</label>
-                <select id="size1" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-                <label for="color1">Color:</label>
-                <select id="color1" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
+                <label for="quantity">Quantity</label>
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -188,6 +234,14 @@
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
                 </select>
+                <label for="quantity">Quantity</label>
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
         </div>
@@ -208,6 +262,14 @@
                     <option value="red">Red</option>
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
+                </select>
+                <label for="quantity">Quantity</label>
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -251,7 +313,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Green Heven All Rights Reserved</p>
+            <p>&copy; 2024 Green Haven All Rights Reserved </p>
+            <p>Edited by: <a href="editorL.html" target="_blank">Linuka Arambawela</a></p>
             <div class="payment-methods">
                 <img src="../assets/images/visa.png" alt="Visa">
                 <img src="../assets/images/mastercard.png" alt="MasterCard">
