@@ -6,25 +6,35 @@ body{
     justify-content: center;
     position: relative;
     background-color: #fff;
-    width: 100%;
 }
+
 .introduction{
     margin-top: 50px;
 }
 
 main{
-    margin-top: 100px;
+    margin-top: 90px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;    
 }
 
 h2{
     font-size: 30px;
     background-color: #b7bcb8;
     padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
 }
 
+.two-columns {
+    column-count: 2;
+    column-gap: 20px;
+    column-fill: balance;
+}
 
 main p{
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 20px;
     margin-left: 40px;
     margin-right: 40px;

@@ -86,6 +86,11 @@ select{
     cursor: pointer;
 }
 
+.add-to-cart:hover, .checkout-button:hover {
+    background-color: #105f23;
+    color: white;
+}
+
 .cart {
     width: 30%;
     border: 1px solid #ccc;

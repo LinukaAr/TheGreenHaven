@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 ;
 
+// form validations
 const personalDetailsForm = document.getElementById('personal-details-form');
 const billingDetailsForm = document.getElementById('billing-details-form');
 const saveButton = document.querySelector('.save-button');
