@@ -47,7 +47,7 @@
     font-size: 1rem;
     margin-left: 1rem;
 }
-.search-icon img {
+.search-icon img, .user-icon img{
     width: 24px;
     height: 24px;
     cursor: pointer;
