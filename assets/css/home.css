@@ -61,7 +61,7 @@ body {
 }
 
 .search-icon img,
-.cart-icon img {
+.cart-icon img, .user-icon img {
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -350,6 +350,11 @@ body {
   margin-top: 1rem;
   border-top: 1px solid #4a4a4a;
   padding-top: 1rem;
+}
+
+footer a{
+  text-decoration: none;
+  color: #12a1e8;
 }
 
 .payment-methods img {
