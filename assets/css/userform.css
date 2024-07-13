@@ -59,3 +59,55 @@ body {
 #profile-display p {
     margin: 10px 0;
 }
+#profile-display {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(224, 240, 244, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#profile-display h2 {
+    color: #14afa2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-field {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-field label {
+    font-weight: bold;
+    width: 200px;
+    color: #333;
+}
+
+.profile-field span {
+    flex: 1;
+    padding: 5px 10px;
+    background-color: #76b1eb;
+    border-radius: 5px;
+}
+
+#profile-display .button {
+    display: block;
+    width: 200px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+#profile-phone_number {
+    font-family: monospace;
+}
+
+#profile-email {
+    font-family: monospace;
+  }
+
+.error {
+    border: 2px solid red;
+}
