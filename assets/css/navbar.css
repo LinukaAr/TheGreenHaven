@@ -1,4 +1,6 @@
-
+*{
+    font-family: 'Open Sans', sans-serif;
+}
 .navbar {
     background-color: #001a33;
     color: #fff;

@@ -352,6 +352,11 @@ body {
   padding-top: 1rem;
 }
 
+footer a{
+  text-decoration: none;
+  color: #12a1e8;
+}
+
 .payment-methods img {
   width: 40px;
   margin: 0 0.5rem;
