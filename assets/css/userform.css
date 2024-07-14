@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin:20px;
-    background-image:url("../images/image2.jpg");
+    background-image:url("../images/profile/image2.jpg");
     background-size: cover;
     background-repeat:no-repeat ;
     background-attachment: fixed;
@@ -21,6 +21,7 @@ body {
 .step.active {
     display: block;
 }
+
 .progress-bar {
     width: 100%;
     background-color: #353c3725;
@@ -48,6 +49,17 @@ body {
     padding: 10px 20px;
     float: right;
     background-color: #14afa2;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.button2 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    float: right;
+    background-color: #af2114;
     color: white;
     border: none;
     border-radius: 40px;
@@ -107,6 +119,14 @@ body {
 #profile-email {
     font-family: monospace;
   }
+
+.resized-image {
+    width: 200px;
+    height:auto; 
+    bottom: 0px; 
+    transform: translateY(-80%);
+
+}
 
 .error {
     border: 2px solid red;
