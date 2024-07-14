@@ -9,6 +9,8 @@ body {
   background: url('../images/Home/background.gif') no-repeat center center fixed;
   /* Background image */
   background-size: cover;
+  margin-top: 80px;
+  margin-bottom: 200px;
 }
 
 .container {
@@ -25,18 +27,18 @@ body {
   /* Align content to the left */
   margin: auto;
   /* Center horizontally */
-  margin-top: 60px;
+  /* margin-top: 200px; */
   /* Spacing from the top */
-  margin-bottom: 20px;
-  /* Spacing
+  /* margin-bottom: 30px; */
+   /* Spacing */
 }
 
-h2 {
+/* h2 {
     text-align: center;
-    color: red; /* Header color */
-  margin-bottom: 20px;
-  /* Increase margin to lower the header */
-}
+    color: red; Header color
+    margin-bottom: 20px;
+    Increase margin to lower the header
+}   */
 
 
 label {
