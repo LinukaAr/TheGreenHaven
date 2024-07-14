@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Content Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('../assets/images/content_main/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position:relative;
+           
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2); /* Black with 50% opacity */
+        }
+
+        .navbar {
+            background-color: #001a33;
+            color: #fff;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .brand-logo img {
+            height: 70px;
+        }
+
+        .nav-items {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin-left: 1rem;
+        }
+
+        .nav-item a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+
+        .nav-item a:hover,
+        .nav-item a.active {
+            background-color: #4a4950;
+            border-radius: 5px;
+            color: red;
+        }
+
+        .contact-number a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+
+        .search-icon img,
+        .cart-icon img {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            margin-left: 3rem;
+        }
+
+        .search-box {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 3px;
+            width: 25px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-container {
+                justify-content: space-between;
+            }
+
+            .nav-items {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                align-items: center;
+                display: none;
+            }
+
+            .nav-items.active {
+                display: flex;
+            }
+
+            .nav-item {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .contact-and-search {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .nav-items {
+                flex: 1;
+                justify-content: center;
+                display: flex;
+            }
+
+            .contact-and-search {
+                display: flex;
+                align-items: center;
+                margin-right: 3rem;
+            }
+
+            .contact-number {
+                margin-left: 3rem;
+            }
+        }
+
+        .container {
+            position:relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            max-width: 800px;
+            margin-top: 200px;
+            margin-bottom: 100px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 20px;
+            z-index:1; /* Ensure it appears above the overlay */
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+
+        .member-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .member-card h2 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .member-card p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .member-card button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .member-card button:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #001a33;
+            color:white;
+            position: absolute;
+            bottom: 100;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo"><img src="../assets/images/content_main/logo.png" alt="Logo"></a>
+            <div class="hamburger" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#home" class="active">Home</a></li>
+                <li class="nav-item"><a href="#services">Team</a></li>
+                <li class="nav-item"><a href="#about">Gallery</a></li>
+                <li class="nav-item"><a href="#contact">Shop</a></li>
+                <li class="nav-item"><a href="feedback.html">Feedback</a></li>
+                <li class="nav-item"><a href="#about">User Profile</a></li>
+                <li class="nav-item"><a href="#contact">Site Map</a></li>
+            </ul>
+            <div class="contact-and-search">
+                <div class="search-icon" onclick="toggleSearch()">
+                    <img src="../assets/images/content_main/search-icon.png" alt="Search">
+                </div>
+                <div class="cart-icon">
+                    <a href="cart.html"><img src="../assets/images/content_main/cart_icon.png" alt="cart"></a>
+                </div>
+            </div>
+        </div>
+        <div class="search-box" id="searchBox">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
+    <div class="container">
+        <div class="member-card" onclick="navigateToPage('page1.html')">
+            <img src="../assets/images/content_main/Linuka_Arambawela.png" alt="Member 1">
+            <p>Linuka Arambawela</p>
+            <h2>Human Wild Life Conflict</h2>
+            <button>Click Here</button>
+        </div>
+        <div class="member-card" onclick="navigateToPage('Sandaru.html')">
+            <img src="../assets/images/content_main/Sandaru_Thathsara.png" alt="Member 2">
+            <p>Sandaru Thathsara</p>
+            <h2>Sustainable Land Use Practices</h2>
+            <button>Click Here</button>
+        </div>
+        <div class="member-card" onclick="navigateToPage('page3.html')">
+            <img src="../assets/images/content_main/Anton_Lucksman.png" alt="Member 3">
+            <p>Anton Lucksman</p>
+            <h2>Main Topic of Content Page 3</h2>
+            <button>Click Here</button>
+        </div>
+        <div class="member-card" onclick="navigateToPage('page4.html')">
+            <img src="../assets/images/content_main/Niruthmi Chandrasekara1.png" alt="Member 4">
+            <p>Niruthmi Chandrasekara</p>
+            <h2>Main Topic of Content Page 4</h2>
+            <button>Click Here</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <img src="../assets/images/content_main/logo.png" alt="Logo">
+        <p>&copy;2024 Green Heven All Rights Reserved</p>
+    </footer>
+    <script>
+        function toggleNav() {
+            const navItems = document.querySelector('.nav-items');
+            navItems.classList.toggle('active');
+        }
+
+        function toggleSearch() {
+            const searchBox = document.getElementById('searchBox');
+            searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

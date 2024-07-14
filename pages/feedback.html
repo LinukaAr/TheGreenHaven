@@ -58,6 +58,7 @@
             <textarea id="additional-comments" name="additional-comments"></textarea>
 
             <button type="submit">Submit</button>
+            <button id="back-home">Home</button>
         </form>
 
         <div id="confirmation-message">
@@ -119,13 +120,19 @@
             return false;
         }
 
+        document.getElementById('back-home').addEventListener('click', function () {
+            const form = document.getElementById('feedback-form');
+            form.reset();
+            window.location.href = 'home.html';
+        });
+
         document.getElementById('confirm-submit').addEventListener('click', function() {
             document.getElementById('confirmation-message').style.display = 'none';
             document.getElementById('final-message').style.display = 'block';
 
             // Redirect to home page after 10 seconds
             setTimeout(function() {
-                window.location.href = 'Home.html'; // Change this to your home page URL
+                window.location.href = '../home.html'; 
             }, 3000);
         });
 
