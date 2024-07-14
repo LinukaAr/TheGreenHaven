@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 body{
-    background-image: url("../images/home/background.gif");
+    background-image: url(../images/home/background.gif);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
