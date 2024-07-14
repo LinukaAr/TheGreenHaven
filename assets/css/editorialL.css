@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,33 +6,93 @@
 
 body {
   font-family: var(--body-font);
-  background-color: #f1f1f1;
   color: rgb(3, 3, 23);
-  
+  margin: 0;
+  /* background-color: #050212; */
+  background-image: url(../images/editorL/bg1.jpg);  
+  background-repeat: no-repeat; 
+  background-position: center;  
+  background-size: cover;
 }
 
-.header {
-  text-align: center;
-  align-items: center;
-  padding-block: 10px;
-  color: white;
-  background-color:#15101e;
+:root {
+  --body-font: "Poppins", sans-serif;
+  --container-color: #ffffff; 
+  --title-color: hsl(0, 0%, 15%);
 }
+
+.main {
+  width: 100%;
+  padding: 10px 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #050212; */
+}
+
+.profile-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 30px;
+  border: 1px solid #ffffff40;
+  box-shadow: 0 5px 20px rgba(240, 240, 240, 0.711);
+  color: #fff;
+}
+.image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+.image .profile-pic{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(249, 249, 249, 0.4);
+}
+.data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.data h2{
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+span{
+  font-size: 18px;
+}
+
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+  background-color: #0893c2;
+
 }
 
 .container {
+  margin-top: -150px;
+  margin-bottom: -100px;
   display: grid;
   place-items: center;
+  /* background-color: #050212; */
 }
 
 .card__container {
   display: grid;
-  row-gap: 56px;
+  grid-template-columns: 1fr;
+  gap: 24px; /* Adjusted gap between cards */
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .card__article {
@@ -44,18 +102,16 @@ img {
 }
 
 .card__img {
-  width: 500px;
-  height: 200px;
+  width: 200px;
+  height: 180px;
   border-radius: 24px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border: 1px solid;
 }
 
 .card__data {
-  width: 280px;
+  width: 180px;
   background-color: var(--container-color);
   padding: 24px 32px;
-  box-shadow: 0 8px 24px hsla(0, 0%, 7%, 0.15);
+  box-shadow: 0 8px 24px hsla(0, 2%, 89%, 0.15);
   border-radius: 16px;
   border: 1px solid;
   position: absolute;
@@ -148,16 +204,7 @@ img {
   }
 }
 
-:root {
-  --first-color: hsl(82, 60%, 28%);
-  --title-color: hsl(0, 0%, 15%);
-  --text-color: hsl(0, 0%, 35%);
-  --body-color: hsl(0, 0%, 95%);
-  --container-color: hsl(0, 0%, 100%);
-  --body-font: "Poppins", sans-serif;
-  --h2-font-size: 20px;
-  --small-font-size: 13px;
-}
+
 
 @media screen and (min-width: 1120px) {
   :root {
@@ -167,11 +214,11 @@ img {
 }
 
 @media screen and (max-width: 340px) {
-  .container {
+ .container {
     margin-inline: 16px;
   }
 
-  .card__data {
+ .card__data {
     width: 250px;
     padding: 16px;
   }
@@ -179,7 +226,7 @@ img {
 
 /* For medium devices */
 @media screen and (min-width: 768px) {
-  .card__container {
+ .card__container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 24px;
   }
@@ -187,17 +234,17 @@ img {
 
 /* For large devices */
 @media screen and (min-width: 1120px) {
-  .container {
+ .container {
     height: 100vh;
   }
 
-  .card__container {
+ .card__container {
     grid-template-columns: repeat(3, 1fr);
   }
-  .card__img {
+ .card__img {
     width: 348px;
   }
-  .card__data {
+ .card__data {
     width: 316px;
     padding-inline: 40px;
   }
