@@ -5,72 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
     <title>Human-Wildlife Conflict</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/css/HWConflict.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
+
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar-container">
             <a href="#" class="brand-logo"><img src="../assets/images/logo.png" alt="Logo"></a>
-            <div class="hamburger" onclick="toggleNav()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
             <ul class="nav-items">
-                <li class="nav-item"><a href="/home.html" class="active">Home</a></li>
+                <li class="nav-item"><a href="../home.html">Home</a></li>
                 <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
-                <li class="nav-item"><a href="#">Gallery</a></li>
-                <li class="nav-item"><a href="../pages/shop.html">Shop</a></li>
+                <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
+                <li class="nav-item"><a href="../pages/shop.html" >Shop</a></li>
+                <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
             </ul>
-            <div class="contact-and-search">
-                <div class="search-icon" onclick="toggleSearch()">
-                    <img src="../assets/images/search-icon.png" alt="Search">
-                </div>
-            </div>
-        </div>
-        <div class="search-box" id="searchBox">
-            <input type="text" placeholder="Search...">
         </div>
     </nav>
+
+    <!-- Main Content -->
     <main>
+        <nav class="page-nav">
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#causes">Causes and Consequences</a></li>
+                <li><a href="#strategies">Mitigation Strategies</a></li>
+                <li><a href="#success-stories">Success Stories</a></li>
+            </ul>
+        </nav>
         <section id="introduction">
             <h2>Human-Wildlife Conflict</h2>
-            <div class="two-columns"> 
-                <p>In the heart of Sri Lanka, the age-old coexistence between humans and elephants is fracturing. As the woods are cut down, farmers’ plots are established at random and huge development plans encroach on forests where elephants live, these great animals begin leaving their ancient homes for people’s towns. As such there is a lot of human-elephant conflict with terrified farmers fighting back for their food and lives leading to fatalities from both sides. Nevertheless, conservationists have been working towards new methods of ensuring coexistence is more harmonious. This article looks at the conflict escalation and attempts made towards sustainable answers in Sri Lanka.</p>
+            <img src="../assets/images/elephant1.png" alt="Human-Wildlife Conflict" class="responsive-img">
+            <p class="caption">A rickshaw driver steers around a wild bull elephant in Habarana, a popular tourist town. Photograph: Getty</p>
+            <div class="two-columns">
+                <p>In the heart of Sri Lanka, the age-old coexistence between humans and elephants is fracturing. As the woods are cut down, farmers' plots are established at random and huge development plans encroach on forests where elephants live, these great animals begin leaving their ancient homes for people's towns. As such there is a lot of human-elephant conflict with terrified farmers fighting back for their food and lives leading to fatalities from both sides. Nevertheless, conservationists have been working towards new methods of ensuring coexistence is more harmonious. This article looks at the conflict escalation and attempts made towards sustainable answers in Sri Lanka.</p>
             </div>
         </section>
+
         <div id="human-wildlife-conflict">
             <article id="causes">
                 <h2>Causes and Consequences</h2>
-                <img src="../assets/images/elephant1.png" alt="Human-Wildlife Conflict" class="responsive-img">
-                <p>Human-wildlife conflict arises due to various factors such as habitat loss, competition for resources, and human encroachment into wildlife territories. In Sri Lanka, deforestation for agriculture and infrastructure development has led to the fragmentation of natural habitats. Elephants, in particular, are forced to venture into human settlements in search of food and water, resulting in frequent encounters with humans. The competition for resources intensifies as both humans and animals vie for the same land and water sources. Consequently, these encounters often lead to tragic outcomes.</p>
+                <p>Human-wildlife conflict arises due to various factors such as habitat loss, competition for resources, and human encroachment into wildlife territories. In Sri Lanka, deforestation for agriculture and infrastructure development has led to the fragmentation of natural habitats. Elephants, in particular, are forced to venture into human settlements in search of food and water, resulting in frequent encounters with humans.</p>
                 <button class="read-more-btn" onclick="toggleReadMore('causes')">Read More</button>
                 <div class="read-more-content" id="causes-read-more">
                     <p>Consequences include loss of life, injury to both humans and animals, and economic losses for communities dependent on agriculture and livestock. Farmers suffer from crop damage and loss of livestock, which are critical to their livelihoods. Additionally, the fear of elephant raids disrupts daily life and instills a sense of insecurity among villagers. On the other hand, elephants face retaliatory killings and injuries from traps and gunshots. The escalation of conflict also affects the broader ecosystem, as the decline in elephant populations can disrupt ecological balance.</p>
                 </div>
             </article>
+
             <article id="strategies">
                 <h2>Conflict Mitigation Strategies</h2>
-                <!-- <img src="../assets/images/electricfence.webp" alt="Mitigation Strategies" class="responsive-img"> -->
-                <p>Effective strategies for mitigating human-wildlife conflict involve community engagement, use of technology, and creating buffer zones. One of the key approaches is the establishment of wildlife corridors, which facilitate safe passage for elephants between fragmented habitats. Electric fencing is another widely used method to prevent elephants from entering farmlands. These fences are designed to deliver mild shocks that deter elephants without causing harm.</p>
+                <p>Effective strategies for mitigating human-wildlife conflict involve community engagement, use of technology, and creating buffer zones. One of the key approaches is the establishment of wildlife corridors, which facilitate safe passage for elephants between fragmented habitats. Electric fencing is another widely used method to prevent elephants from entering farmlands.</p>
                 <button class="read-more-btn" onclick="toggleReadMore('strategies')">Read More</button>
                 <div class="read-more-content" id="strategies-read-more">
                     <p>Examples include setting up wildlife corridors, using non-lethal deterrents, and promoting sustainable land-use practices. Community-based initiatives are crucial for the success of these strategies. For instance, involving local communities in the planning and maintenance of electric fences fosters a sense of ownership and responsibility. Non-lethal deterrents such as bee hive fences and chilli-based repellents have also shown promise in keeping elephants at bay. Additionally, promoting sustainable agricultural practices, such as growing elephant-resistant crops, helps reduce the attractiveness of farmlands to elephants.</p>
                 </div>
             </article>
+
             <article id="success-stories">
                 <h2>Success Stories of Coexistence</h2>
-                <!-- <img src="../assets/images/pinnawala.jpg" alt="Success Stories" class="responsive-img"> -->
-                <p>There are numerous success stories where communities have learned to coexist with wildlife, benefiting both humans and animals. In Sri Lanka, the Elephant Transit Home (ETH) in Udawalawe National Park is a notable example. ETH provides a safe haven for orphaned elephant calves, rehabilitating them before releasing them back into the wild. This initiative not only supports elephant conservation but also reduces human-elephant conflict by addressing the needs of vulnerable elephants.</p>
+                <p>There are numerous success stories where communities have learned to coexist with wildlife, benefiting both humans and animals. In Sri Lanka, the Elephant Transit Home (ETH) in Udawalawe National Park is a notable example. ETH provides a safe haven for orphaned elephant calves, rehabilitating them before releasing them back into the wild.</p>
                 <button class="read-more-btn" onclick="toggleReadMore('success-stories')">Read More</button>
                 <div class="read-more-content" id="success-stories-read-more">
                     <p>For instance, community-based conservation projects in Africa and Asia have shown positive outcomes in reducing conflict and promoting wildlife conservation. In Sri Lanka, the implementation of innovative solutions such as the use of GPS collars to track elephant movements has helped in anticipating and mitigating potential conflicts. Additionally, ecotourism initiatives have provided alternative livelihoods for local communities, reducing their dependence on agriculture and fostering a positive relationship with wildlife. The success of these projects underscores the importance of a holistic approach that combines scientific research, community involvement, and sustainable development practices.</p>
                 </div>
             </article>
-        </section>
+        </div>
     </main>
-    
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -96,8 +101,8 @@
                 <img src="../assets/images/logo.png" alt="Logo">
             </div>
             <div class="footer-column footer-icons">
-                <a href="#"><img src="../assets/images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="../assets/images/instagram.png" alt="Instagram"></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -112,19 +117,40 @@
             </div>
         </div>
     </footer>
-    <script src="../assets/js/nav.js"></script>
-    <script>
+    <button class="go-to-top" id="goToTop" title="Go to top">
+        &uarr;
+    </button>
 
+    <script>
         function toggleReadMore(section) {
             const readMoreContent = document.getElementById(`${section}-read-more`);
-            readMoreContent.classList.toggle('active');
             const btn = document.querySelector(`#${section} .read-more-btn`);
-            if (readMoreContent.classList.contains('active')) {
+            
+            if (readMoreContent.style.display === 'none' || readMoreContent.style.display === '') {
+                readMoreContent.style.display = 'block';
                 btn.textContent = 'Read Less';
             } else {
+                readMoreContent.style.display = 'none';
                 btn.textContent = 'Read More';
             }
         }
+
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            const goToTopButton = document.getElementById("goToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                goToTopButton.style.display = "block";
+            } else {
+                goToTopButton.style.display = "none";
+            }
+        }
+
+        // Scroll to the top of the document when the button is clicked
+        document.getElementById("goToTop").addEventListener("click", function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        });
     </script>
 </body>
 </html>
