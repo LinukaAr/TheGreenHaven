@@ -1,0 +1,134 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 90px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    color: #042630;
+}
+
+h2 {
+    font-size: 30px;
+    background-color: #18d7a1;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.toc {
+    width: 100%;
+    background-image: url('../images/St3_content/a_c2.jpg');
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.toc ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.toc li {
+    flex-basis: calc(50% - 10px);
+    max-width: 300px;
+}
+.toc a {
+    display: block;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.toc a:hover {
+    background-color: #2980b9;
+}
+main p {
+    font-size: 15px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+    max-width: 800px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.resized-image {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+    
+.read-more-content {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out, opacity 0.5s ease-out;
+}
+    
+.read-more-content.active {
+    display: block;
+    opacity: 1;
+    max-height: 1000px;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#backToTop:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#backToTop:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+}
+
+#backToTop i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#backToTop:hover i {
+    transform: translateY(-2px);
+}
+
