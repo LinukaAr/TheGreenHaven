@@ -2,6 +2,7 @@
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    position: fixed;
 
 
 }
@@ -12,8 +13,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /*../images/gallery/lion.gif*/
     /* background: url("https://i.pinimg.com/originals/e3/07/77/e307778e2def26c31231e2075a38f88a.gif") no-repeat */
-    background: url("../images/gallery/lion.gif") no-repeat;
+    background: url("https://i.pinimg.com/originals/e3/07/77/e307778e2def26c31231e2075a38f88a.gif") no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
