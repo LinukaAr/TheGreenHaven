@@ -1,11 +1,9 @@
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    background-color: #ffffff;
+/* General styles for all devices */
+html {
     margin: 0;
-    padding: 90px;
-    position: relative;
-    overflow-x: hidden;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 h1, h2 {
@@ -25,7 +23,7 @@ h2 {
     width: 100%;
     background-image: url('../images/St3_content/a_c2.jpg');
     background-color: #f2f2f2;
-    padding: 20px;
+    padding: 90px;
     box-sizing: border-box;
 }
 
@@ -42,6 +40,7 @@ h2 {
     flex-basis: calc(50% - 10px);
     max-width: 300px;
 }
+
 .toc a {
     display: block;
     padding: 10px;
@@ -51,9 +50,11 @@ h2 {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
+
 .toc a:hover {
-    background-color: #2980b9;
+    background-color: #2440de;
 }
+
 main p {
     font-size: 15px;
     margin: 20px auto;
@@ -87,7 +88,7 @@ img {
     cursor: pointer;
     border-radius: 5px;
 }
-    
+
 .read-more-content {
     display: none;
     opacity: 0;
@@ -95,7 +96,7 @@ img {
     overflow: hidden;
     transition: max-height 1s ease-out, opacity 0.5s ease-out;
 }
-    
+
 .read-more-content.active {
     display: block;
     opacity: 1;
@@ -106,7 +107,7 @@ img {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    border-radius: 50%;
+    border-radius: 10%;
     font-size: 18px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
