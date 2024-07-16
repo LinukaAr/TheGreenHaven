@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link href="../assets/css/student4editor.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #001a33;
+            color: #fff;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .brand-logo img {
+            height: 70px;
+        }
+
+        .nav-items {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin-left: 1rem;
+        }
+
+        .nav-item a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+
+        .nav-item a:hover,
+        .nav-item a.active {
+            background-color: #4a4950;
+            border-radius: 5px;
+            color: red;
+        }
+
+        .contact-number a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+
+        .search-icon img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            margin-left: 3rem;
+        }
+
+        .search-box {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 3px;
+            width: 25px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        .content {
+            flex: 1;
+            padding-top: 80px;
+            /* Height of the fixed navbar */
+        }
+
+        @media (max-width: 768px) {
+            .navbar-container {
+                justify-content: space-between;
+            }
+
+            .nav-items {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                align-items: center;
+                display: none;
+            }
+
+            .nav-items.active {
+                display: flex;
+            }
+
+            .nav-item {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .contact-and-search {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .nav-items {
+                flex: 1;
+                justify-content: center;
+                display: flex;
+            }
+
+            .contact-and-search {
+                display: flex;
+                align-items: center;
+                margin-right: 5rem;
+            }
+
+            .contact-number {
+                margin-left: 3rem;
+            }
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #001a33;
+            color: #fff;
+            padding: 2rem 1rem;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin: 1rem;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-logo img {
+            height: 80px;
+            width: 80px;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .footer-icons a {
+            margin: 0 0.5rem;
+        }
+
+        .footer-icons img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 1rem;
+            border-top: 1px solid #4a4a4a;
+            padding-top: 1rem;
+        }
+
+        .payment-methods img {
+            width: 40px;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo"><img src="../assets/images/student4editor/logo.png" alt="Logo"></a>
+            <div class="hamburger" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#home" class="active">Home</a></li>
+                <li class="nav-item"><a href="#services">Services</a></li>
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="contact-and-search">
+                <div class="contact-number">
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </div>
+                <div class="search-icon" onclick="toggleSearch()">
+                    <img src="../assets/images/student4editor/search-icon.png" alt="Search">
+                </div>
+            </div>
+        </div>
+        <div class="search-box" id="searchBox">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
+
+    <div class="content">
+        <!--<video autoplay muted loop class="background-video">
+            <source src="5155383-uhd_4096_2160_24fps.mp4" type="video/mp4">
+
+        </video>-->
+        <div class="div1">
+            <div class="div2">
+                <p class="p"><b>Niruthmi Chandrasekara</b></p>
+                <p class="p"><b>UoW No : w2082255</b></p>
+                <p class="p"><b>IIT No : 20232558</b><br> <br><b>Role : Student 4</b></p>
+                <a class="down" id="down">Go Down</a>
+                <img src="../assets/images/student4editor/WhatsApp Image 2024-07-14 at 3.39.59 PM.jpeg" alt="niruthmi"
+                    class="img">
+            </div>
+
+            <div class="div" id="div"><br><br>GALLERY<br><br><a class="a" href="#gallery">link to
+                    gallery</a><br><br><img src="../assets/images/student4editor/gallery3.webp" alt="gallery"
+                    class="images"><br><br>This gallery includes three separate slideshows, designed with HTML,
+                JavaScript, and CSS for interactive content browsing and responsive display.</div>
+            <div class="div"><br><br>SITE MAP<br><br><a class="a" href="#sitemap">link to sit emap</a><br><br><img
+                    src="../assets/images/student4editor/sitemap2.png" alt="sitemap" class="images"><br><br> This
+                website includes a concise site map crafted using HTML, CSS, and
+                JavaScript, enabling seamless navigation across all web pages.<br><br></div>
+            <div class="div"><br><br>CONTENT PAGE<br><br><a class="a" href="#contentpage">link to content
+                    page</a><br><br><img src="../assets/images/student4editor/contentpage.webp" alt="contentpage"
+                    class="images"><br><br>The content page on this website provides organized and accessible
+                information, structured using HTML and CSS for clarity and user-friendly browsing.<br><br></div>
+            <p class="h" id="p"><b>The Following pages are done by me</b></p>
+
+            <a class="up" id="up"><b>Go Up</b></a>
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Privacy Policy</h3>
+                <a href="#">Delivery Policy</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="footer-column">
+                <h3>Branches</h3>
+                <p>Colombo 5</p>
+                <p>Nugegoda</p>
+                <p>Kandy</p>
+                <p>Matara</p>
+                <p>Welisara</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
+                <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
+                <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
+            </div>
+            <div class="footer-column footer-logo">
+                <img src="../assets/images/student4editor/logo.png" alt="Supplement Warehouse Logo">
+            </div>
+            <div class="footer-column footer-icons">
+                <a href="#"><img src="../assets/images/student4editor/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../assets/images/student4editor/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Green Heven All Rights Reserved</p>
+            <p>Edited by Niruthmi Chandrasekara</p>
+            <div class="payment-methods">
+                <img src="../assets/images/student4editor/visa.png" alt="Visa">
+                <img src="../assets/images/student4editor/mastercard.png" alt="MasterCard">
+                <img src="../assets/images/student4editor/paypal.png" alt="PayPal">
+                <img src="../assets/images/student4editor/amex.png" alt="American Express">
+                <img src="../assets/images/student4editor/discover.png" alt="Discover">
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/student4editor.js"></script>
+    <script>
+        function toggleSearch() {
+            const searchBox = document.getElementById('searchBox');
+            searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function toggleNav() {
+            const navItems = document.querySelector('.nav-items');
+            navItems.classList.toggle('active');
+        }
+
+        // Adding active class to the current link
+        const navLinks = document.querySelectorAll('.nav-item a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
