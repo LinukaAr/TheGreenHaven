@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon" />
     <title>Welcome</title>
-    <link rel="stylesheet" href="assets/css/splash.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/splash.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="splash-screen">
-        <div class="splash-content">
-            <div class="text-content">
-                <img src="assets/images/logo.png" alt="Life on Land Logo" class="logo">
-                <h1>The Green Haven</h1>
-                <p class="mission">"Green Earth Better Life"</p>
-                <div class="team">
-                    <h2>Group Members:</h2>
-                    <ul class="members">
-                        <li>Niruthmi Chandrasekara</li>
-                        <li>Sadaru Malshan</li>
-                        <li>Anton Luckshman</li>
-                        <li>Linuka Arambawela</li>
-                    </ul>
-                </div> 
-                <img src="assets/images/loading1.gif" alt="Loading..." class="loader-image">        
-            </div>
-          
+      <div class="splash-content">
+        <div class="text-content">
+          <img
+            src="assets/images/logo.png"
+            alt="Life on Land Logo"
+            class="logo"
+          />
+          <h1>The Green Haven</h1>
+          <p class="mission">"Green Earth Better Life"</p>
+          <div class="team">
+            <h2>Group Members</h2>
+            <ul class="members">
+              <li>
+                <span class="name">S1. Linuka Arambawela</span>
+                <span class="details"> w2083086</span>
+              </li>
+              <li>
+                <span class="name">S2. Sandaru Thathsara</span>
+                <span class="details"> w2083049</span>
+              </li>
+              <li>
+                <span class="name">S3. Anton Luckshman</span>
+                <span class="details"> w2082257</span>
+              </li>
+              <li>
+                <span class="name">S4. Niruthmi Chandrasekara</span>
+                <span class="details"> w2082255</span>
+              </li>
+            </ul>
+          </div>
+          <img
+            src="assets/images/loading1.gif"
+            alt="Loading..."
+            class="loader-image"
+          />
         </div>
+      </div>
     </div>
-    <div id="home-page" style="display: none;"></div>
+    <div id="home-page" style="display: none"></div>
     <script>
-       document.addEventListener('DOMContentLoaded', function() {
-       document.getElementById('splash-screen').style.display = 'block';
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("splash-screen").style.display = "block";
 
-  
-        setTimeout(function() {
-            document.getElementById('splash-screen').classList.add('fade-out');
+        setTimeout(function () {
+          document.getElementById("splash-screen").classList.add("fade-out");
         }, 3500);
 
-    
-        setTimeout(function() {
-            window.location.href = 'home.html';
+        setTimeout(function () {
+          window.location.href = "home.html";
         }, 4000);
-    });
-
+      });
     </script>
-
-</body>
+  </body>
 </html>

@@ -51,7 +51,7 @@ body {
 .nav-item a.active {
     background-color: #4a4950;
     border-radius: 5px;
-    color: red;
+    color: white;
 }
 
 .contact-number a {
@@ -61,7 +61,7 @@ body {
     margin-left: 1rem;
 }
 
-.search-icon img {
+.search-icon img, .user-icon img {
     width: 24px;
     height: 24px;
     cursor: pointer;
@@ -231,16 +231,16 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    background: url(../images/sitemapN/leaves.gif);
+    background: url(../images/sitemapN/image.png);
     background-size: cover;
     background-position: center;
     align-items: flex-start;
     width: 100%;
+   
 
-
+   
 
 }
-
 /**.background-video {
     position: absolute;
     top: 0;
@@ -249,24 +249,23 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-/**}**/
+/*}*/
 
 
 .map h1 {
-
+   
     font-size: 2em;
     margin-bottom: 20px;
     color: #fff;
     margin-left: 80px;
-
-
+   
+   
 
 }
-
-#h1 {
+#h1{
     text-align: center;
     align-items: center;
-
+   
     padding: 0;
 }
 
@@ -277,17 +276,18 @@ body {
 .btn5,
 .btn6 {
     width: 150px;
-    height: 50px;
-    font-size: larger;
+    height: 60px;
+    font-size: x-large;
     color: #fff;
     background-color: transparent;
     margin: 20px 10px;
     margin-top: 200px;
     margin-left: 100px;
     border-color: #fff;
-    font-weight: lighter;
-    border-radius: 10px;
+    font-weight:lighter;
+    border-radius:10px;
     border-width: 3px;
+    border: 1px solid #ccc;
 }
 
 .btn1 {
@@ -313,8 +313,8 @@ body {
 .btn8,
 .btn9 {
     width: 150px;
-    height: 50px;
-    font-size: larger;
+    height: 60px;
+    font-size: x-large;
     background-color: transparent;
     margin: 10px 0;
 
@@ -322,10 +322,11 @@ body {
     margin-left: 10px;
     margin-bottom: -150px;
     border-color: #fff;
-    font-weight: lighter;
+    font-weight:lighter;
     color: #fff;
-    border-radius: 10px;
+    border-radius:10px;
     border-width: 3px;
+    border: 1px solid #ccc;
 
 }
 
@@ -346,8 +347,8 @@ body {
 .btn12,
 .btn13 {
     width: 150px;
-    height: 50px;
-    font-size: larger;
+    height: 60px;
+    font-size: x-large;
     background-color: transparent;
     margin: 10px 0;
 
@@ -355,11 +356,12 @@ body {
     margin-left: 10px;
     margin-bottom: -150px;
     border-color: #fff;
-    font-weight: lighter;
+    font-weight:lighter;
     color: #fff;
-    border-radius: 10px;
+    border-radius:10px;
     border-width: 3px;
     color: #fff;
+    border: 1px solid #ccc;
 }
 
 
@@ -376,8 +378,8 @@ body {
 .btn15,
 .btn16 {
     width: 150px;
-    height: 50px;
-    font-size: larger;
+    height: 60px;
+    font-size: x-large;
     background-color: transparent;
     margin: 10px 0;
     margin-top: 300px;
@@ -387,21 +389,71 @@ body {
     border-radius: 10px;
     border-width: 3px;
     margin-left: -490px;
-
-
+   
+   
     margin-bottom: -150px;
-
-
+    border: 1px solid #ccc;
+   
+   
+   
 }
-
-.btn15 {
+.btn15{
     margin-top: 200px;
 }
 
-.btn16 {
+.btn16{
     margin-top: 200px;
 }
-
-.btn3 {
+.btn3{
     margin-left: 200px;
 }
+
+
+
+#btn1 { top: 100px; left: 100px; }
+#btn2 { top: 100px; left: 300px; }
+#btn3{ top: 100px; left: 500px; }
+#btn4 { top: 100px; left: 700px; }
+#btn5 { top: 100px; left: 900px; }
+#btn6{ top: 100px; left: 1100px; }
+#btn7 { top: 200px; left: 300px; }
+#btn8 { top: 300px; left: 300px; }
+#btn9 { top: 400px; left: 300px; }
+#btn14 { top: 500px; left: 300px; }
+#btn15 { top: 200px; left: 100px; }
+#btn16  { top: 300px; left: 100px; }
+#btn10 { top: 200px; left: 1100px; }
+#btn11 { top: 300px; left: 1100px; }
+#btn12 { top: 400px; left: 1100px; }
+#btn13 { top: 500px; left: 1100px; }
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
