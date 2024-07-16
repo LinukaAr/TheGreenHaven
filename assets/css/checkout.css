@@ -41,6 +41,22 @@ body {
     right: 20px; 
 }
 
+.saved-details {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.saved-details h3 {
+    margin: 0 0 10px;
+}
+.saved-details p {
+    margin: 5px 0;
+}
+
+
 .proceed-button {
     padding: 10px 20px;
     background-color: #28a745;
