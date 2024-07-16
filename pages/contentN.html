@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link href="../assets/css/contentN.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #001a33;
+            color: #fff;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .brand-logo img {
+            height: 70px;
+        }
+
+        .nav-items {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin-left: 1rem;
+        }
+
+        .nav-item a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+
+        .nav-item a:hover,
+        .nav-item a.active {
+            background-color: #4a4950;
+            border-radius: 5px;
+            color: red;
+        }
+
+        .contact-number a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+
+        .search-icon img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            margin-left: 3rem;
+        }
+
+        .search-box {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 3px;
+            width: 25px;
+            background-color: #fff;
+            margin: 4px 0;
+        }
+
+        .content {
+            flex: 1;
+            padding-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-container {
+                justify-content: space-between;
+            }
+
+            .nav-items {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                align-items: center;
+                display: none;
+            }
+
+            .nav-items.active {
+                display: flex;
+            }
+
+            .nav-item {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .contact-and-search {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .nav-items {
+                flex: 1;
+                justify-content: center;
+                display: flex;
+            }
+
+            .contact-and-search {
+                display: flex;
+                align-items: center;
+                margin-right: 5rem;
+            }
+
+            .contact-number {
+                margin-left: 3rem;
+            }
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #001a33;
+            color: #fff;
+            padding: 2rem 1rem;
+            width: 100vw;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin: 1rem;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-logo img {
+            height: 80px;
+            width: 80px;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .footer-icons a {
+            margin: 0 0.5rem;
+        }
+
+        .footer-icons img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 1rem;
+            border-top: 1px solid #4a4a4a;
+            padding-top: 1rem;
+        }
+
+        .payment-methods img {
+            width: 40px;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo"><img src="../assets/images/logo.png" alt="Logo"></a>
+            <div class="hamburger" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="../home.html">Home</a></li>
+                <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
+                <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
+                <li class="nav-item"><a href="../pages/shop.html" >Shop</a></li>
+                <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
+            </ul>
+            <div class="contact-and-search">
+                <div class="search-icon" onclick="toggleSearch()">
+                    <img src="../assets/images/search-icon.png" alt="Search">
+                </div>
+            </div>
+        </div>
+        <div class="search-box" id="searchBox">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
+
+    <div class="content">
+
+
+        <div class="div1">
+            <!--<video autoplay muted loop class="background-video">
+                <source src="4562021-hd_1056_1880_30fps.mp4" type="video/mp4">
+                
+            </video>-->
+
+
+            <h1 class="h1" id="main-title"><br><br>Life On Land<br><br></h1>
+            <a class="a" href="#Biodiversity">Biodiversity</a>
+            <a class="a" href="#Habitats">Habitats</a>
+            <a class="a" href="#ConservationEffort">Conservation Efforts</a>
+
+
+            <h1 class="h2" id="Biodiversity"><br>Biodiversity</h1>
+            <p class="p">Biodiversity refers to the variety of life on Earth, encompassing the diversity of species,
+                genetic variability, and the complex ecosystems they form. This diversity is essential for the health
+                and stability of ecosystems, as it allows them to adapt to changes, provide ecosystem services, and
+                sustain life. Biodiversity includes all living organisms, from the tiniest microorganisms to the largest
+                mammals, and the intricate relationships they share within their habitats.
+
+                The importance of biodiversity extends beyond ecological balance; it supports ecosystem services that
+                humans rely on, such as pollination of crops, purification of water, and regulation of climate.
+                Moreover, it offers cultural, aesthetic, and recreational benefits, enriching human lives and
+                contributing to well-being.
+
+                However, biodiversity is under threat from human activities, including habitat destruction, pollution,
+                climate change, and overexploitation of resources. Conservation efforts are crucial to protect and
+                restore biodiversity, ensuring the resilience of ecosystems and the survival of countless species,
+                including our own. By preserving biodiversity, we safeguard the natural heritage and maintain the
+                ecological processes vital for life on Earth.<br><br><br></p>
+            <img src="../assets/images/contentN/GettyImages-900700320-b1b73ac1c38e434396c3cc48b8e640d3.jpg" class="img" alt="img1">
+            <img src="../assets/images/contentN/2ebe7ebd2da74cd3b9196b2443f1328c.jpeg" class="img" alt="img2">
+            <img src="../assets/images/contentN/istockphoto-1194518176-612x612.jpg" class="img" alt="img3">
+
+
+
+            <h1 class="h2" id="Habitats"><br><br>Habitats</h1>
+            <p class="p">Habitats are the natural environments where different species of plants, animals, and other
+                organisms live and thrive. These ecosystems, which can range from lush rainforests and expansive
+                grasslands to arid deserts and vibrant coral reefs, are crucial for maintaining biodiversity. Each
+                habitat offers unique resources such as food, water, shelter, and breeding grounds, enabling a wide
+                variety of species to survive and reproduce.
+
+                Healthy habitats support complex interactions among species, contributing to ecological balance and
+                resilience. They provide essential services like pollination, seed dispersal, water purification, and
+                climate regulation, which are vital for the well-being of all living organisms, including humans.
+                However, habitats are increasingly threatened by human activities such as deforestation, pollution,
+                urbanization, and climate change. Protecting and restoring natural habitats is essential for preserving
+                biodiversity, ensuring ecosystem services, and maintaining the planet's ecological
+                integrity.<br><br><br></p>
+            <img src="../assets/images/contentN/habitat1.png" class="img" alt="img4">
+            <img src="../assets/images/contentN/habitat2.jpg" class="img" alt="img5">
+            <img src="../assets/images/contentN/habitat3.avif" class="img" alt="img6">
+
+
+
+
+            <h1 class="h2" id="ConservationEffort"><br><br>Conservation Efforts</h1>
+            <p class="p">Conservation efforts are essential to protect and restore the world's habitats, ensuring the
+                survival of countless species and the health of our planet's ecosystems. These efforts focus on
+                preserving natural environments and mitigating the impacts of human activities such as deforestation,
+                pollution, and climate change.
+
+                Key conservation strategies include establishing protected areas like national parks and wildlife
+                reserves, which safeguard critical habitats from development and exploitation. Restoration projects aim
+                to rehabilitate degraded ecosystems, replanting native vegetation and reintroducing wildlife to areas
+                where they have been lost.
+
+                Community involvement is also crucial, as local populations often play a significant role in
+                conservation. Education and sustainable practices help communities coexist with nature, promoting
+                eco-friendly agriculture, fishing, and tourism.
+
+                Furthermore, conservation organizations and governments work together to enforce environmental laws,
+                combat illegal wildlife trade, and implement policies that reduce carbon emissions and other pollutants.
+
+                Through these combined efforts, conservation initiatives strive to maintain biodiversity, ensure the
+                health of ecosystems, and create a sustainable future for all living beings.<br><br><br></p>
+            <img src="../assets/images/contentN/conservation1.jpg" class="img" alt="img7">
+            <img src="../assets/images/contentN/consevation2.jpg" class="img" alt="img8">
+            <img src="../assets/images/contentN/conservation3.jpg" class="img" alt="img9"><br><br><br><br>
+
+            <a class="up" id="up">Up</a>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Privacy Policy</h3>
+                <a href="#">Delivery Policy</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="footer-column">
+                <h3>Branches</h3>
+                <p>Colombo 5</p>
+                <p>Nugegoda</p>
+                <p>Kandy</p>
+                <p>Matara</p>
+                <p>Welisara</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
+                <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
+                <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
+            </div>
+            <div class="footer-column footer-logo">
+                <img src="../assets/images/contentN/logo.png" alt="Supplement Warehouse Logo">
+            </div>
+            <div class="footer-column footer-icons">
+                <a href="#"><img src="../assets/images/contentN/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../assets/images/contentN/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Green Heven All Rights Reserved</p>
+            <p>Edited by Niruthmi Chandrasekara</p>
+            <div class="payment-methods">
+                <img src="../assets/images/contentN/visa.png" alt="Visa">
+                <img src="../assets/images/contentN/mastercard.png" alt="MasterCard">
+                <img src="../assets/images/contentN/paypal.png" alt="PayPal">
+                <img src="../assets/images/contentN/amex.png" alt="American Express">
+                <img src="../assets/images/contentN/discover.png" alt="Discover">
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/contentN.js"></script>
+    <script>
+        function toggleSearch() {
+            const searchBox = document.getElementById('searchBox');
+            searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function toggleNav() {
+            const navItems = document.querySelector('.nav-items');
+            navItems.classList.toggle('active');
+        }
+
+        // Adding active class to the current link
+        const navLinks = document.querySelectorAll('.nav-item a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
