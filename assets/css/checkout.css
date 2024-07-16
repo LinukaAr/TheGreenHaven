@@ -78,16 +78,6 @@ body {
     font-weight: bold;
 }
 
-.footer {
-    clear: both;
-    width: 100%;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    position: relative;
-}
-
 .head {
     font-size: 40px;
     font-weight: bold;
@@ -153,6 +143,9 @@ input[type="text"], input[type="email"], input[type="tel"] {
 }
 
 @media (max-width: 768px) {
+    .body{
+        width: 100%;
+    }
     .checkout-container {
         width: 80%;
         margin-right: auto; 
@@ -161,7 +154,6 @@ input[type="text"], input[type="email"], input[type="tel"] {
     }
 
     .order-summary {
-        width: 90%; 
         position: relative; 
         margin: 20px auto; 
         border-radius: 0;
@@ -170,11 +162,5 @@ input[type="text"], input[type="email"], input[type="tel"] {
         right: 0; 
     }
 
-    .footer {
-        width: 100%;
-    }
-
-    .navbar {
-        width: 100%;
-    }
+   
 }
