@@ -59,16 +59,42 @@ h1 {
 }
 
 h2{
+    padding-top: 20px;
     padding-bottom: 15px;
+    color: #011003;
 }
 
-.members,h2 {
+.members {
 	padding-top: 10px;
 	padding-left: 20px;
     text-align: left;
     font-size: 20px;
 	color: white;
 }
+.members {
+    padding-left: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.members li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.members .name {
+    flex: 1; /* This allows the name section to take up the remaining space */
+    padding-right: 20px; /* Add some space between the name and details */
+}
+
+.members .details {
+    flex-shrink: 0; /* This keeps the details section from shrinking */
+    white-space: nowrap; /* This prevents the details from wrapping */
+    margin-right: 300px; /* Add margin to the right to prevent touching the box */
+}
+
 
 .mission {
     color: rgb(255, 255, 255);
