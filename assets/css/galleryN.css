@@ -4,7 +4,6 @@
     overflow-x: hidden;
     position: fixed;
 }
-
 .parallax {
     position: relative;
     display: flex;
@@ -28,7 +27,6 @@
     text-shadow: 2px 4px 5px #f9f9f9;
     margin-left: -100px;
 }
-
 .parallax img {
     position: absolute;
     top: 0;
@@ -36,8 +34,7 @@
     width: 100%;
     pointer-events: none;
 }
-
-.div {
+.div{
     height: 100vh;
     width: 97.99vw;
     background-color: transparent;
@@ -48,8 +45,7 @@
     background-position: center;
     background-attachment: fixed;
     
-
-
+    
 }
 
 .sec {
@@ -67,22 +63,24 @@
 }
 
 .box {
-
+    
     width: 200px;
-    height: 200px;
+    height: 130px;
     display: inline-flex;
-    margin-top: -10px;
+    margin-top: 20px;
     padding: 50px;
     margin-left: 100px;
-
-    background-color: rgb(84, 124, 84);
+    
+    background-color: transparent;
     color: white;
     font-size: x-large;
     text-align: center;
     align-items: center;
+    border-color: white;
+    border-radius: 2em;
+    border-style: groove;
 
 }
-
 .box h4 {
     margin: 0;
     font-size: 1.5em;
@@ -92,10 +90,10 @@
 
 .mainBox {
     height: 40vh;
-
+    
     width: 100%;
     overflow: hidden;
-
+    
 
 }
 
@@ -239,7 +237,7 @@
     height: 600px;
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
-    margin-bottom: 20px; 
+    margin-bottom: 20px; /* Ensures space between the bottom of the container and the bottom of div1 */
 /**}
 
 .container .slide .item {
@@ -715,16 +713,110 @@
     width: 98.5vw;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* 
+    z-index: -1; /* Place the video behind other elements 
 }*/
 
-.scroll-icon {
+.scroll-icon{
     size: 50px;
     position: absolute;
-    bottom: 350px;
-    left: 60px;
+    bottom: 350px; 
+    left: 60px; 
     font-size: 24px;
     text-decoration: none;
     color: white;
-    z-index: 10;
+    z-index: 10; 
 }
+
+
+#color1{
+    margin-left: 600px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: black;
+
+}
+
+#color2{
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    background-color:rgb(2, 31, 45);
+}
+
+#color3{
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: grey;
+}
+
+.colourchange{
+    color: #eee;
+    width: 50px;
+    margin-left: 0px;
+    margin-top: -180px;
+    margin-bottom:100px ;
+    background-color:transparent;
+    border-radius: 100px;
+    font-size: medium;
+    display: inline;
+    right: 1000px;
+    
+    
+    
+}
+
+.fontchange{
+    color: #eee;
+    margin-left: 800px;
+    margin-top: -155px;
+    margin-bottom: 50px;
+    
+}
+
+#font1{
+    cursor: pointer;
+    width: 75px;
+    height: 30px;
+    border-radius: 100px;
+    color: white;
+    background-color: #eee5;
+    font-family:'Times New Roman';
+    margin-left: 250px;
+    
+    
+}
+
+#font2{
+    cursor: pointer;
+    width: 75px;
+    height: 30px;
+    border-radius: 100px;
+    color: white;
+    background-color: #eee5;
+    font-family:family Anton;
+}
+
+#font3{
+    cursor: pointer;
+    width: 75px;
+    height: 30px;
+    border-radius: 100px;
+    color: white;
+    background-color: #eee5;
+    font-family: Rowdies;
+}
+
+#change1 #change2{
+    font-display: inline;
+}
+#change1{
+    margin-bottom: 15px;
+    
+}
+
+

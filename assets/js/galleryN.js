@@ -114,14 +114,65 @@ window.addEventListener('load', function() {
 
 
 
-// page does not scroll horizontally
+// Ensure the page does not scroll horizontally
 window.addEventListener('scroll', function() {
     if (window.scrollX !== 0) {
         window.scrollTo(0, window.scrollY);
     }
 });
 
-//  page does not resize horizontally
+// Optionally, ensure the page does not resize horizontally
 window.addEventListener('resize', function() {
     document.documentElement.style.width = window.innerWidth + 'px';
 });
+
+
+
+function color1(){
+    document.getElementById('div2').style.background ="black";
+    document.getElementById('div1').style.background ="black";
+    document.getElementById('div3').style.background ="black";
+}
+
+function color2(){
+    document.getElementById('div2').style.background ="rgb(2, 31, 45)";
+    document.getElementById('div1').style.background ="rgb(2, 31, 45)";
+    document.getElementById('div3').style.background ="rgb(2, 31, 45)";
+
+}
+
+function color3(){
+    document.getElementById('div2').style.background ="grey";
+    document.getElementById('div1').style.background ="grey";
+    document.getElementById('div3').style.background ="grey";
+}
+
+function font1() {
+    ['1hf1', '1pf1', '1hf2', '1pf2', '1hf3', '1pf3', '1hf4', '1pf4', '1hf5',
+    '1pf5', '1hf6', '1pf6','2hf1', '2pf1', '2hf2', '2pf2', '2hf3', '2pf3', '2hf4', '2pf4', '2hf5',
+    '2pf5', '2hf6', '2pf6','3hf1', '3pf1', '3hf2', '3pf2', '3hf3', '3pf3', '3hf4', '3pf4', '3hf5',
+    '3pf5', '3hf6', '3pf6'].forEach(function(id) {
+        document.getElementById(id).style.fontFamily = "Times New Roman";
+    });
+}
+
+function font2() {
+    ['1hf1', '1pf1', '1hf2', '1pf2', '1hf3', '1pf3', '1hf4', '1pf4', '1hf5',
+    '1pf5', '1hf6', '1pf6','2hf1', '2pf1', '2hf2', '2pf2', '2hf3', '2pf3', '2hf4', '2pf4', '2hf5',
+    '2pf5', '2hf6', '2pf6','3hf1', '3pf1', '3hf2', '3pf2', '3hf3', '3pf3', '3hf4', '3pf4', '3hf5',
+    '3pf5', '3hf6', '3pf6'].forEach(function(id) {
+        document.getElementById(id).style.fontFamily = "family Anton";
+    });
+}
+
+function font3() {
+    ['1hf1', '1pf1', '1hf2', '1pf2', '1hf3', '1pf3', '1hf4', '1pf4', '1hf5',
+    '1pf5', '1hf6', '1pf6','2hf1', '2pf1', '2hf2', '2pf2', '2hf3', '2pf3', '2hf4', '2pf4', '2hf5',
+    '2pf5', '2hf6', '2pf6','3hf1', '3pf1', '3hf2', '3pf2', '3hf3', '3pf3', '3hf4', '3pf4', '3hf5',
+    '3pf5', '3hf6', '3pf6'].forEach(function(id) {
+        document.getElementById(id).style.fontFamily = "Rowdies";
+    });
+}
+
+
+
