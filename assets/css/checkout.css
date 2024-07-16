@@ -5,12 +5,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #ccc;
+    background-color: #fff;
     margin: 0;
 }
 
 .checkout-container {
-    background-color: #ccc;
+    background-color: #fff;
     padding: 60px;
     border-radius: 8px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
@@ -39,6 +39,38 @@ body {
     position: absolute; 
     top: 225px; 
     right: 20px; 
+}
+
+.saved-details {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.saved-details h3 {
+    margin: 0 0 10px;
+}
+.saved-details p {
+    margin: 5px 0;
+}
+
+
+.proceed-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.back{
+    padding-top: 20px;
+    text-decoration: none;
 }
 
 .order {
@@ -89,7 +121,7 @@ input[type="text"], input[type="email"], input[type="tel"] {
     font-size: 0.875em;
 }
 
-.checkout-button {
+.save-button, .checkout-button{
     width: 100%;
     padding: 10px;
     background-color: #28a745;
@@ -100,7 +132,7 @@ input[type="text"], input[type="email"], input[type="tel"] {
     font-size: 1em;
 }
 
-.checkout-button:hover {
+.save-button:hover, .checkout-button:hover{
     background-color: #218838;
 }
 

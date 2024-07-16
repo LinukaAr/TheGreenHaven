@@ -1,4 +1,6 @@
-
+*{
+    font-family: 'Open Sans', sans-serif;
+}
 .navbar {
     background-color: #001a33;
     color: #fff;
@@ -37,7 +39,7 @@
 .nav-item a.active {
     background-color: #4a4950;
     border-radius: 5px;
-    color: red;
+    color: white;
 }
 .contact-number a {
     color: #fff;
@@ -45,7 +47,7 @@
     font-size: 1rem;
     margin-left: 1rem;
 }
-.search-icon img {
+.search-icon img, .user-icon img{
     width: 24px;
     height: 24px;
     cursor: pointer;
@@ -179,4 +181,13 @@
 .payment-methods img {
     width: 40px;
     margin: 0 0.5rem;
+}
+
+footer p{
+    margin-bottom: 10px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #12a1e8;
 }

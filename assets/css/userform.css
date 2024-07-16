@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin:20px;
-    background-image:url('image2.jpg');
+    background-image:url("../images/profile/image2.jpg");
     background-size: cover;
     background-repeat:no-repeat ;
     background-attachment: fixed;
@@ -21,6 +21,7 @@ body {
 .step.active {
     display: block;
 }
+
 .progress-bar {
     width: 100%;
     background-color: #353c3725;
@@ -53,9 +54,80 @@ body {
     border-radius: 40px;
     cursor: pointer;
 }
+
+.button2 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    float: right;
+    background-color: #af2114;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
 #profile-display {
     display: none;
 }
 #profile-display p {
     margin: 10px 0;
+}
+#profile-display {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(224, 240, 244, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#profile-display h2 {
+    color: #14afa2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-field {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-field label {
+    font-weight: bold;
+    width: 200px;
+    color: #333;
+}
+
+.profile-field span {
+    flex: 1;
+    padding: 5px 10px;
+    background-color: #76b1eb;
+    border-radius: 5px;
+}
+
+#profile-display .button {
+    display: block;
+    width: 200px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+#profile-phone_number {
+    font-family: monospace;
+}
+
+#profile-email {
+    font-family: monospace;
+  }
+
+.resized-image {
+    width: 200px;
+    height:auto; 
+    bottom: 0px; 
+    transform: translateY(-80%);
+
+}
+
+.error {
+    border: 2px solid red;
 }

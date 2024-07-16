@@ -3,59 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Page</title>
+    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
+    <title>Team</title>
     <link rel="stylesheet" href="../assets/css/teampage.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
 </head>
 <body>
-    <h1>Student Details</h1>
-    <div class="team-container">
-        <div class="team-member">
-            <div class="thumbnail">
-                <img src="../assets/images/st1_pic.png" alt="Team Member 1">
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo"><img src="../assets/images/logo.png" alt="Logo"></a>
+            <div class="hamburger" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-            <div class="details">
-                <h2>Linuka</h2>
-                <p><strong>Role:</strong> Student 01</p>
-                <p><strong>Designed and implemented pages:</strong><br> Splash Screen | Shop</p>
-            </div>
-        </div>
-        <div class="team-member">
-            <div class="thumbnail">
-                <img src="../assets/images/st2_pic.png" alt="Team Member 2">
-            </div>
-            <div class="details">
-                <h2>Sandaru</h2>
-                <p><strong>Role:</strong> Student 02</p>
-                <p><strong>Designed and implemented pages:</strong><br> Home Page + website template + navigation bar | Feedback</p>
-            </div>
-        </div>
-        <div class="team-member">
-            <div class="resize">
-                <div class="thumbnail">
-                    <img src="../assets/images/st3_pic.png" alt="Team Member 1">
+            <ul class="nav-items">
+                <li class="nav-item"><a href="../home.html">Home</a></li>
+                <li class="nav-item"><a href="#" class="active">Team</a></li>
+                <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
+                <li class="nav-item"><a href="../pages/shop.html" >Shop</a></li>
+                <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
+            </ul>
+            <div class="contact-and-search">
+               
+                <div class="search-icon" onclick="toggleSearch()">
+                    <img src="../assets/images/search-icon.png" alt="Search">
+                </div>
+                <div class="user-icon">
+                    <a href="../pages/userform.html" target="_blank"><img src="../assets/images/user.png" alt="user"></a>
                 </div>
             </div>
-            <div class="details">
-                <h2>Anton</h2>
-                <p><strong>Role:</strong> Student 03</p>
-                <p><strong>Designed and implemented pages:</strong><br> User Profile | Team</p>
-            </div>
         </div>
-        <div class="team-member">
-            <div class="resize">
+        <div class="search-box" id="searchBox">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
+    
+    <div class="content">
+        <h1>Student Details</h1>
+        <div class="team-container">
+            <div class="team-member">
                 <div class="thumbnail">
-                    <img src="../assets/images/st4_pic.png" alt="Team Member 1">
+                    <img src="../assets/images/st_1.png" alt="Team Member 1">
+                </div>
+                <div class="details">
+                    <h2>Linuka</h2>
+                    <p><strong>Role:</strong> Student 01</p>
+                    <p><strong>Designed and implemented pages:</strong><br> Splash Screen | Shop</p>
                 </div>
             </div>
-            <div class="details">
-                <h2>Niruthmi</h2>
-                <p><strong>Role:</strong> Student 04</p>
-                <p><strong>Designed and implemented pages:</strong><br> Gallery | Sitemap</p>
+            <div class="team-member">
+                <div class="thumbnail">
+                    <img src="../assets/images/st_2.png" alt="Team Member 2">
+                </div>
+                <div class="details">
+                    <h2>Sandaru</h2>
+                    <p><strong>Role:</strong> Student 02</p>
+                    <p><strong>Designed and implemented pages:</strong><br> Home Page + website template + navigation bar | Feedback</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="resize">
+                    <div class="thumbnail">
+                        <img src="../assets/images/st_3.png" alt="Team Member 1">
+                    </div>
+                </div>
+                <div class="details">
+                    <h2>Anton</h2>
+                    <p><strong>Role:</strong> Student 03</p>
+                    <p><strong>Designed and implemented pages:</strong><br> User Profile | Team</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="resize">
+                    <div class="thumbnail">
+                        <img src="../assets/images/st_4.png" alt="Team Member 1">
+                    </div>
+                </div>
+                <div class="details">
+                    <h2>Niruthmi</h2>
+                    <p><strong>Role:</strong> Student 04</p>
+                    <p><strong>Designed and implemented pages:</strong><br> Gallery | Sitemap</p>
+                </div>
             </div>
         </div>
-        <!-- Add more team members as needed -->
     </div>
-
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Privacy Policy</h3>
+                <a href="#">Delivery Policy</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="footer-column">
+                <h3>Branches</h3>
+                <p>Colombo 5</p>
+                <p>Nugegoda</p>
+                <p>Kandy</p>
+                <p>Matara</p>
+                <p>Welisara</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
+                <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
+                <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
+            </div>
+            <div class="footer-column footer-logo">
+                <img src="../assets/images/logo.png" alt="Supplement Warehouse Logo">
+            </div>
+            <div class="footer-column footer-icons">
+                <a href="#"><img src="../assets/images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../assets/images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Green Heven All Rights Reserved</p>
+<<<<<<< HEAD:pages/teampage.html
+            <p>Edited by: <a href="#" target="_blank">Anton Lucksman</a></p>
+=======
+            <p>Edited by: <a href="editorL.html">Anton Luckshman</a></p>
+>>>>>>> antonluckshman:pages/team.html
+            <div class="payment-methods">
+                <img src="../assets/images/visa.png" alt="Visa">
+                <img src="../assets/images/mastercard.png" alt="MasterCard">
+                <img src="../assets/images/paypal.png" alt="PayPal">
+                <img src="../assets/images/amex.png" alt="American Express">
+                <img src="../assets/images/discover.png" alt="Discover">
+            </div>
+        </div>
+    </footer>
     <script src="../assets/js/teampage.js"></script>
+    <script src="../assets/js/nav.js"></script>
 </body>
 </html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/Sandaru.css">
+    <title>Advanced Content Page</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo"><img src="../assets/images/Sandaru/logo.png" alt="Logo"></a>
+            <div class="hamburger" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#" class="active">Home</a></li>
+                <li class="nav-item"><a href="#">Products</a></li>
+                <li class="nav-item"><a href="#">Services</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+                
+            </ul>
+            <div class="contact-and-search">
+                <div class="search-icon" onclick="toggleSearch()">
+                    <img src="../assets/images/Sandaru/search-icon.png" alt="Search Icon">
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="cart-icon">
+                    <img src="../assets/images/Sandaru/cart_icon.png" alt="Cart Icon">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="background">
+        <img src="../assets/images/Sandaru/background.gif" alt="Background GIF">
+    </div>
+    <div class="content">
+        <h1 style="font-family: 'Times New Roman', Times, serif;font-size: 300%;">Sustainable Land Use Practices</h1>
+        <p style="text-align: justify;font-size: 150%;">Sustainable land use practices are essential for maintaining the health and productivity of the land while ensuring that natural resources are available for future generations. These practices involve managing land in ways that meet human needs—such as food production, housing, and recreation—without compromising the ecological balance or depleting resources.</p>
+        <p style="text-align: justify;font-size:150%;">At the heart of sustainable land use is the integration of environmental, social, and economic considerations. By adopting sustainable practices, we can reduce the negative impacts of land use, such as deforestation, soil erosion, and habitat loss, and promote positive outcomes like biodiversity conservation, climate regulation, and improved livelihoods.</p>
+        <h2>Photo Album</h2>
+        <div class="photo-album">
+            <img src="../assets/images/Sandaru/photo1.jpg" alt="Photo 1" onclick="openModal(this.src);currentSlide(1)">
+            <img src="../assets/images/Sandaru/photo2.jpg" alt="Photo 2" onclick="openModal(this.src);currentSlide(2)">
+            <img src="../assets/images/Sandaru/photo3.jpg" alt="Photo 3" onclick="openModal(this.src);currentSlide(3)">
+        </div>
+        <h2 style="font-size: 200%;">Agroecology and Sustainable Agriculture</h2>
+        <h4 style="text-align: left;font-size:150%;">Overview of Agroecology</h4>
+        <p style="text-align: justify;font-size:120%">Agroecology is a holistic approach to agriculture that integrates ecological principles, local knowledge, and social values to develop sustainable and resilient farming systems. Unlike conventional agriculture, which often relies on intensive chemical inputs and monoculture practices, agroecology emphasizes the importance of biodiversity, soil health, and ecosystem services in agricultural production. By mimicking natural ecosystems, agroecological practices promote diversified cropping systems, agroforestry, and integrated livestock management. These practices not only enhance soil fertility and water retention but also improve pest and disease control through natural means, reducing the reliance on synthetic pesticides and fertilizers. Agroecology fosters a deep connection between farmers and their landscapes, encouraging practices that conserve natural resources, preserve traditional knowledge, and promote food sovereignty. By prioritizing ecological resilience and community empowerment, agroecology offers a sustainable path forward to address global challenges such as climate change, food insecurity, and biodiversity loss, ensuring that agriculture remains viable and productive for future generations.</p>
+        <div class="paragraph">
+            <h4 style="text-align: justify;font-size:150%">Benefits of Sustainable Agriculture</h4>
+            <p style="text-align: justify;font-size:120%">
+                <span class="more-text">Sustainable agriculture benefits include preserving soil health, enhancing biodiversity, reducing greenhouse gas emissions, supporting local economies, and ensuring long-term food security. By conserving resources and promoting resilience against climate change, it fosters environmentally friendly farming practices that meet current needs without compromising future generations' ability to do the same.</span>
+            </p>
+            <button class="read-more" onclick="toggleText(this)">Read More</button>
+        </div>
+        <h2 style="font-size:200%" > Forest Conservation and Management</h2>
+        <h4 style="text-align: left;font-size:150%">Importance of Forests</h4>
+        <p style="text-align: justify;font-size:120%">Forests provide essential ecosystem services, including carbon sequestration, water regulation, and habitat for countless species. They are also vital for the livelihoods of millions of people and hold cultural significance for many communities.</p>
+        <div class="paragraph">
+            <h4 style="text-align: left;font-size:150%">Threats to Forests</h4>
+            <p style="text-align: justify;font-size:120%">
+                
+                <span class="more-text">Forests worldwide confront multifaceted threats. Deforestation driven by agriculture, urban expansion, and logging, both legal and illegal, diminishes woodland coverage. Climate change intensifies risks with more frequent and severe wildfires. Invasive species and habitat fragmentation further imperil biodiversity and disrupt ecosystems. Conservation efforts are vital to sustain forest health, biodiversity, carbon storage, and livelihoods reliant on forest resources.</span>
+            </p>
+            <button class="read-more" onclick="toggleText(this)">Read More</button>
+        </div>
+        <h2>Photo Album</h2>
+        <div class="photo-album">
+            <img src="../assets/images/Sandaru/photo4.jpg" alt="Photo 4" onclick="openModal(this.src);currentSlide(1)">
+            <img src="../assets/images/Sandaru/photo5.jpg" alt="Photo 5" onclick="openModal(this.src);currentSlide(2)">
+            <img src="../assets/images/Sandaru/photo6.jpg" alt="Photo 6" onclick="openModal(this.src);currentSlide(3)">
+            <img src="../assets/images/Sandaru/photo7.jpg" alt="Photo 7" onclick="openModal(this.src);currentSlide(4)">
+            <img src="../assets/images/Sandaru/photo8.jpg" alt="Photo 8" onclick="openModal(this.src);currentSlide(3)">
+            <img src="../assets/images/Sanadru/photo9.jpg" alt="Photo 9" onclick="openModal(this.src);currentSlide(4)">
+        </div>
+        <h2 style="font-size:200%"> Urban Green Spaces and Biodiversity</h2>
+        <h4 style="text-align: left;font-size:150%">Role of Urban Green Spaces</h4>
+        <p style="text-align: justify;font-size:120%">Urban green spaces, such as parks, gardens, and green roofs, play a crucial role in supporting urban biodiversity, mitigating the urban heat island effect, and providing recreational opportunities for residents.</p>
+        <div class="paragraph">
+            <h4 style="text-align: left;font-size:150%">Designing Biodiverse Cities</h4>
+            <p style="text-align: justify;font-size:120%">
+                 
+                <span class="more-text">Principles for creating biodiverse urban areas include incorporating native plant species, creating wildlife habitats, and designing green infrastructure. Examples include green corridors, vertical gardens, and biodiversity-friendly urban planning.</span>
+            </p>
+            <button class="read-more" onclick="toggleText(this)">Read More</button>
+        </div>
+    </div>
+    <button id="top-up-button" onclick="scrollToTop()">Top Up</button>
+    <div id="photo-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div class="caption"></div>
+    </div>
+    <div class="conclusion">
+        <div class="conclusion-content">
+            <h2 style="font-size: 150%;">Conclusion</h2>
+            <p style="text-align: justify;font-size:120%">Agroecology and sustainable agriculture play crucial roles in addressing global challenges such as food insecurity, environmental degradation, and climate change. By promoting biodiversity, improving soil health, and fostering community resilience, these practices offer viable pathways towards a more sustainable and equitable food system.
+
+                This expanded overview provides a comprehensive look at the principles and benefits of agroecology and sustainable agriculture, highlighting their importance in achieving food security and environmental sustainability.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Privacy Policy</h3>
+                <a href="#">Delivery Policy</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="footer-column">
+                <h3>Branches</h3>
+                <p>Colombo 5</p>
+                <p>Nugegoda</p>
+                <p>Kandy</p>
+                <p>Matara</p>
+                <p>Welisara</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
+                <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
+                <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
+            </div>
+            <div class="footer-column footer-logo">
+                <img src="../assets/images/Sandaru/logo.png" alt="Supplement Warehouse Logo">
+            </div>
+            <div class="footer-column footer-icons">
+                <a href="#"><img src="../assets/images/Sandaru/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../assets/images/Sandaru/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Green Heven All Rights Reserved</p>
+            <p>Edited-by:<a href="editorl.html">Sandaru Thathsra</a></p>
+            <div class="payment-methods">
+                <img src="../assets/images/Sandaru/visa.png" alt="Visa">
+                <img src="../assets/images/Sandaru/mastercard.png" alt="MasterCard">
+                <img src="../assets/images/Sandaru/paypal.png" alt="PayPal">
+                <img src="../assets/images/Sandaru/amex.png" alt="American Express">
+                <img src="../assets/images/Sandaru/discover.png" alt="Discover">
+            </div>
+        </div>
+    </footer>
+</hr>
+    <script>
+        function toggleText(button) {
+            const moreText = button.previousElementSibling.querySelector('.more-text');
+            if (moreText.style.display === "none" || moreText.style.display === "") {
+                moreText.style.display = "inline";
+                button.textContent = "Read Less";
+            } else {
+                moreText.style.display = "none";
+                button.textContent = "Read More";
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openModal(src) {
+            var modal = document.getElementById('photo-modal');
+            var modalImg = document.getElementById('modal-image');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+        }
+        function closeModal() {
+            var modal = document.getElementById('photo-modal');
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('photo-modal')) {
+                closeModal();
+            }
+        }
+
+        document.onkeydown = function(event) {
+            event = event || window.event;
+            if (event.keyCode == 27) {
+                closeModal();
+            }
+        }
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function toggleNav() {
+            document.querySelector('.nav-items').classList.toggle('active');
+        }
+
+        function toggleSearch() {
+            document.querySelector('.search-box').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

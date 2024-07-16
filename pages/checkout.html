@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/checkout.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,17 +19,18 @@
                 <div class="bar"></div>
             </div>
             <ul class="nav-items">
-                <li class="nav-item"><a href="/home.html" class="active">Home</a></li>
+                <li class="nav-item"><a href="../home.html">Home</a></li>
                 <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
-                <li class="nav-item"><a href="#">Gallery</a></li>
-                <li class="nav-item"><a href="../pages/shop.html">Shop</a></li>
+                <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
+                <li class="nav-item"><a href="../pages/shop.html" class="active">Shop</a></li>
+                <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
             </ul>
             <div class="contact-and-search">
-                <div class="contact-number">
-                    <a href="tel:+1234567890">+1 (234) 567-890</a>
-                </div>
                 <div class="search-icon" onclick="toggleSearch()">
                     <img src="../assets/images/search-icon.png" alt="Search">
+                </div>
+                <div class="user-icon">
+                    <a href="../pages/userform.html" target="_blank"><img src="../assets/images/user.png" alt="user"></a>
                 </div>
             </div>
         </div>
@@ -43,12 +44,11 @@
             <form id="personal-details-form">
                 <div>
                     <h1 class="head">Almost there!</h1>
-                    <p>Please Provide your shipping details</p>
                 </div>
                 <h1>Personal Details</h1>
                 <div class="form-group">
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" name="first-name" required>
+                    <input type="text" id="first-name" name="first-name" required placeholder="Enter First Name">
                     <span class="error-message" id="first-name-error"></span>
                 </div>
                 <div class="form-group">
@@ -93,8 +93,8 @@
                 </div>
             </form>
         </div>
-        <button type="submit" class="checkout-button">Save Details</button>
-        <a href="../pages/shop.html">Go back</a>
+        <button type="submit" class="save-button" >Save Details</button>
+        <a href="../pages/shop.html" class="back">◀Go back</a>
         <div id="order-confirmation" class="order-confirmation">
             <p>Thank you for your order! Your order has been successfully placed.</p>
         </div>
@@ -105,7 +105,12 @@
         <p>Shipping (5%) <span id="shipping-price"></span></p>
         <p>Tax <span id="tax-price"></span></p>
         <p>Sub total <span id="subtotal-price"></span></p>
-        <button class="checkout-button">Proceed to Pay</button>
+        <div id="saved-details" class="saved-details">
+            <h3>Shipping Details:</h3>
+            <p id="saved-name"></p>
+            <p id="saved-address"></p>
+        </div>
+        <button class="proceed-button">Proceed to Pay</button>
         <div>
             <h3>Choose Payment Option</h3>
             <i id="amex" class="fa fa-cc-amex payment-option" style="font-size:36px"></i>
@@ -145,7 +150,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Green Heaven All Rights Reserved</p>
+            <p>&copy; 2024 Green Haven All Rights Reserved</p>
+            <p>Edited by: <a href="editorL.html" target="_blank">Linuka Arambawela</a></p>
             <div class="payment-methods">
                 <img src="../assets/images/visa.png" alt="Visa">
                 <img src="../assets/images/mastercard.png" alt="MasterCard">

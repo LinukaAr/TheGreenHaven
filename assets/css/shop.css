@@ -11,17 +11,17 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: #ccc;
+    background-color: #fff;
 }
 
 .title {
     color: rgb(3, 29, 24);
     font-family: "Archivo Black", sans-serif;
-    font-size: 70px;
-    margin-top: 60px;
+    font-size: 40px;
+    margin-top: 110px;
     width: 70%;
     text-align: center;
-    margin-top: 100px;
+    
 }
 
 .main-container {
@@ -40,6 +40,10 @@ body {
     width: 61%;
 }
 
+select{
+    border-radius: 15px;
+}
+
 .product-card {
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -49,16 +53,21 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
     width: 275px;
     text-align: center;
-    background-color: rgba(177, 186, 179, 0.8);
+    background-color: #ccc;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
+.dog{
+    padding-top: 40px;
+    width:200px;
+    align-items: center;
+}
 .product-image {
     width: 100%;
+    height: 40px;
     height: auto;
     border-radius: 10px;
 }
@@ -83,17 +92,30 @@ body {
     cursor: pointer;
 }
 
+.add-to-cart:hover, .checkout-button:hover {
+    background-color: #105f23;
+    color: white;
+}
+
 .cart {
     width: 30%;
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #ccc;
     height: fit-content;
     position: absolute; 
     top: 225px; 
     right: 20px; 
+}
+
+.remove-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 .checkout-button {
@@ -123,6 +145,22 @@ select{
     justify-content: space-between;
     margin-top: 10px;
     font-size: 1.2em;
+}
+
+.main-container, .product-card {
+    animation: zoomIn 0.8s ease-in-out;
+}
+
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 
