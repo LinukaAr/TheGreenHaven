@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(../images/BG..jpg);
+    background-image: url(../images/BG..webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -52,16 +52,16 @@ body {
 }
 
 h1 {
-    color: rgb(255, 255, 255);
+    color: white;
     font-family: "Archivo Black", sans-serif;
-    font-size: 90px;
-    margin-top: 10px;
+    font-size: 110px;
+    margin-top: 5px;
 }
 
 h2 {
     padding-top: 20px;
     padding-bottom: 15px;
-    color: #011003;
+    color: white;
 }
 
 .members {

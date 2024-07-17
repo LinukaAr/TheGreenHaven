@@ -1,338 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon" />
     <title>Shop</title>
-    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/shop.css">
-    <link rel="stylesheet" href="../assets/css/navbar.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/shop.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="brand-logo"><img src="../assets/images/logo.png" alt="Logo"></a>
-            <div class="hamburger" onclick="toggleNav()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="nav-items">
-                <li class="nav-item"><a href="../home.html">Home</a></li>
-                <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
-                <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
-                <li class="nav-item"><a href="../pages/shop.html" class="active">Shop</a></li>
-                <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
-            </ul>
-            <div class="contact-and-search">
-                <div class="search-icon" onclick="toggleSearch()">
-                    <img src="../assets/images/search-icon.png" alt="Search">
-                </div>
-                <div class="user-icon">
-                    <a href="pages/userform.html" target="_blank"><img src="../assets/images/user.png" alt="user"></a>
-                </div>
-            </div>
+      <div class="navbar-container">
+        <a href="#" class="brand-logo"
+          ><img src="../assets/images/logo.png" alt="Logo"
+        /></a>
+        <div class="hamburger" onclick="toggleNav()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
-        <div class="search-box" id="searchBox">
-            <input type="text" placeholder="Search...">
+        <ul class="nav-items">
+          <li class="nav-item"><a href="../home.html">Home</a></li>
+          <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
+          <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
+          <li class="nav-item">
+            <a href="../pages/shop.html" class="active">Shop</a>
+          </li>
+          <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
+        </ul>
+        <div class="contact-and-search">
+          <div class="search-icon" onclick="toggleSearch()">
+            <img src="../assets/images/search-icon.png" alt="Search" />
+          </div>
+          <div class="user-icon">
+            <a href="pages/userform.html" target="_blank"
+              ><img src="../assets/images/user.png" alt="user"
+            /></a>
+          </div>
         </div>
+      </div>
+      <div class="search-box" id="searchBox">
+        <input type="text" placeholder="Search..." />
+      </div>
     </nav>
-    
-	<h1 class="title">Buy some merch : Help to save animals &#x1f415; </h1>
+
+    <h1 class="title">Buy Some Merch: Help Save Animals</h1>
     <div id="product-showcase">
-       
-        <div class="product-card">
-            <img src="../assets/images/product1.PNG" alt="shirt" class="product-image">
-            <h3 class="product-title">T-shirt</h3>
-            <p class="product-description">Cotton unisex t-shirt</p>
-            <p class="product-price">$25.00</p>
-            <div class="product-options">
-                <label for="size1">Size:</label>
-                <select id="size1" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-                <label for="color1">Color:</label>
-                <select id="color1" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-                <label for="quantity1">Quantity</label>
-                <select id="quantity1" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
+      <div class="product-card">
+        <img
+          src="../assets/images/product1.PNG"
+          alt="shirt"
+          class="product-image"
+        />
+        <h3 class="product-title">T-shirt</h3>
+        <p class="product-description">Cotton unisex t-shirt</p>
+        <p class="product-price">$25.00</p>
+        <div class="product-options">
+          <label for="size1">Size:</label>
+          <select id="size1" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <label for="color1">Color:</label>
+          <select id="color1" name="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <label for="quantity1">Quantity</label>
+          <select id="quantity1" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
-        <div class="product-card">
-            <img src="../assets/images/product2.PNG" alt="ong Sleeve T-shirt" class="product-image">
-            <h3 class="product-title">Long Sleeve </h3>
-            <p class="product-description">Cotton Long Sleeve T-shirt</p>
-            <p class="product-price">$30.00</p>
-            <div class="product-options">
-                <label for="size2">Size:</label>
-                <select id="size2" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-                <label for="color2">Color:</label>
-                <select id="color2" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-                <label for="quantity2">Quantity</label>
-                <select id="quantity2" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="../assets/images/product2.PNG"
+          alt="ong Sleeve T-shirt"
+          class="product-image"
+        />
+        <h3 class="product-title">Long Sleeve</h3>
+        <p class="product-description">Cotton Long Sleeve T-shirt</p>
+        <p class="product-price">$30.00</p>
+        <div class="product-options">
+          <label for="size2">Size:</label>
+          <select id="size2" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <label for="color2">Color:</label>
+          <select id="color2" name="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <label for="quantity2">Quantity</label>
+          <select id="quantity2" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
-		<div class="product-card">
-            <img src="../assets/images/product3.PNG" alt="Women's T-shirt" class="product-image">
-            <h3 class="product-title"> V-Neck T-shirt</h3>
-            <p class="product-description">New Era Women's T-shirt</p>
-            <p class="product-price">$35.00</p>
-            <div class="product-options">
-                <label for="size3">Size:</label>
-                <select id="size3" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-                <label for="color3">Color:</label>
-                <select id="color3" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-                <label for="quantity3">Quantity</label>
-                <select id="quantity3" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="../assets/images/product3.PNG"
+          alt="Women's T-shirt"
+          class="product-image"
+        />
+        <h3 class="product-title">V-Neck T-shirt</h3>
+        <p class="product-description">New Era Women's T-shirt</p>
+        <p class="product-price">$35.00</p>
+        <div class="product-options">
+          <label for="size3">Size:</label>
+          <select id="size3" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <label for="color3">Color:</label>
+          <select id="color3" name="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <label for="quantity3">Quantity</label>
+          <select id="quantity3" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
-		<div class="product-card">
-            <img src="../assets/images/product4.PNG" alt="cap" class="product-image">
-            <h3 class="product-title">Cap</h3>
-            <p class="product-description">Unisex Cap</p>
-            <p class="product-price">$10.00</p>
-            <div class="product-options">
-                <label for="size4">Size:</label>
-                <select id="size4" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-                <label for="color4">Color:</label>
-                <select id="color4" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-                <label for="quantity4">Quantity</label>
-                <select  id="quantity4" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="../assets/images/product4.PNG"
+          alt="cap"
+          class="product-image"
+        />
+        <h3 class="product-title">Cap</h3>
+        <p class="product-description">Unisex Cap</p>
+        <p class="product-price">$10.00</p>
+        <div class="product-options">
+          <label for="size4">Size:</label>
+          <select id="size4" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <label for="color4">Color:</label>
+          <select id="color4" name="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <label for="quantity4">Quantity</label>
+          <select id="quantity4" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
-		<div class="product-card">
-            <img src="../assets/images/product5.PNG" alt="mug" class="product-image">
-            <h3 class="product-title">Mug</h3>
-            <p class="product-description">GreenHaven Mug</p>
-            <p class="product-price">$5.00</p>
-            <div class="product-options">
-                <label for="size5">Size:</label>
-                <select id="size5" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-                <label for="color5">Color:</label>
-                <select id="color5" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-                <label for="quantity5">Quantity</label>
-                <select id="quantity5" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="../assets/images/product5.PNG"
+          alt="mug"
+          class="product-image"
+        />
+        <h3 class="product-title">Mug</h3>
+        <p class="product-description">GreenHaven Mug</p>
+        <p class="product-price">$5.00</p>
+        <div class="product-options">
+          <label for="size5">Size:</label>
+          <select id="size5" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <label for="color5">Color:</label>
+          <select id="color5" name="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <label for="quantity5">Quantity</label>
+          <select id="quantity5" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
-		<div class="product-card">
-            <img src="../assets/images/product6.PNG" alt="Product" class="product-image">
-            <h3 class="product-title">Clock</h3>
-            <p class="product-description">Wall clock</p>
-            <p class="product-price">$10.00</p>
-            <div class="product-options">
-                <label for="size6">Size:</label>
-                <select id="size6" name="size">
-                    <!-- <option value="small">Small</option>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="../assets/images/product6.PNG"
+          alt="Product"
+          class="product-image"
+        />
+        <h3 class="product-title">Clock</h3>
+        <p class="product-description">Wall clock</p>
+        <p class="product-price">$10.00</p>
+        <div class="product-options">
+          <label for="size6">Size:</label>
+          <select id="size6" name="size">
+            <!-- <option value="small">Small</option>
                     <option value="medium">Medium</option>
                     <option value="large">Large</option> -->
-                </select>
-                <label for="color6">Color:</label>
-                <select id="color6" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-                <label for="quantity6">Quantity</label>
-                <select id="quantity6" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
+          </select>
+          <label for="color6">Color:</label>
+          <select id="color6" name="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <label for="quantity6">Quantity</label>
+          <select id="quantity6" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
-		<div class="product-card">
-            <img src="../assets/images/cs.png" alt="Product 1" class="product-image">
-            <h3 class="product-title">Product</h3>
-            <p class="product-description">Description</p>
-            <p class="product-price">$00.00</p>
-            <div class="product-options">
-                <label for="size7">Size:</label>
-                <select id="size7" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-                <label for="color7">Color:</label>
-                <select id="color7" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-                <label for="quantity7">Quantity</label>
-                <select id="quantity7" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="../assets/images/cs.png"
+          alt="Product 1"
+          class="product-image"
+        />
+        <h3 class="product-title">Product</h3>
+        <p class="product-description">Description</p>
+        <p class="product-price">$00.00</p>
+        <div class="product-options">
+          <label for="size7">Size:</label>
+          <select id="size7" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <label for="color7">Color:</label>
+          <select id="color7" name="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <label for="quantity7">Quantity</label>
+          <select id="quantity7" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
-		<div class="product-card">
-            <img src="../assets/images/cs.png" alt="Product" class="product-image">
-            <h3 class="product-title">Product </h3>
-            <p class="product-description">Description</p>
-            <p class="product-price">$00.00</p>
-            <div class="product-options">
-                <label for="size8">Size:</label>
-                <select id="size8" name="size">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-                <label for="color8">Color:</label>
-                <select id="color8" name="color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-                <label for="quantity8">Quantity</label>
-                <select id="quantity8" name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="../assets/images/cs.png"
+          alt="Product"
+          class="product-image"
+        />
+        <h3 class="product-title">Product</h3>
+        <p class="product-description">Description</p>
+        <p class="product-price">$00.00</p>
+        <div class="product-options">
+          <label for="size8">Size:</label>
+          <select id="size8" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <label for="color8">Color:</label>
+          <select id="color8" name="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <label for="quantity8">Quantity</label>
+          <select id="quantity8" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
     </div>
     <div>
-        <div class="cart">
-            <div class="cart-summary">
-                <h2><i class="fa-solid fa-cart-shopping"></i> Your Cart is empty</h2>
-                <p>.</p>
-                <strong>Total:</strong> <span>0$</span>       
-            </div>
-        <button class="checkout-button">Proceed to Checkout</button><br>
-        <img src="../assets/images/giphy.gif" alt="dog" class="dog">
+      <div class="cart">
+        <div class="cart-summary">
+          <h2><i class="fa-solid fa-cart-shopping"></i> Your Cart is empty</h2>
+          <p>.</p>
+          <strong>Total:</strong> <span>0$</span>
         </div>
+        <button class="checkout-button">Proceed to Checkout</button><br />
+        <!-- <img src="../assets/images/giphy.gif" alt="dog" class="dog"> -->
+      </div>
     </div>
 
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Privacy Policy</h3>
-                <a href="#">Delivery Policy</a>
-                <a href="#">FAQs</a>
-            </div>
-            <div class="footer-column">
-                <h3>Branches</h3>
-                <p>Colombo 5</p>
-                <p>Nugegoda</p>
-                <p>Kandy</p>
-                <p>Matara</p>
-                <p>Welisara</p>
-            </div>
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
-                <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
-                <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
-            </div>
-            <div class="footer-column footer-logo">
-                <img src="../assets/images/logo.png" alt="Logo">
-            </div>
-            <div class="footer-column footer-icons">
-                <a href="#"><img src="../assets/images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="../assets/images/instagram.png" alt="Instagram"></a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Privacy Policy</h3>
+          <a href="#">Delivery Policy</a>
+          <a href="#">FAQs</a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Green Haven All Rights Reserved </p>
-            <p>Edited by: <a href="editorL.html" target="_blank">Linuka Arambawela</a></p>
-            <div class="payment-methods">
-                <img src="../assets/images/visa.png" alt="Visa">
-                <img src="../assets/images/mastercard.png" alt="MasterCard">
-                <img src="../assets/images/paypal.png" alt="PayPal">
-                <img src="../assets/images/amex.png" alt="American Express">
-                <img src="../assets/images/discover.png" alt="Discover">
-            </div>
+        <div class="footer-column">
+          <h3>Branches</h3>
+          <p>Colombo 5</p>
+          <p>Nugegoda</p>
+          <p>Kandy</p>
+          <p>Matara</p>
+          <p>Welisara</p>
         </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
+          <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
+          <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
+        </div>
+        <div class="footer-column footer-logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
+        </div>
+        <div class="footer-column footer-icons">
+          <a href="#"
+            ><img src="../assets/images/facebook.png" alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img src="../assets/images/instagram.png" alt="Instagram"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Green Haven All Rights Reserved</p>
+        <p>
+          Edited by:
+          <a href="editorL.html" target="_blank">Linuka Arambawela</a>
+        </p>
+        <div class="payment-methods">
+          <img src="../assets/images/visa.png" alt="Visa" />
+          <img src="../assets/images/mastercard.png" alt="MasterCard" />
+          <img src="../assets/images/paypal.png" alt="PayPal" />
+          <img src="../assets/images/amex.png" alt="American Express" />
+          <img src="../assets/images/discover.png" alt="Discover" />
+        </div>
+      </div>
     </footer>
-    <script  src="../assets/js/scriptL.js"></script>
-    <script  src="../assets/js/nav.js"></script>
-</body>
+    <script src="../assets/js/scriptL.js"></script>
+    <script src="../assets/js/nav.js"></script>
+  </body>
 </html>
