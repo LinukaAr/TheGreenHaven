@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/feedback.css">
+    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form id="feedback-form" onsubmit="return validateForm()">
+            <p class="required">Required fields *</p>
+
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Was this your first time visiting?</label>
+            <input type="radio" id="first-time-yes" name="first-time" value="yes" required> Yes
+            <input type="radio" id="first-time-no" name="first-time" value="no" required> No
+
+            <label>Was this website informative and easy to navigate through?</label>
+            <input type="radio" id="informative-yes" name="informative" value="yes" required> Yes
+            <input type="radio" id="informative-no" name="informative" value="no" required> No
+
+            <label>If "No", suggest any improvements for the future:</label>
+            <textarea id="improvements" name="improvements"></textarea>
+
+            <label>How satisfied are you with our services?</label>
+            <div class="rating">
+                <label>1<input type="radio" name="satisfaction" value="1" required></label>
+                <label>2<input type="radio" name="satisfaction" value="2" required></label>
+                <label>3<input type="radio" name="satisfaction" value="3" required></label>
+                <label>4<input type="radio" name="satisfaction" value="4" required></label>
+                <label>5<input type="radio" name="satisfaction" value="5" required></label>
+                <label>6<input type="radio" name="satisfaction" value="6" required></label>
+                <label>7<input type="radio" name="satisfaction" value="7" required></label>
+                <label>8<input type="radio" name="satisfaction" value="8" required></label>
+                <label>9<input type="radio" name="satisfaction" value="9" required></label>
+                <label>10<input type="radio" name="satisfaction" value="10" required></label>
+            </div>
+
+            <label>Would you recommend our services?</label>
+            <input type="radio" id="recommend-yes" name="recommend" value="yes" required> Yes
+            <input type="radio" id="recommend-no" name="recommend" value="no" required> No
+
+            <label>Would you like to receive updates about the website and any offers?</label>
+            <select id="updates" name="updates">
+                <option value="yes-email">Yes - via Email</option>
+                <option value="yes-sms">Yes - via SMS</option>
+                <option value="no">No</option>
+            </select>
+
+            <label>Do you have any additional questions or requests?</label>
+            <textarea id="additional-comments" name="additional-comments"></textarea>
+
+            <button type="submit">Submit</button>
+            <button id="back-home">Home</button>
+        </form>
+
+        <div id="confirmation-message">
+            <h3>Please confirm your submission.</h3>
+            <button id="confirm-submit">Submit</button>
+            <button id="reset-form">Reset</button>
+        </div>
+
+        <div id="final-message">
+            <h3>Thank you for your feedback!</h3>
+            <p>Your feedback has been submitted successfully.</p>
+        </div>
+    </div>
+
+    <script>
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        function validateForm() {
+            const form = document.getElementById('feedback-form');
+            const email = form.email.value;
+            const requiredFields = form.querySelectorAll('input[required], textarea[required], select[required]');
+
+            let valid = true;
+
+            requiredFields.forEach(field => {
+                if (field.type === 'radio') {
+                    const name = field.name;
+                    const checked = form.querySelector(`input[name="${name}"]:checked`);
+                    if (!checked) {
+                        field.classList.add('error');
+                        valid = false;
+                    } else {
+                        field.classList.remove('error');
+                    }
+                } else if (!field.value) {
+                    field.classList.add('error');
+                    valid = false;
+                } else {
+                    field.classList.remove('error');
+                }
+            });
+
+            if (!validateEmail(email)) {
+                form.email.classList.add('error');
+                valid = false;
+            } else {
+                form.email.classList.remove('error');
+            }
+
+            if (valid) {
+                // Show confirmation message
+                form.style.display = 'none';
+                document.getElementById('confirmation-message').style.display = 'block';
+            }
+
+            return false;
+        }
+
+        document.getElementById('back-home').addEventListener('click', function () {
+            const form = document.getElementById('feedback-form');
+            form.reset();
+            window.location.href = 'home.html';
+        });
+
+        document.getElementById('confirm-submit').addEventListener('click', function() {
+            document.getElementById('confirmation-message').style.display = 'none';
+            document.getElementById('final-message').style.display = 'block';
+
+            // Redirect to home page after 10 seconds
+            setTimeout(function() {
+                window.location.href = '../home.html'; 
+            }, 3000);
+        });
+
+        document.getElementById('reset-form').addEventListener('click', function() {
+            const form = document.getElementById('feedback-form');
+            form.reset();
+            form.style.display = 'block';
+            document.getElementById('confirmation-message').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
+

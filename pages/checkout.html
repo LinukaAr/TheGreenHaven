@@ -22,11 +22,15 @@
                 <li class="nav-item"><a href="../home.html">Home</a></li>
                 <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
                 <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
-                <li class="nav-item"><a href="../pages/shop.html">Shop</a></li>
+                <li class="nav-item"><a href="../pages/shop.html" class="active">Shop</a></li>
+                <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
             </ul>
             <div class="contact-and-search">
                 <div class="search-icon" onclick="toggleSearch()">
                     <img src="../assets/images/search-icon.png" alt="Search">
+                </div>
+                <div class="user-icon">
+                    <a href="../pages/userform.html" target="_blank"><img src="../assets/images/user.png" alt="user"></a>
                 </div>
             </div>
         </div>
@@ -44,7 +48,7 @@
                 <h1>Personal Details</h1>
                 <div class="form-group">
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" name="first-name" required>
+                    <input type="text" id="first-name" name="first-name" required placeholder="Enter First Name">
                     <span class="error-message" id="first-name-error"></span>
                 </div>
                 <div class="form-group">
@@ -89,7 +93,7 @@
                 </div>
             </form>
         </div>
-        <button type="submit" class="save-button">Save Details</button>
+        <button type="submit" class="save-button" >Save Details</button>
         <a href="../pages/shop.html" class="back">◀Go back</a>
         <div id="order-confirmation" class="order-confirmation">
             <p>Thank you for your order! Your order has been successfully placed.</p>
@@ -101,6 +105,11 @@
         <p>Shipping (5%) <span id="shipping-price"></span></p>
         <p>Tax <span id="tax-price"></span></p>
         <p>Sub total <span id="subtotal-price"></span></p>
+        <div id="saved-details" class="saved-details">
+            <h3>Shipping Details:</h3>
+            <p id="saved-name"></p>
+            <p id="saved-address"></p>
+        </div>
         <button class="proceed-button">Proceed to Pay</button>
         <div>
             <h3>Choose Payment Option</h3>

@@ -1,8 +1,0 @@
-# Ignore .vscode directory
-.vscode/
-
-# Ignore .vscode settings for Windows, Mac, and Linux
-*.code-workspace
-.vscode/*.*
-
-README.md

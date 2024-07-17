@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 body{
-    background-image: url("../images/home/background.gif");
+    background-image: url(../images/background.gif);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -73,9 +73,10 @@ header{
 }
 .nav-item a:hover,
 .nav-item a.active {
-    background-color: #4a4950;
-    border-radius: 5px;
-    color: red;
+  background-color: #4a4950;
+  border-radius: 5px;
+  color: #fff;
+
 }
 .contact-number a {
     color: #fff;
@@ -84,11 +85,11 @@ header{
     margin-left: 1rem;
 }
 .search-icon img,
-.cart-icon img {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    margin-left: 3rem;
+.cart-icon img, .user-icon img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-left: 3rem;
 }
 
 .search-box {
@@ -293,6 +294,16 @@ main{
 .container a{
     color: white;
     font-weight: bolder;
+}
+
+footer a{
+  text-decoration: none;
+  color: #12a1e8;
+}
+
+.payment-methods img {
+  width: 40px;
+  margin: 0 0.5rem;
 }
 
 .heading{

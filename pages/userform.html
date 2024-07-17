@@ -3,76 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
-    <title>Progressive User Profile</title>
+    <title>User Profile Builder</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../assets/css/userform.css">
 </head>
 <body>
-    <div id="profile-setup">
-        <div class="progress-bar">
-            <div class="progress" id="progress"></div>
+
+    <main class="profile-builder">
+        <div class="progress-section">
+            <div class="progress-bar">
+                <div id="progress-bar-fill"></div>
+            </div>
+            <p id="progress-text">Profile Completion: 0%</p>
         </div>
-        <div id="steps-container">
-            <!-- Step 1: Basic Information -->
-            <div class="step active" id="step-1">
-                <p>Hi! Let's start by getting to know you. Enter  your </p>
-                <p>First name:</p>
-                <input type="text" id="first_name" />
-                <p>Last name:</p>
-                <input type="text" id="last_name" />
-                <p>Age:</p>
-                <input type="text" id="age" />
-                <p>Gender:</p>
-                <input type="text" id="gender" />
-                <p>Education:</p>
-                <input type="text" id="education" />
-                <p>Profession:</p>
-                <input type="text" id="profession" /><br>
-                <button class="button" onclick="nextStep()">Next</button>
-            </div>
 
-            <!-- Step 2: Personal Details -->
-            <div class="step" id="step-2">
-                <p>Great, <span id="display-name"></span>! What's your preferred username?</p>
-                <input type="text" id="username" />
-                <p>password:</p>
-                <input type="password" id="password" />
-                <p>Password Confirmation:</p>
-                <input type="password" id="password_confirmation" />
-                <p>Email:</p>
-                <input type="text" id="email" /><hr>
-                <p>Have you ever participated in any environmental conservation activities?:</p>
-                <input type="text" id="q2" />
-                <p>Do you think sustainable land management practices are achievable on a global scale?:</p>
-                <input type="text" id="q3" /><br>
-                <button class="button" onclick="nextStep()">Next</button>
-                <button class="button1" onclick="backStep()">Previous</button>
+        <h1>Hi! Let's start by getting to know you</h1>
+        <div class="profile-container">
+            <div class="prompt-area">
+                <div class="prompt-card">
+                    <div id="current-prompt"></div>
+                    <div class="button-group">
+                        <button id="next-btn" class="btn btn-primary">Next</button>
+                        <button id="skip-btn" class="btn btn-secondary">Skip</button>
+                        <button id="review-btn" class="btn btn-primary" style="display: none;">Review Profile</button>
+                        <a href="../home.html" class="btn btn-cancel">Cancel</a>
+                    </div>
+                </div>
             </div>
-
-            <!-- Step 3: Completion -->
-            <div class="step" id="step-completion">
-                <p>Thank you for providing your information. Your profile is now completed!</p>
-                <button class="button" onclick="showProfile()">Show Profile</button>
+            <div class="profile-output" id="profile-output-section">
+                <div class="profile-card">
+                    <h2>Your Profile</h2>
+                    <div id="profile-content"></div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div id="profile-display">
-                    <h2>User Profile</h2>
-                    <p><strong>First Name:</strong> <span id="profile-first-name"></span></p>
-        <p><strong>Last Name:</strong> <span id="profile-last-name"></span></p>
-        <p><strong>Age:</strong> <span id="profile-age"></span></p>
-        <p><strong>Gender:</strong> <span id="profile-gender"></span></p>
-        <p><strong>Education:</strong> <span id="profile-education"></span></p>
-        <p><strong>Profession:</strong> <span id="profile-profession"></span></p>
-        <p><strong>Username:</strong> <span id="profile-username"></span></p>
-        <p><strong>Password:</strong> <span id="profile-password"></span></p>
-        <p><strong>Email:</strong> <span id="profile-email"></span></p>
-        <p><strong>Environmental Activities Participation:</strong> <span id="profile-q2"></span></p>
-        <p><strong>Sustainable Land Management Opinion:</strong> <span id="profile-q3"></span></p>
-        <button class="button" onclick="editProfile()">Edit Profile</button>
-    </div>
-    
+    </main>
 
     <script src="../assets/js/userform.js"></script>
 </body>
