@@ -41,6 +41,22 @@ body {
     right: 20px; 
 }
 
+.saved-details {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.saved-details h3 {
+    margin: 0 0 10px;
+}
+.saved-details p {
+    margin: 5px 0;
+}
+
+
 .proceed-button {
     padding: 10px 20px;
     background-color: #28a745;
@@ -60,16 +76,6 @@ body {
 .order {
     font-size: 30px;
     font-weight: bold;
-}
-
-.footer {
-    clear: both;
-    width: 100%;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    position: relative;
 }
 
 .head {
@@ -137,6 +143,9 @@ input[type="text"], input[type="email"], input[type="tel"] {
 }
 
 @media (max-width: 768px) {
+    .body{
+        width: 100%;
+    }
     .checkout-container {
         width: 80%;
         margin-right: auto; 
@@ -145,7 +154,6 @@ input[type="text"], input[type="email"], input[type="tel"] {
     }
 
     .order-summary {
-        width: 90%; 
         position: relative; 
         margin: 20px auto; 
         border-radius: 0;
@@ -154,11 +162,5 @@ input[type="text"], input[type="email"], input[type="tel"] {
         right: 0; 
     }
 
-    .footer {
-        width: 100%;
-    }
-
-    .navbar {
-        width: 100%;
-    }
+   
 }

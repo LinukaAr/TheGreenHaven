@@ -33,7 +33,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+.navbar {
+  background-color: transparent;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand-logo img {
+  height: 70px;
 }
 
 .profile-card {
@@ -41,7 +62,7 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 800px;
-  height: 350px;
+  height: 390px;
   width: 100%;
   border-radius: 25px;
   padding: 30px;
@@ -54,6 +75,10 @@ body {
   position: relative;
   height: 150px;
   width: 150px;
+}
+
+span{
+  margin-bottom: 7px;
 }
 
 .image .profile-pic {
@@ -126,7 +151,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  background-color: #0893c2;
+  
 }
 
 .container {

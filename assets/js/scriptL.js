@@ -117,6 +117,7 @@ const saveButton = document.querySelector('.save-button');
 saveButton.addEventListener('click', (event) => {
   event.preventDefault();
   validateForms();
+  printNameAndAddress();
 });
 
 function validateForms() {
@@ -198,4 +199,24 @@ function validatePhone(phoneInput) {
 function displayErrorMessage(input, message) {
   const errorMessage = input.nextElementSibling;
   errorMessage.textContent = message;
+}
+
+function printNameAndAddress() {
+    const firstName = document.getElementById("first-name").value;
+    const lastName = document.getElementById("last-name").value;
+    const address = document.getElementById("address").value;
+    const city = document.getElementById("city").value;
+    const state = document.getElementById("state").value;
+    const zip = document.getElementById("zip").value;
+
+    const fullName = `${firstName} ${lastName}`;
+    const fullAddress = `${address}, ${city}, ${state}, ${zip}`;
+
+    console.log(`Full Name: ${fullName}`);
+    console.log(`Full Address: ${fullAddress}`);
+
+    document.getElementById("saved-name").textContent = ` ${fullName}`;
+    document.getElementById("saved-address").textContent = ` ${fullAddress}`;
+
+    document.getElementById("saved-details").style.display = 'block';
 }
