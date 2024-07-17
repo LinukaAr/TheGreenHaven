@@ -67,7 +67,7 @@ input[type="radio"] {
   width: 30px;
 }
 
-button {
+button, .button {
   background: #28a745;
   color: #fff;
   border: none;
@@ -75,6 +75,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
   margin: 5px;
+  text-decoration: none;
 }
 
 button:hover {

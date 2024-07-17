@@ -1,153 +1,211 @@
-let currentStep = 0;
-const totalSteps = 3; // Adjust this as you add more steps
-const steps = document.querySelectorAll('.step');
-const progress = document.getElementById('progress');
+const prompts = [
+    { category: "Personal Details", question: "What's your full name?", key: "Name" },
+    { category: "Personal Details", question: "How old are you?", key: "age" },
+    { category: "Personal Details", question: "Which country are you from?", key: "Country" },
+    { category: "Contact Information", question: "What's your email address?", key: "Email" },
+    { category: "Contact Information", question: "What's your phone number?", key: "Phone" },
+    { category: "Personal Details", question: "What's your sex?", key: "sex" },
+    { category: "Professional Information", question: "What's your profession?", key: "Profession" },
+    { category: "Account Details", question: "Choose a username:", key: "username" },
+    { category: "Account Details", question: "Create a password:", key: "password", type: "password" },
+    { category: "Account Details", question: "Confirm your password:", key: "confirmPassword", type: "password" },
+    { category: "Environmental Activities", question: "Have you participated in any environmental clean-up events?", key: "CleanupEvents" },
+    { category: "Environmental Activities", question: "Do you practice recycling at home or work?", key: "recyclingHabits" },
+    { category: "Environmental Activities", question: "Have you ever planted a tree or participated in a tree-planting event?", key: "TreePlanting" },
+    { category: "Environmental Interest", question: "Are you interested in participating in future environmental activities?", key: "EnvironmentalInterest" }
+];
+let currentPromptIndex = 0;
+let userProfile = {};
 
-function updateDisplayName() {
-    const firstName = document.getElementById('first_name').value;
-    document.getElementById('display-name').textContent = firstName;
-}
+const reviewBtn = document.getElementById('review-btn');
+const currentPromptElement = document.getElementById('current-prompt');
+const nextBtn = document.getElementById('next-btn');
+const skipBtn = document.getElementById('skip-btn');
+const profileContent = document.getElementById('profile-content');
+const progressBarFill = document.getElementById('progress-bar-fill');
+const progressText = document.getElementById('progress-text');
+const profileOutputSection = document.getElementById('profile-output-section');
 
-function nextStep() {
-    if (validateStep(currentStep)) {
-        steps[currentStep].classList.remove('active');
-        currentStep++;
-        if (currentStep < steps.length) {
-            steps[currentStep].classList.add('active');
-        }
-    updateProgress();
-    updateDisplayName();
-    }  
-}
+profileOutputSection.style.display = 'none';
 
-function backStep() {
-    steps[currentStep].classList.remove('active');
-    currentStep--;
-    if (currentStep >= 0) {
-        steps[currentStep].classList.add('active');
+function displayPrompt() {
+    const prompt = prompts[currentPromptIndex];
+    const inputType = prompt.type || 'text';
+    let inputHTML = '';
+
+    if (['cleanupEvents', 'recyclingHabits', 'treePlanting', 'environmentalInterest'].includes(prompt.key)) {
+        inputHTML = `
+            <div class="yes-no-buttons">
+                <button class="yes-no-btn" data-value="Yes">Yes</button>
+                <button class="yes-no-btn" data-value="No">No</button>
+            </div>
+            <input type="hidden" id="prompt-input">
+        `;
+    } else {
+        inputHTML = `<input type="${inputType}" id="prompt-input" placeholder="Your answer...">`;
     }
-    updateProgress();
+
+    currentPromptElement.innerHTML = `
+        <h3>${prompt.category}</h3>
+        <p>${prompt.question}</p>
+        ${inputHTML}
+    `;
+
+    if (['cleanupEvents', 'recyclingHabits', 'treePlanting', 'environmentalInterest'].includes(prompt.key)) {
+        const buttons = currentPromptElement.querySelectorAll('.yes-no-btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                buttons.forEach(btn => btn.classList.remove('selected'));
+                this.classList.add('selected');
+                document.getElementById('prompt-input').value = this.dataset.value;
+            });
+        });
+    } else {
+        document.getElementById('prompt-input').focus();
+    }
+}
+
+    if (userProfile[prompt.key]) {
+        document.getElementById('prompt-input').value = userProfile[prompt.key];
+
+    }
+
+function displayReviewScreen() {
+    currentPromptElement.innerHTML = '<h3>Review Your Profile</h3>';
+    const list = document.createElement('ul');
+    prompts.forEach((prompt, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `${prompt.question} ${userProfile[prompt.key] ? '✓' : '❌'}`;
+        if (!userProfile[prompt.key]) {
+            li.style.cursor = 'pointer';
+            li.addEventListener('click', () => {
+                currentPromptIndex = index;
+                displayPrompt();
+                nextBtn.style.display = 'inline-block';
+                skipBtn.style.display = 'inline-block';
+                reviewBtn.style.display = 'none';
+            });
+        }
+        list.appendChild(li);
+    });
+    currentPromptElement.appendChild(list);
+}
+
+reviewBtn.addEventListener('click', displayReviewScreen);
+
+function updateProfile() {
+    profileContent.innerHTML = '';
+    for (const key in userProfile) {
+        if (userProfile[key] && key !== 'password' && key !== 'confirmPassword') {
+            const p = document.createElement('p');
+            p.innerHTML = `<strong>${key}:</strong> ${userProfile[key]}`;
+            p.style.opacity = '0';
+            profileContent.appendChild(p);
+            setTimeout(() => {
+                p.style.transition = 'opacity 0.5s ease';
+                p.style.opacity = '1';
+            }, 10);
+        }
+    }
 }
 
 function updateProgress() {
-    const progressPercentage = ((currentStep + 1) / totalSteps) * 100;
-    progress.style.width = progressPercentage + '%';
+    const progress = (Object.keys(userProfile).length / prompts.length) * 100;
+    progressBarFill.style.width = `${progress}%`;
+    progressText.textContent = `Profile Completion: ${Math.round(progress)}%`;
 }
 
-function showProfile() {
-    document.getElementById('profile-setup').style.display = 'none';
-    document.getElementById('profile-display').style.display = 'block';
-
-
-    document.getElementById('profile-first_name').textContent = document.getElementById('first_name').value;
-    document.getElementById('profile-last_name').textContent = document.getElementById('last_name').value;
-    document.getElementById('profile-birthday').textContent = document.getElementById('birthday').value;
-    document.getElementById('profile-gender').textContent = document.querySelector('input[name="gender"]:checked')?.value || '';
-    document.getElementById('profile-profession').textContent = document.getElementById('profession').value;
-    document.getElementById('profile-country').textContent = document.getElementById('country').value;
-    document.getElementById('profile-username').textContent = document.getElementById('username').value;
-
-    const countryCode = document.getElementById('country_code').value;
-    const phoneNumber = document.getElementById('phone_number').value;
-    document.getElementById('profile-phone_number').textContent = countryCode + ' ' + phoneNumber;
- 
-    document.getElementById('profile-email').textContent = document.getElementById('email').value;
-    document.getElementById('profile-q2').textContent = document.getElementById('q2').value;
+function validateInput(input, prompt) {
+    if (input.trim() === '') {
+        return 'This field is required.';
+    }
+    switch (prompt.key) {
+        case 'email':
+            if (!/\S+@\S+\.\S+/.test(input)) {
+                return 'Please enter a valid email address.';
+            }
+            break;
+        case 'phone':
+            if (!/^\d{10,}$/.test(input.replace(/\D/g,''))) {
+                return 'Please enter a valid phone number (at least 10 digits).';
+            }
+            break;
+        case 'confirmPassword':
+            if (input !== userProfile.password) {
+                return 'Passwords do not match.';
+            }
+            break;
+        case 'cleanupEvents':
+        case 'recyclingHabits':
+        case 'treePlanting':
+        case 'environmentalInterest':
+            if (!['yes', 'no'].includes(input.toLowerCase())) {
+                return 'Please answer with Yes or No.';
+            }
+            break;
+    }
+    return '';
 }
 
 
-
-function editProfile() {
-    document.getElementById('profile-setup').style.display = 'block';
-    document.getElementById('profile-display').style.display = 'none';
-    currentStep = 0;
-    steps.forEach(step => step.classList.remove('active'));
-    steps[0].classList.add('active');
+nextBtn.addEventListener('click', () => {
+    const input = document.getElementById('prompt-input');
+    const prompt = prompts[currentPromptIndex];
+    const errorMessage = validateInput(input.value, prompt);
+    
+    if (errorMessage) {
+        input.style.border = '2px solid #e74c3c';
+        const errorElement = document.createElement('p');
+        errorElement.textContent = errorMessage;
+        errorElement.style.color = '#e74c3c';
+        currentPromptElement.appendChild(errorElement);
+        return;
+    }
+    
+    userProfile[prompt.key] = input.value;
+    
+    if (currentPromptIndex === 0) {
+        profileOutputSection.style.display = 'block';
+        profileOutputSection.style.opacity = '0';
+        setTimeout(() => {
+            profileOutputSection.style.transition = 'opacity 0.5s ease';
+            profileOutputSection.style.opacity = '1';
+        }, 10);
+    }
+    
+    updateProfile();
     updateProgress();
-}
-
-function validateStep(step) {
-    let isValid = true;
-    const currentStepElement = steps[step];
-    const inputs = currentStepElement.querySelectorAll('input, select');
-    
-    inputs.forEach(input => {
-        if (input.hasAttribute('required') && !input.value.trim()) {
-            isValid = false;
-            input.classList.add('error');
-        } else {
-            input.classList.remove('error');
-        }
-    
-
-        if (input.id === 'phone_number' && input.value.trim()) {
-            if (!validatePhoneNumber(input.value.trim())) {
-                isValid = false;
-                input.classList.add('error');
-                alert('Please enter a valid phone number (6-14 digits).');
-            }
-        }
-
-        // Country code validation
-        if (input.id === 'country_code' && !input.value) {
-            isValid = false;
-            input.classList.add('error');
-            alert('Please select a country code.');
-        }
-
-        if (input.id === 'email' && input.value.trim()) {
-            if (!validateEmail(input.value.trim())) {
-              isValid = false;
-              input.classList.add('error');
-              alert('Please enter a valid email address.');
-            }
-          }
-        });
-    
-
-
-    if (!isValid) {
-        alert('Please fill in all required fields before proceeding.');
-        return false;
-    }
-
-    if (step === 1) { // Assuming step 2 is index 1
-        if (!validatePasswordConfirmation()) {
-            return false;
-        }
-    }
-
-    return true;
-
-
-}
-
-
-
-function validatePasswordConfirmation() {
-    const password = document.getElementById('password').value;
-    const passwordConfirmation = document.getElementById('password_confirmation').value;
-    const passwordInput = document.getElementById('password');
-    const passwordConfirmationInput = document.getElementById('password_confirmation');
-
-    if (password !== passwordConfirmation) {
-        passwordInput.classList.add('error');
-        passwordConfirmationInput.classList.add('error');
-        alert('Passwords do not match. Please try again.');
-        return false;
+    currentPromptIndex++;
+    if (currentPromptIndex < prompts.length) {
+        displayPrompt();
     } else {
-        passwordInput.classList.remove('error');
-        passwordConfirmationInput.classList.remove('error');
-        return true;
+        currentPromptElement.innerHTML = '<h3>Profile Complete!</h3><p>Thank you for building your profile! You can review and complete any skipped questions.</p>';
+        nextBtn.style.display = 'none';
+        skipBtn.style.display = 'none';
+        reviewBtn.style.display = 'inline-block';
     }
-}
+});
 
-function validatePhoneNumber(phoneNumber) {
-    const phoneRegex = /^[0-9]{6,14}$/;
-    return phoneRegex.test(phoneNumber);
-}
 
-function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
+skipBtn.addEventListener('click', () => {
+    currentPromptIndex++;
+    if (currentPromptIndex < prompts.length) {
+        displayPrompt();
+    } else {
+        currentPromptElement.innerHTML = '<h3>Profile Complete!</h3><p>Thank you for building your profile!</p>';
+        nextBtn.style.display = 'none';
+        skipBtn.style.display = 'none';
+        reviewBtn.style.display = 'inline-block';
+    }
+    
+    if (profileOutputSection.style.display === 'none') {
+        profileOutputSection.style.display = 'block';
+        profileOutputSection.style.opacity = '0';
+        setTimeout(() => {
+            profileOutputSection.style.transition = 'opacity 0.5s ease';
+            profileOutputSection.style.opacity = '1';
+        }, 10);
+    }
+});
+
+displayPrompt();
