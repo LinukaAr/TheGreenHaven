@@ -3,16 +3,16 @@ body {
     /* background-color: #ffffff; */
     margin: 0;
     padding: 0;
-    background-image: url(../images/dfw.jpg);
-    background-attachment: fixed;
-    background-size: cover;
     background-position: center;
+    background-image: url('../images/profile/greenBg.jpg');
+    background-size: cover;
+
 }
 
 h1 {
     text-align: center;
     padding: 20px;
-    background-color: rgb(35, 250, 161);
+    background-color: rgb(175, 206, 193);
 }
 
 .team-container {

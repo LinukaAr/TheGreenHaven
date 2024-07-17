@@ -6,16 +6,17 @@
         color: #333;
         margin: 0;
         padding: 0;
-    }
+        max-width: 100%;
+        overflow-x: hidden;   
+        background-image: url('../images/profile/greenBg.jpg');
+        background-size: cover;
+    }   
 
-    .profile-builder {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1rem 2rem 2rem;
-    }
 
     .progress-section {
-        background-color: #ffffff;
+        margin-top: 100px; /* Adjust this value to ensure the progress bar is below the navbar */
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
         padding: 1rem 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         position: sticky;
@@ -24,7 +25,12 @@
     }
 
     .progress-bar {
+        width: 100%;    .progress-section {
+            margin-top: 100px; /* Adjust this value to ensure the progress bar is below the navbar */
         width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+        }
         height: 8px;
         background-color: #ecf0f1;
         border-radius: 4px;
@@ -46,13 +52,13 @@
 
     h1 {
         text-align: center;
-        color: #2c3e50;
+        color: #ffffff;
         margin: 2rem 0;
     }
     .profile-container {
         display: flex;
         gap: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
         min-height: 400px; /* Adjust this value as needed */
     }
     
@@ -68,7 +74,7 @@
 
 
     .prompt-card, .profile-card {
-        background-color: #89ddc9;
+        background-color: rgba(255, 255, 255, 0.8);
         border-radius: 12px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         padding: 2rem;
