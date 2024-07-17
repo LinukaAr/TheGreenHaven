@@ -1,0 +1,140 @@
+/* .div1{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+.div2{
+    width:100vw;
+    height: 60vh;
+    background-color: rgba(240, 248, 255, 0.527);
+    
+} */
+
+.div1 {
+    position: relative;
+    height: 200vh;
+
+    border: black;
+    background-color: transparent;
+
+    background: url(../images/student4editor/frame.avif);
+    background-size: cover;
+    background-position: center;
+    align-items: flex-start;
+
+}
+
+.div2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+
+    height: 500px;
+
+    background-color: rgba(255, 255, 255, 0.525);
+
+    border-style: groove;
+}
+
+.p {
+    margin-left: 50px;
+    font-size: 40px;
+    color: black;
+}
+
+.img {
+    width: 400px;
+    height: 500px;
+    margin-left: 1000px;
+    margin-top: -415px;
+}
+
+.div {
+    width: 400px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.525);
+    display: inline-block;
+    margin-top: 900px;
+    margin-left: 70px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: inherit;
+    font-weight: 600;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 2em;
+    border-style: groove;
+
+}
+
+.h {
+    margin-left: 50px;
+    font-size: 40px;
+    color: black;
+    margin-top: -650px;
+
+
+}
+
+.images {
+    width: 100px;
+    height: 100px;
+
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.div:hover {
+    transform: scale(1.1);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+}
+
+/**.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220vh;
+    object-fit: cover;
+    z-index: -1;
+    
+}**/
+
+
+
+#p {
+    color: black;
+}
+
+
+.up {
+    font-size: larger;
+    margin-left: 750px;
+    margin-bottom: 0px;
+    font-style: inherit;
+    cursor: pointer;
+    color: black;
+    margin-top: 600px;
+}
+
+.down {
+    font-size: larger;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    font-style: inherit;
+    cursor: pointer;
+    color: black;
+    margin-top: 600px;
+
+}
+
+.a {
+    cursor: pointer;
+}

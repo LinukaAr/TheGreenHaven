@@ -11,7 +11,7 @@ function toggleNav() {
 // Adding active class to the current link
 const navLinks = document.querySelectorAll('.nav-item a');
 navLinks.forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function () {
         navLinks.forEach(nav => nav.classList.remove('active'));
         this.classList.add('active');
     });
@@ -38,23 +38,23 @@ navLinks.forEach(link => {
 //     }
 // });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     function addEventListeners(buttonId) {
         var btn = document.getElementById(buttonId);
 
-        btn.addEventListener("mousemove", function() {
+        btn.addEventListener("mousemove", function () {
             btn.style.backgroundColor = "transparent";
         });
-        btn.addEventListener("click", function() {
+        btn.addEventListener("click", function () {
             btn.style.backgroundColor = "#4682B4";
         });
-       
 
-        btn.addEventListener("mouseover", function() {
+
+        btn.addEventListener("mouseover", function () {
             btn.style.transform = "scale(1.2)";
         });
 
-        btn.addEventListener("mouseout", function() {
+        btn.addEventListener("mouseout", function () {
             btn.style.transform = "scale(1)";
         });
     }
@@ -116,5 +116,79 @@ document.addEventListener('DOMContentLoaded', () => {
         svgLine.setAttribute('stroke-width', '2');
         svg.appendChild(svgLine);
     });
+});
+
+
+
+
+
+function navigateTo(url) {
+    window.location.href = url;
+}
+
+// Adding event listeners to the buttons
+document.getElementById('btn1').addEventListener('click', function () {
+    navigateTo('../index.html');
+});
+
+document.getElementById('btn2').addEventListener('click', function () {
+    navigateTo('gallery.html');
+});
+
+document.getElementById('btn3').addEventListener('click', function () {
+    navigateTo('shop.html');
+});
+
+document.getElementById('btn4').addEventListener('click', function () {
+    navigateTo('userform.html');
+});
+
+document.getElementById('btn5').addEventListener('click', function () {
+    navigateTo('feedback.html');
+});
+
+document.getElementById('btn6').addEventListener('click', function () {
+    navigateTo('content_main.html');
+});
+
+document.getElementById('btn10').addEventListener('click', function () {
+    navigateTo('editorL.html');
+});
+
+document.getElementById('btn11').addEventListener('click', function () {
+    navigateTo('sandaru_pageeditor.html');
+});
+
+document.getElementById('btn12').addEventListener('click', function () {
+    navigateTo('st3_editorial.html');
+});
+
+document.getElementById('btn13').addEventListener('click', function () {
+    navigateTo('student4editor.html');
+});
+
+document.getElementById('btn7').addEventListener('click', function () {
+    navigateTo('gallery.html#div1');
+});
+
+document.getElementById('btn8').addEventListener('click', function () {
+    navigateTo('gallery.html#div2');
+});
+
+document.getElementById('btn9').addEventListener('click', function () {
+    navigateTo('gallery.html#div3');
+});
+
+document.getElementById('btn14').addEventListener('click', function () {
+    navigateTo('../home.html#targets');
+
+});
+
+document.getElementById('btn15').addEventListener('click', function () {
+    navigateTo('../home.html#thingtodo');
+});
+
+document.getElementById('btn16').addEventListener('click', function () {
+    navigateTo('content_main.html');
 });
 
