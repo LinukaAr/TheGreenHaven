@@ -2,13 +2,16 @@ body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f4f4f4;
+  background-image: url(../images/BG2.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   margin: 0;
   padding: 0;
 }
 
 .page-nav {
-    background-color: #ecf0f1;
+    background-color: transparent;
     padding: 1rem;
     margin-bottom: 2rem;
     border-radius: 8px;
@@ -28,7 +31,9 @@ body {
 }
 
 .page-nav a {
-    color: #2c3e50;
+  background: rgba(255, 255, 255, 0.75);
+  color: #1c3329;
+  font-weight: 700;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -36,8 +41,9 @@ body {
 }
 
 .page-nav a:hover {
-    background-color: #105f23;
-    color: #fff;
+  
+  background: #1c3329;
+  color: #56e161;
 }
 
 /* Main content styles */
@@ -45,7 +51,7 @@ main {
   max-width: 1200px;
   margin: 80px auto 0;
   padding: 2rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -54,6 +60,13 @@ h2 {
   color: #2c3e50;
   border-bottom: 2px solid #105f23;
   padding-bottom: 0.5rem;
+}
+.main-h2{
+  font-size: 40px;
+}
+
+.main-h2, .main-para{
+  color: #fff;
 }
 
 .responsive-img {
@@ -66,7 +79,7 @@ h2 {
 
 .caption {
   font-size: 0.8rem;
-  color: #757173;
+  color: #fff;
   margin-bottom: 10px;
   font-style: italic;
 }
@@ -87,8 +100,9 @@ article {
 }
 
 .read-more-btn {
-  background-color: #105f23;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.75);
+  color: #1c3329;
+  font-weight: 700;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -97,7 +111,8 @@ article {
 }
 
 .read-more-btn:hover {
-  background-color: #0e8f2c;
+  background: #1c3329;
+  color: #56e161;
 }
 
 .read-more-content {
@@ -129,11 +144,55 @@ article {
     padding: 0;
 }
 
-.go-to-top:hover {
-    background-color: #168d31;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .page-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-nav a {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    margin: 20px auto 0;
+    padding: 1rem;
+  }
+
+  .two-columns {
+    column-count: 1;
+  }
+
+  .caption {
+    font-size: 1rem;
+  }
+
+  .main-h2 {
+    font-size: 30px;
+  }
 }
 
-.go-to-top p {
-    margin: 0;
-    padding: 0;
+@media (max-width: 480px) {
+  .page-nav {
+    padding: 0.5rem;
+  }
+
+  .page-nav a {
+    padding: 0.5rem;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .main-h2 {
+    font-size: 24px;
+  }
 }
