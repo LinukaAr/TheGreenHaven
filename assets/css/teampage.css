@@ -1,3 +1,4 @@
+/* Base styles for the body */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #ffffff;
@@ -7,12 +8,14 @@ body {
     background-size: cover;
 }
 
+/* Styles for the main heading */
 h1 {
     text-align: center;
     padding: 20px;
     background-color: rgb(175, 206, 193);
 }
 
+/* Styles for the team container */
 .team-container {
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +24,7 @@ h1 {
     padding: 20px;
 }
 
+/* Styles for individual team members */
 .team-member {
     background-color: rgb(240, 240, 240);
     border: 2px ridge rgb(35, 250, 161);
@@ -29,28 +33,36 @@ h1 {
     transition: transform 0.3s;
 }
 
+/* Hover effect for team members */
 .team-member:hover {
     transform: scale(1.05);
 }
 
+/* Styles for the thumbnail images */
 .thumbnail img {
     width: 100%;
     transition: opacity 0.3s;
 }
+
+/* Styles for resized images */
 .resize img {
     width: 150px;
     height: 200px;
 }
+
+/* Hover effect for thumbnail images */
 .thumbnail img:hover {
     opacity: 0.7;
 }
 
+/* Styles for the details section */
 .details {
     padding: 10px;
     display: none;
     background-color: #ffffff;
 }
 
+/* Display details on hover */
 .team-member:hover .details {
     display: block;
 }
