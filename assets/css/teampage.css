@@ -1,11 +1,13 @@
 /* Base styles for the body */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     margin: 0;
     padding: 0;
+    background-position: center;
     background-image: url('../images/profile/greenBg.jpg');
     background-size: cover;
+
 }
 
 /* Styles for the main heading */

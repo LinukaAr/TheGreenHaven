@@ -1,168 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
-    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/checkout.css">
-    <link rel="stylesheet" href="../assets/css/navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/checkout.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="brand-logo"><img src="../assets/images/logo.png" alt="Logo"></a>
-            <div class="hamburger" onclick="toggleNav()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="nav-items">
-                <li class="nav-item"><a href="../home.html">Home</a></li>
-                <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
-                <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
-                <li class="nav-item"><a href="../pages/shop.html" class="active">Shop</a></li>
-                <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
-            </ul>
-            <div class="contact-and-search">
-                <div class="search-icon" onclick="toggleSearch()">
-                    <img src="../assets/images/search-icon.png" alt="Search">
-                </div>
-                <div class="user-icon">
-                    <a href="../pages/userform.html" target="_blank"><img src="../assets/images/user.png" alt="user"></a>
-                </div>
-            </div>
+      <div class="navbar-container">
+        <a href="#" class="brand-logo"
+          ><img src="../assets/images/logo.png" alt="Logo"
+        /></a>
+        <div class="hamburger" onclick="toggleNav()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
-        <div class="search-box" id="searchBox">
-            <input type="text" placeholder="Search...">
+        <ul class="nav-items">
+          <li class="nav-item"><a href="../home.html">Home</a></li>
+          <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
+          <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
+          <li class="nav-item">
+            <a href="../pages/shop.html" class="active">Shop</a>
+          </li>
+          <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
+        </ul>
+        <div class="contact-and-search">
+          <div class="search-icon" onclick="toggleSearch()">
+            <img src="../assets/images/search-icon.png" alt="Search" />
+          </div>
+          <div class="user-icon">
+            <a href="../pages/userform.html" target="_blank"
+              ><img src="../assets/images/user.png" alt="user"
+            /></a>
+          </div>
         </div>
+      </div>
+      <div class="search-box" id="searchBox">
+        <input type="text" placeholder="Search..." />
+      </div>
     </nav>
     <div class="wrapper"></div>
     <div class="checkout-container">
-        <div class="personal-details">
-            <form id="personal-details-form">
-                <div>
-                    <h1 class="head">Almost there!</h1>
-                </div>
-                <h1>Personal Details</h1>
-                <div class="form-group">
-                    <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" name="first-name" required placeholder="Enter First Name">
-                    <span class="error-message" id="first-name-error"></span>
-                </div>
-                <div class="form-group">
-                    <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" name="last-name" required>
-                    <span class="error-message" id="last-name-error"></span>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                    <span class="error-message" id="email-error"></span>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone *</label>
-                    <input type="tel" id="phone" name="phone" required>
-                    <span class="error-message" id="phone-error"></span>
-                </div>
-            </form>
-        </div>
-        <div class="billing-details">
-            <form id="billing-details-form">
-                <h1>Billing Details</h1>
-                <div class="form-group">
-                    <label for="address">Address *</label>
-                    <input type="text" id="address" name="address" required>
-                    <span class="error-message" id="address-error"></span>
-                </div>
-                <div class="form-group">
-                    <label for="city">City *</label>
-                    <input type="text" id="city" name="city" required>
-                    <span class="error-message" id="city-error"></span>
-                </div>
-                <div class="form-group">
-                    <label for="state">State *</label>
-                    <input type="text" id="state" name="state" required>
-                    <span class="error-message" id="state-error"></span>
-                </div>
-                <div class="form-group">
-                    <label for="zip">Zip Code *</label>
-                    <input type="text" id="zip" name="zip" required>
-                    <span class="error-message" id="zip-error"></span>
-                </div>
-            </form>
-        </div>
-        <button type="submit" class="save-button" >Save Details</button>
-        <a href="../pages/shop.html" class="back">◀Go back</a>
-        <div id="order-confirmation" class="order-confirmation">
-            <p>Thank you for your order! Your order has been successfully placed.</p>
-        </div>
+      <div class="personal-details">
+        <form id="personal-details-form">
+          <div>
+            <h1 class="head">Almost there!</h1>
+          </div>
+          <h1>Personal Details</h1>
+          <div class="form-group">
+            <label for="first-name">First Name *</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              required
+              placeholder="Enter your First Name"
+            />
+            <span class="error-message" id="first-name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name *</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              required
+              placeholder="Enter Your Last Name"
+            />
+            <span class="error-message" id="last-name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter Your Email"
+            />
+            <span class="error-message" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone *</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="Enter Your Phone Number"
+            />
+            <span class="error-message" id="phone-error"></span>
+          </div>
+        </form>
+      </div>
+      <div class="billing-details">
+        <form id="billing-details-form">
+          <h1>Billing Details</h1>
+          <div class="form-group">
+            <label for="address">Address *</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              required
+              placeholder="Enter Your Address"
+            />
+            <span class="error-message" id="address-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="city">City *</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              required
+              placeholder="Enter Your City"
+            />
+            <span class="error-message" id="city-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="state">State *</label>
+            <input
+              type="text"
+              id="state"
+              name="state"
+              required
+              placeholder="Enter Your State"
+            />
+            <span class="error-message" id="state-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="zip">Zip Code *</label>
+            <input
+              type="text"
+              id="zip"
+              name="zip"
+              required
+              placeholder="Enter Your Zip"
+            />
+            <span class="error-message" id="zip-error"></span>
+          </div>
+        </form>
+      </div>
+      <button type="submit" class="save-button">Save Details</button>
+      <a href="../pages/shop.html" class="back">◀Go back</a>
+      <div id="order-confirmation" class="order-confirmation">
+        <p>
+          Thank you for your order! Your order has been successfully placed.
+        </p>
+      </div>
     </div>
     <div class="order-summary">
-        <h2 class="order">Order Summary</h2>
-        <p>Total <span id="total-price"></span></p>
-        <p>Shipping (5%) <span id="shipping-price"></span></p>
-        <p>Tax <span id="tax-price"></span></p>
-        <p>Sub total <span id="subtotal-price"></span></p>
-        <div id="saved-details" class="saved-details">
-            <h3>Shipping Details:</h3>
-            <p id="saved-name"></p>
-            <p id="saved-address"></p>
-        </div>
-        <button class="proceed-button">Proceed to Pay</button>
-        <div>
-            <h3>Choose Payment Option</h3>
-            <i id="amex" class="fa fa-cc-amex payment-option" style="font-size:36px"></i>
-            <i id="visa" class="fa fa-cc-visa payment-option" style="font-size:36px"></i>
-            <i id="mastercard" class="fa fa-cc-mastercard payment-option" style="font-size:36px"></i>
-            <i id="paypal" class="fa fa-cc-paypal payment-option" style="font-size:36px"></i>
-        </div>
-        <input type="hidden" id="selected-payment-method" name="selected-payment-method">
+      <h2 class="order">Order Summary</h2>
+      <p>Total <span id="total-price"></span></p>
+      <p>Shipping (5%) <span id="shipping-price"></span></p>
+      <p>Tax <span id="tax-price"></span></p>
+      <p>Sub total <span id="subtotal-price"></span></p>
+      <div id="saved-details" class="saved-details">
+        <h3>Shipping Details:</h3>
+        <p id="saved-name"></p>
+        <p id="saved-address"></p>
+      </div>
+      <button class="proceed-button">Proceed to Pay</button>
+      <div>
+        <h3>Choose Payment Option</h3>
+        <i
+          id="amex"
+          class="fa fa-cc-amex payment-option"
+          style="font-size: 36px"
+        ></i>
+        <i
+          id="visa"
+          class="fa fa-cc-visa payment-option"
+          style="font-size: 36px"
+        ></i>
+        <i
+          id="mastercard"
+          class="fa fa-cc-mastercard payment-option"
+          style="font-size: 36px"
+        ></i>
+        <i
+          id="paypal"
+          class="fa fa-cc-paypal payment-option"
+          style="font-size: 36px"
+        ></i>
+      </div>
+      <input
+        type="hidden"
+        id="selected-payment-method"
+        name="selected-payment-method"
+      />
     </div>
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Privacy Policy</h3>
-                <a href="#">Delivery Policy</a>
-                <a href="#">FAQs</a>
-            </div>
-            <div class="footer-column">
-                <h3>Branches</h3>
-                <p>Colombo 5</p>
-                <p>Nugegoda</p>
-                <p>Kandy</p>
-                <p>Matara</p>
-                <p>Welisara</p>
-            </div>
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
-                <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
-                <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
-            </div>
-            <div class="footer-column footer-logo">
-                <img src="../assets/images/logo.png" alt="Logo">
-            </div>
-            <div class="footer-column footer-icons">
-                <a href="#"><img src="../assets/images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="../assets/images/instagram.png" alt="Instagram"></a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Privacy Policy</h3>
+          <a href="#">Delivery Policy</a>
+          <a href="#">FAQs</a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Green Haven All Rights Reserved</p>
-            <p>Edited by: <a href="editorL.html" target="_blank">Linuka Arambawela</a></p>
-            <div class="payment-methods">
-                <img src="../assets/images/visa.png" alt="Visa">
-                <img src="../assets/images/mastercard.png" alt="MasterCard">
-                <img src="../assets/images/paypal.png" alt="PayPal">
-                <img src="../assets/images/amex.png" alt="American Express">
-                <img src="../assets/images/discover.png" alt="Discover">
-            </div>
+        <div class="footer-column">
+          <h3>Branches</h3>
+          <p>Colombo 5</p>
+          <p>Nugegoda</p>
+          <p>Kandy</p>
+          <p>Matara</p>
+          <p>Welisara</p>
         </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
+          <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
+          <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
+        </div>
+        <div class="footer-column footer-logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
+        </div>
+        <div class="footer-column footer-icons">
+          <a href="#"
+            ><img src="../assets/images/facebook.png" alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img src="../assets/images/instagram.png" alt="Instagram"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Green Haven All Rights Reserved</p>
+        <p>
+          Edited by:
+          <a href="editorL.html" target="_blank">Linuka Arambawela</a>
+        </p>
+        <div class="payment-methods">
+          <img src="../assets/images/visa.png" alt="Visa" />
+          <img src="../assets/images/mastercard.png" alt="MasterCard" />
+          <img src="../assets/images/paypal.png" alt="PayPal" />
+          <img src="../assets/images/amex.png" alt="American Express" />
+          <img src="../assets/images/discover.png" alt="Discover" />
+        </div>
+      </div>
     </footer>
     <script defer src="../assets/js/scriptL.js"></script>
     <script defer src="../assets/js/nav.js"></script>
-
-</body>
+  </body>
 </html>

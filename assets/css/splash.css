@@ -1,169 +1,172 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url(../images/BG..jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: white;
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../images/BG..webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
 }
 
 .logo {
-    width: 100px;
+  width: 100px;
 }
 
 #splash-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    transition: opacity 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity 1s ease;
 }
 
 #splash-screen.fade-out {
-    opacity: 0;
+  opacity: 0;
 }
 
 .splash-content {
-    padding: 20px;
-    align-items: left;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 20px;
+  padding: 20px;
+  align-items: left;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .loader-image {
-    width: 50px;
-    height: 50px;
-    display: block;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
-    color: rgb(255, 255, 255);
-    font-family: "Archivo Black", sans-serif;
-    font-size: 90px;
-    margin-top: 10px;
+  color: white;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 110px;
 }
 
 h2 {
-    padding-top: 20px;
-    padding-bottom: 15px;
-    color: #011003;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  color: white;
+    
 }
 
 .members {
-    padding-top: 10px;
-    text-align: left;
-    font-size: 20px;
-    color: white;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  padding-top: 5px;
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .members li {
-    display: flex;
-    justify-content: flex-start;
-    padding: 8px 0;
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px 0;
 }
 
 .members .index {
-    width: 40px;
-    flex-shrink: 0;
+  width: 40px;
+  flex-shrink: 0;
 }
 
 .members .name {
-    flex: 1;
-    padding-right: 20px;
+  flex: 1;
+  padding-right: 20px;
 }
 
 .members .details {
-    flex-shrink: 0;
-    white-space: nowrap;
-    margin-right: 20px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-right: 20px;
 }
 
 .mission {
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    font-style: italic;
-    margin-top: 5px;
-    margin-bottom: 40px;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 40px;
 }
 
 li {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .team {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 20px;
-    margin-top: 50px;
-    margin: auto;
-    text-align: center;
-    max-width: 800px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  margin-top: 50px;
+  margin: auto;
+  text-align: center;
+  max-width: 800px;
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 60px;
-        margin-top: 20px;
-    }
+  h1 {
+    font-size: 60px;
+    margin-top: 20px;
+  }
 
-    .mission {
-        font-size: 20px;
-        margin-top: 30px;
-    }
+  .mission {
+    font-size: 20px;
+    margin-top: 30px;
+  }
 
-    .team {
-        margin-top: 45px;
-        margin-bottom: 50px;
-    }
+  .team {
+    margin-top: 45px;
+    margin-bottom: 50px;
+  }
 
-    .members, h2 {
-        font-size: 18px;
-    }
+  .members,
+  h2 {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 40px;
-        margin-top: 20px;
-    }
+  h1 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
 
-    .mission {
-        font-size: 20px;
-        margin-top: 30px;
-    }
+  .mission {
+    font-size: 20px;
+    margin-top: 30px;
+  }
 
-    .team {
-        margin-top: 45px;
-    }
+  .team {
+    margin-top: 45px;
+  }
 
-    .members li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .members li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .members .index, .members .name, .members .details {
-        width: 100%;
-        margin: 2px 0;
-    }
+  .members .index,
+  .members .name,
+  .members .details {
+    width: 100%;
+    margin: 2px 0;
+  }
 }
