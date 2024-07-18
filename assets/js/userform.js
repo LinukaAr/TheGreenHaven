@@ -120,12 +120,12 @@ function validateInput(input, prompt) {
         return 'This field is required.';
     }
     switch (prompt.key) {
-        case 'email':
+        case 'Email':
             if (!/\S+@\S+\.\S+/.test(input)) {
                 return 'Please enter a valid email address.';
             }
             break;
-        case 'phone':
+        case 'Phone':
             if (!/^\d{10,}$/.test(input.replace(/\D/g,''))) {
                 return 'Please enter a valid phone number (at least 10 digits).';
             }
@@ -135,10 +135,22 @@ function validateInput(input, prompt) {
                 return 'Passwords do not match.';
             }
             break;
-        case 'cleanupEvents':
+        case 'sex':
+            const validSexes = ['male', 'female', 'other', 'prefer not to say'];
+            if (!validSexes.includes(input.toLowerCase())) {
+                return 'Please enter a valid sex (Male, Female, Other, or Prefer not to say).';
+            }
+            break;
+        case 'age':
+            const age = parseInt(input);
+            if (isNaN(age) || age < 0 || age > 120) {
+                return 'Please enter a valid age between 0 and 120.';
+            }
+            break;
+        case 'CleanupEvents':
         case 'recyclingHabits':
-        case 'treePlanting':
-        case 'environmentalInterest':
+        case 'TreePlanting':
+        case 'EnvironmentalInterest':
             if (!['yes', 'no'].includes(input.toLowerCase())) {
                 return 'Please answer with Yes or No.';
             }
@@ -146,7 +158,6 @@ function validateInput(input, prompt) {
     }
     return '';
 }
-
 
 nextBtn.addEventListener('click', () => {
     const input = document.getElementById('prompt-input');

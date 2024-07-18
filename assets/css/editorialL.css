@@ -14,7 +14,7 @@ body {
   font-family: var(--body-font);
   color: rgb(3, 3, 23);
   margin: 0;
-  background-image: url(../images/editorL/bg1.jpg);
+  background-image: url(../images/editorL/bg1.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
