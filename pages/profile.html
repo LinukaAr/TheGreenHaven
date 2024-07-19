@@ -1,33 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character encoding and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon link -->
     <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
+    
+    <!-- Page title -->
     <title>User Profile</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../assets/css/userform.css">
+    <link rel="stylesheet" href="../assets/css/profile.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
 </head>
 <body>
 
+    <!-- Navigation bar -->
     <nav class="navbar">
         <div class="navbar-container">
+            <!-- Brand logo -->
             <a href="#" class="brand-logo"><img src="../assets/images/logo.png" alt="Logo"></a>
+            
+            <!-- Hamburger menu for mobile view -->
             <div class="hamburger" onclick="toggleNav()">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
+            
+            <!-- Navigation items -->
             <ul class="nav-items">
                 <li class="nav-item"><a href="../home.html">Home</a></li>
                 <li class="nav-item"><a href="#" class="active">Team</a></li>
                 <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
-                <li class="nav-item"><a href="../pages/shop.html" >Shop</a></li>
+                <li class="nav-item"><a href="../pages/shop.html">Shop</a></li>
                 <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
             </ul>
+            
+            <!-- Contact and search icons -->
             <div class="contact-and-search">
-               
                 <div class="search-icon" onclick="toggleSearch()">
                     <img src="../assets/images/search-icon.png" alt="Search">
                 </div>
@@ -36,6 +50,8 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Search box -->
         <div class="search-box" id="searchBox">
             <input type="text" placeholder="Search...">
         </div>
@@ -49,7 +65,10 @@
             <p id="progress-text">Profile Completion: 0%</p>
         </div>
 
+        <!-- Introduction message -->
         <h1>Hi! Let's start by getting to know you</h1>
+        
+        <!-- Profile container -->
         <div class="profile-container">
             <div class="prompt-area">
                 <div class="prompt-card">
@@ -113,7 +132,8 @@
         </div>
     </footer>
 
-    <script src="../assets/js/userform.js"></script>
+    <!-- JavaScript files -->
+    <script src="../assets/js/profile.js"></script>
     <script src="../assets/js/nav.js"></script>
 </body>
 </html>

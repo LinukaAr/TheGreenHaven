@@ -1,123 +1,143 @@
+/* Set background image and font for the entire page */
 body {
-    background-image: url('../images/St3_editorial/blue.jpg');
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    background-image: url('../images/St3_editorial/blue.jpg'); /* Background image for body */
+    font-family: Arial, sans-serif; /* Default font family */
+    line-height: 1.6; /* Line height for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
-
-header {
-    background-color: #52d196;
+h2 {
     text-align: center;
-    padding: 1rem;
-    background-image: url('../images/St3_editorial/blue.jpg');
+    color: #000000;
+}
+/* Styling for the header section */
+header {
+    background-color: #52d196; /* Background color for header */
+    text-align: center; /* Center align text */
+    padding: 1rem; /* Padding around header content */
+    background-image: url('../images/St3_editorial/blue.jpg'); /* Additional background image */
 }
 
+/* Styling for profile photos */
 .profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    background-color: #fff;
+    width: 150px; /* Set width of profile photo */
+    height: 150px; /* Set height of profile photo */
+    border-radius: 50%; /* Rounded corners for circular shape */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    background-color: #fff; /* Background color for photo */
 }
 
+/* Margin for contact details */
 .contact-details {
-    margin-top: 1rem;
+    margin-top: 1rem; /* Top margin for contact details */
 }
 
+/* Remove default margin for paragraphs inside contact details */
 .contact-details p {
     margin: 0;
 }
 
+/* Styling for social icons in header */
 header .social-icons {
-    margin-top: 1rem;
+    margin-top: 1rem; /* Top margin for social icons */
 }
 
+/* Styling for individual social icons */
 header .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
+    margin: 0 10px; /* Margin around each social icon */
+    display: inline-block; /* Display icons inline */
 }
 
+/* Size of social icons */
 header .social-icons img {
-    width: 30px;
-    height: 30px;
+    width: 30px; /* Width of social icons */
+    height: 30px; /* Height of social icons */
 }
 
+/* Padding for main content area */
 main {
-    padding: 2rem;
+    padding: 2rem; /* Padding around main content */
 }
 
+/* Flexbox layout for showcasing web pages */
 .webpage-showcase {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space around web page showcases */
+    flex-wrap: wrap; /* Allow wrapping of items */
 }
 
+/* Styling for individual web page showcases */
 .webpage {
-    width: 30%;
-    margin-bottom: 2rem;
-    text-align: center;
+    width: 30%; /* Width of each webpage showcase */
+    margin-bottom: 2rem; /* Bottom margin for spacing */
+    text-align: center; /* Center align text */
 }
 
+/* Responsive image sizing within web page showcases */
 .webpage img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Styling for buttons */
 button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+    background-color: #333; /* Background color for buttons */
+    color: #fff; /* Text color for buttons */
+    border: none; /* No border */
+    padding: 0.5rem 1rem; /* Padding inside button */
+    cursor: pointer; /* Cursor style */
 }
 
-/* Tooltip container */
+/* Tooltip container styling */
 .tooltip {
-    position: relative;
-    display: inline-block;
+    position: relative; /* Relative positioning for tooltips */
+    display: inline-block; /* Display as inline block */
 }
 
-/* Tooltip text */
+/* Tooltip text styling */
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 200px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Position the tooltip above the button */
-    left: 50%;
-    margin-left: -100px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    visibility: hidden; /* Hide tooltip by default */
+    width: 200px; /* Width of tooltip */
+    background-color: black; /* Background color of tooltip */
+    color: #fff; /* Text color of tooltip */
+    text-align: center; /* Center align text */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 0; /* Padding inside tooltip */
+    position: absolute; /* Absolute positioning */
+    z-index: 1; /* Ensure tooltip appears above other elements */
+    bottom: 125%; /* Position above the button */
+    left: 50%; /* Center horizontally */
+    margin-left: -100px; /* Adjust for center alignment */
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
 }
 
+/* Show tooltip on hover */
 .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+    visibility: visible; /* Make tooltip visible on hover */
+    opacity: 1; /* Fully visible */
 }
 
+/* Styling for footer section */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #333; /* Background color for footer */
+    color: #fff; /* Text color for footer */
+    text-align: center; /* Center align text */
+    padding: 1rem; /* Padding around footer content */
+    position: fixed; /* Fixed positioning at the bottom */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
 }
 
+/* Styling for social icons in footer */
 footer .social-icons {
-    margin-top: 1rem;
+    margin-top: 1rem; /* Top margin for social icons */
 }
 
+/* Styling for individual social icons in footer */
 footer .social-icons a {
-    margin: 0 10px;
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
+    margin: 0 10px; /* Margin around each social icon */
+    color: #fff; /* Text color for social icons */
+    font-size: 1.5rem; /* Font size of social icons */
+    text-decoration: none; /* Remove underline */
 }
