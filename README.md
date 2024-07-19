@@ -2,7 +2,7 @@
 
 # The Green Haven 
 
-![GreenHaven](assets/images/editorL/Splash.PNG)
+![GreenHaven](assets/images/editorL/Splash.webp)
 
 
 <i>Green Earth Better Life</i>
