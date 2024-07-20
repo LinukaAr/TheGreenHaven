@@ -6,39 +6,44 @@
 
     <title>Content Page</title>
     <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
-
     <link rel="stylesheet" href="../assets/css/St3_content.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-container">
+            <!-- Brand Logo -->
             <a href="#" class="brand-logo"><img src="../assets/images/logo.png" alt="Logo"></a>
+            <!-- Hamburger Icon for Mobile Navigation -->
             <div class="hamburger" onclick="toggleNav()">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
+            <!-- Navigation Items -->
             <ul class="nav-items">
                 <li class="nav-item"><a href="../home.html">Home</a></li>
                 <li class="nav-item"><a href="../pages/teampage.html">Team</a></li>
                 <li class="nav-item"><a href="../pages/gallery.html">Gallery</a></li>
-                <li class="nav-item"><a href="../pages/shop.html" >Shop</a></li>
+                <li class="nav-item"><a href="../pages/shop.html">Shop</a></li>
                 <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
             </ul>
+            <!-- Contact and Search Icons -->
             <div class="contact-and-search">
-               
                 <div class="search-icon" onclick="toggleSearch()">
                     <img src="../assets/images/search-icon.png" alt="Search">
                 </div>
             </div>
         </div>
+        <!-- Search Box -->
         <div class="search-box" id="searchBox">
             <input type="text" placeholder="Search...">
         </div>
     </nav>
 
+    <!-- Table of Contents Section -->
     <div class="toc">
         <h1>Urbanization and Its Effects on Life on Land</h1>
         <p>Urbanization, the process by which rural areas transform into cities and towns, is one of the most significant global trends shaping our world today. As of 2024, over 56% of the world's population resides in urban areas, a figure projected to rise to 68% by 2050.</p>
@@ -52,6 +57,7 @@
         </ul>
     </div>
 
+    <!-- Section: The Process of Urbanization -->
     <section id="process">
         <h2>The Process of Urbanization</h2>
         <h3>Historical Perspective</h3>
@@ -67,105 +73,114 @@
         <p>As of 2024, urbanization rates vary significantly across regions, with the fastest growth occurring in Africa and Asia.</p>
     </section>
 
+    <!-- Section: Direct Effects on Ecosystems -->
     <section id="effects">
         <h2>Direct Effects on Ecosystems</h2>
-        <img src="../assets/images/St3_content/a_c4.jpg" class="resized-image"><br>
+        <img src="../assets/images/St3_content/a_c4.jpg" alt="environmental_pollution" class="resized-image"><br>
         <a href="url">https://acs.dypvp.edu.in/blogs/pollution</a>
         <p>Urban expansion often results in habitat loss and fragmentation, displacing native species and disrupting essential ecosystem functions.</p>
         
         <button class="read-more-btn" onclick="toggleReadMore('effects')">Read More</button>
         <div class="read-more-content" id="effects-read-more">
-        
-        <p>The construction of buildings and infrastructure leads to soil degradation and sealing, which reduces water infiltration and soil biodiversity. Additionally, urban areas create heat islands, altering temperature patterns and potentially affecting local weather systems. Cities are also significant sources of pollution, contributing to air, water, and soil contamination, which impacts both urban and surrounding ecosystems.</p>    
-    </div>
+            <p>The construction of buildings and infrastructure leads to soil degradation and sealing, which reduces water infiltration and soil biodiversity. Additionally, urban areas create heat islands, altering temperature patterns and potentially affecting local weather systems. Cities are also significant sources of pollution, contributing to air, water, and soil contamination, which impacts both urban and surrounding ecosystems.</p>    
+        </div>
     </section>
 
+    <!-- Section: Impacts on Biodiversity -->
     <section id="biodiversity">
         <h2>Impacts on Biodiversity</h2>
-        <img src="../assets/images/St3_content/a_c5.jpg" class="resized-image"><br>
+        <img src="../assets/images/St3_content/a_c5.jpg" alt="monkey" class="resized-image"><br>
         <a href="url">https://www.businessinsider.com/animals-adapting-to-city-life-photos-2019-7</a>
-        <p>often leads to a reduction in species richness, as urban areas typically support fewer species compared to natural habitats, although some adaptable species may thrive.Changes in species composition are common in urban environments, which tend to favor certain species, leading to shifts in local biodiversity profiles.<p>
+        <p>Urbanization often leads to a reduction in species richness, as urban areas typically support fewer species compared to natural habitats, although some adaptable species may thrive. Changes in species composition are common in urban environments, which tend to favor certain species, leading to shifts in local biodiversity profiles.</p>
             
         <button class="read-more-btn" onclick="toggleReadMore('biodiversity')">Read More</button>
         <div class="read-more-content" id="biodiversity-read-more">
-            <p>Notably, some wildlife demonstrates remarkable adaptability to urban life, developing new behaviors and traits to survive in these altered environments.However, cities can also act as entry points and habitats for non-native species, potentially threatening local ecosystems with the introduction of invasive species.</p>
+            <p>Notably, some wildlife demonstrates remarkable adaptability to urban life, developing new behaviors and traits to survive in these altered environments. However, cities can also act as entry points and habitats for non-native species, potentially threatening local ecosystems with the introduction of invasive species.</p>
         </div>
-
     </section>
 
+    <!-- Section: Consequences for Human Well-being -->
     <section id="consequences">
         <h2>Consequences for Human Well-being</h2>
-             <p>Integrating natural elements into urban design can significantly mitigate the adverse impacts of urbanization by enhancing environmental quality and promoting resilience.</p>
+        <p>Integrating natural elements into urban design can significantly mitigate the adverse impacts of urbanization by enhancing environmental quality and promoting resilience.</p>
              
-             <button class="read-more-btn" onclick="toggleReadMore('consequences')">Read More</button>
-             <div class="read-more-content" id="consequences-read-more">
-                <p>Innovative building designs that incorporate habitats for wildlife not only support biodiversity but also create greener, more sustainable urban environments. Cities are increasingly recognizing the value of urban ecosystems and are implementing conservation initiatives to protect and restore these vital areas.</p>
-                <p>Furthermore, governments are adopting policies aimed at balancing urban growth with environmental preservation, ensuring that urbanization progresses in a sustainable and ecologically responsible manner.</p>
-             </div>
-
+        <button class="read-more-btn" onclick="toggleReadMore('consequences')">Read More</button>
+        <div class="read-more-content" id="consequences-read-more">
+            <p>Innovative building designs that incorporate habitats for wildlife not only support biodiversity but also create greener, more sustainable urban environments. Cities are increasingly recognizing the value of urban ecosystems and are implementing conservation initiatives to protect and restore these vital areas.</p>
+            <p>Furthermore, governments are adopting policies aimed at balancing urban growth with environmental preservation, ensuring that urbanization progresses in a sustainable and ecologically responsible manner.</p>
+        </div>
     </section>
 
+    <!-- Section: Sustainable Urban Development -->
     <section id="sustainable">
         <h2>Sustainable Urban Development</h2>
         <p>Integrating natural elements into urban design can mitigate some negative impacts of urbanization by enhancing environmental quality and promoting resilience.</p>
 
         <button class="read-more-btn" onclick="toggleReadMore('sustainable')">Read More</button>
-            <div class="read-more-content" id="sustainable-read-more">        
-        
-        <p> Innovative building designs that incorporate habitats for wildlife not only support biodiversity but also create greener, more sustainable urban environments. Cities are increasingly recognizing the value of urban ecosystems and are implementing conservation initiatives to protect and restore these vital areas. Furthermore, governments are adopting policies aimed at balancing urban growth with environmental preservation, ensuring that urbanization progresses in a sustainable and ecologically responsible manner.</p>
-            </div>
+        <div class="read-more-content" id="sustainable-read-more">
+            <p>Innovative building designs that incorporate habitats for wildlife not only support biodiversity but also create greener, more sustainable urban environments. Cities are increasingly recognizing the value of urban ecosystems and are implementing conservation initiatives to protect and restore these vital areas. Furthermore, governments are adopting policies aimed at balancing urban growth with environmental preservation, ensuring that urbanization progresses in a sustainable and ecologically responsible manner.</p>
+        </div>
     </section>
 
+    <!-- Section: Conclusion -->
     <section id="conclusion">
         <h2>Conclusion</h2>
         <p>Urbanization presents both challenges and opportunities for life on land. While the rapid growth of cities has led to significant environmental impacts, it also offers the potential for innovative solutions. By embracing sustainable urban development practices, we can work towards creating cities that not only meet human needs but also support thriving ecosystems. The future of urbanization will play a crucial role in shaping the health of our planet's terrestrial ecosystems and the well-being of both urban and rural populations.</p>
     </section>
 
-<button id="backToTop" title="Go to top">Back to Top</button>
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">Back to Top</button>
 
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Privacy Policy Links -->
+            <div class="footer-column">
+                <h3>Privacy Policy</h3>
+                <a href="#">Delivery Policy</a>
+                <a href="#">FAQs</a>
+            </div>
+            <!-- Branch Locations -->
+            <div class="footer-column">
+                <h3>Branches</h3>
+                <p>Colombo 5</p>
+                <p>Nugegoda</p>
+                <p>Kandy</p>
+                <p>Matara</p>
+                <p>Welisara</p>
+            </div>
+            <!-- Contact Information -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
+                <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
+                <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
+            </div>
+            <!-- Footer Logo -->
+            <div class="footer-column footer-logo">
+                <img src="../assets/images/logo.png" alt="Supplement Warehouse Logo">
+            </div>
+            <!-- Social Media Icons -->
+            <div class="footer-column footer-icons">
+                <a href="#"><img src="../assets/images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../assets/images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Green Heven All Rights Reserved</p>
+            <p>Edited by: <a href="St3_editorial.html">Anton Luckshman</a></p>
+            <div class="payment-methods">
+                <img src="../assets/images/visa.png" alt="Visa">
+                <img src="../assets/images/mastercard.png" alt="MasterCard">
+                <img src="../assets/images/paypal.png" alt="PayPal">
+                <img src="../assets/images/amex.png" alt="American Express">
+                <img src="../assets/images/discover.png" alt="Discover">
+            </div>
+        </div>
+    </footer>
 
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-column">
-            <h3>Privacy Policy</h3>
-            <a href="#">Delivery Policy</a>
-            <a href="#">FAQs</a>
-        </div>
-        <div class="footer-column">
-            <h3>Branches</h3>
-            <p>Colombo 5</p>
-            <p>Nugegoda</p>
-            <p>Kandy</p>
-            <p>Matara</p>
-            <p>Welisara</p>
-        </div>
-        <div class="footer-column">
-            <h3>Contact Us</h3>
-            <a href="tel:+94770409409">Product Advice: +94 77 040 9409</a>
-            <a href="tel:+94776588001">Delivery Information: +94 77 658 8001</a>
-            <a href="tel:+94777042913">Feedback/Complaints: +94 77 704 2913</a>
-        </div>
-        <div class="footer-column footer-logo">
-            <img src="../assets/images/logo.png" alt="Supplement Warehouse Logo">
-        </div>
-        <div class="footer-column footer-icons">
-            <a href="#"><img src="../assets/images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="../assets/images/instagram.png" alt="Instagram"></a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Green Heven All Rights Reserved</p>
-        <p>Edited by: <a href="St3_editorial.html">Anton Luckshman</a></p>
-        <div class="payment-methods">
-            <img src="../assets/images/visa.png" alt="Visa">
-            <img src="../assets/images/mastercard.png" alt="MasterCard">
-            <img src="../assets/images/paypal.png" alt="PayPal">
-            <img src="../assets/images/amex.png" alt="American Express">
-            <img src="../assets/images/discover.png" alt="Discover">
-        </div>
-    </div>
-</footer>
-
+    <!-- JavaScript Files -->
     <script src="../assets/js/St3_content.js"></script>
     <script src="../assets/js/nav.js"></script>
 </body>

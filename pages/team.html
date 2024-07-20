@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to favicon -->
     <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
+    <!-- Page title -->
     <title>Team</title>
+    <!-- Links to external CSS stylesheets -->
     <link rel="stylesheet" href="../assets/css/teampage.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar">
         <div class="navbar-container">
+            <!-- Brand logo -->
             <a href="#" class="brand-logo"><img src="../assets/images/logo.png" alt="Logo"></a>
+            <!-- Hamburger icon for mobile view -->
             <div class="hamburger" onclick="toggleNav()">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
+            <!-- Navigation items -->
             <ul class="nav-items">
                 <li class="nav-item"><a href="../home.html">Home</a></li>
                 <li class="nav-item"><a href="#" class="active">Team</a></li>
@@ -24,8 +32,8 @@
                 <li class="nav-item"><a href="../pages/shop.html" >Shop</a></li>
                 <li class="nav-item"><a href="../pages/sitemap.html">Site Map</a></li>
             </ul>
+            <!-- Contact and search icons -->
             <div class="contact-and-search">
-               
                 <div class="search-icon" onclick="toggleSearch()">
                     <img src="../assets/images/search-icon.png" alt="Search">
                 </div>
@@ -34,14 +42,18 @@
                 </div>
             </div>
         </div>
+        <!-- Search box -->
         <div class="search-box" id="searchBox">
             <input type="text" placeholder="Search...">
         </div>
     </nav>
     
+    <!-- Main content section -->
     <div class="content">
         <h1>Student Details</h1>
+        <!-- Team members container -->
         <div class="team-container">
+            <!-- Individual team member details -->
             <div class="team-member">
                 <div class="thumbnail">
                     <img src="../assets/images/st_1.png" alt="Team Member 1">
@@ -89,6 +101,7 @@
         </div>
     </div>
     
+    <!-- Footer section -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -130,6 +143,7 @@
             </div>
         </div>
     </footer>
+    <!-- External JavaScript files -->
     <script src="../assets/js/teampage.js"></script>
     <script src="../assets/js/nav.js"></script>
 </body>
