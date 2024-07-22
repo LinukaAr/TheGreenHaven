@@ -140,7 +140,7 @@ document.getElementById('btn3').addEventListener('click', function () {
 });
 
 document.getElementById('btn4').addEventListener('click', function () {
-    navigateTo('profile.html');
+    navigateTo('userform.html');
 });
 
 document.getElementById('btn5').addEventListener('click', function () {
@@ -156,11 +156,11 @@ document.getElementById('btn10').addEventListener('click', function () {
 });
 
 document.getElementById('btn11').addEventListener('click', function () {
-    navigateTo('Sandaru_pageeditor.html');
+    navigateTo('sandaru_pageeditor.html');
 });
 
 document.getElementById('btn12').addEventListener('click', function () {
-    navigateTo('St3_editorial.html');
+    navigateTo('st3_editorial.html');
 });
 
 document.getElementById('btn13').addEventListener('click', function () {
