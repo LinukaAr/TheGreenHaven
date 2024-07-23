@@ -140,7 +140,7 @@ document.getElementById('btn3').addEventListener('click', function () {
 });
 
 document.getElementById('btn4').addEventListener('click', function () {
-    navigateTo('profile.html');
+    navigateTo('userform.html');
 });
 
 document.getElementById('btn5').addEventListener('click', function () {
