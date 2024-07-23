@@ -24,7 +24,9 @@
           />
           <h1>The Green Haven</h1>
           <p class="mission">"Green Earth Better Life"</p>
-          <div class="team">
+          
+          <!-- team card -->
+          <div class="team"> 
             <h2>Group Members</h2>
             <ul class="members">
               <li>
@@ -56,15 +58,15 @@
     <div id="home-page" style="display: none"></div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("splash-screen").style.display = "block";
+        document.getElementById("splash-screen").style.display = "block"; // show splash screen
 
         setTimeout(function () {
-          document.getElementById("splash-screen").classList.add("fade-out");
+          document.getElementById("splash-screen").classList.add("fade-out");// fade out splash screen
         }, 3500);
 
         setTimeout(function () {
-          window.location.href = "home.html";
-        }, 4000);
+          window.location.href = "home.html";// redirect to home page
+        }, 4000);// 4 seconds
       });
     </script>
   </body>

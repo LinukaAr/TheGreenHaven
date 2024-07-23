@@ -51,7 +51,7 @@ body {
 .nav-item a.active {
     background-color: #4a4950;
     border-radius: 5px;
-    color: red;
+    color: white;
 }
 
 .contact-number a {
@@ -61,7 +61,7 @@ body {
     margin-left: 1rem;
 }
 
-.search-icon img {
+.search-icon img, .user-icon img {
     width: 24px;
     height: 24px;
     cursor: pointer;
