@@ -93,7 +93,7 @@ select {
   background: rgba(255, 255, 255, 0.75);
   color: #1c3329;
   font-weight: 700;
-  border: none;
+  border: 1px solid #1c3329;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -130,7 +130,7 @@ select {
   background: rgba(255, 255, 255, 0.75);
   color: #1c3329;
   font-weight: 700;
-  border: none;
+  border: 1px solid #1c3329;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;

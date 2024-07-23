@@ -96,3 +96,29 @@ button:hover {
   text-align: center;
   display: none;
 }
+
+#preview-message p {
+  text-align: left;
+}
+
+/* Additional styles for preview message */
+#preview-content {
+  text-align: left;
+  margin: 20px 0;
+}
+
+#preview-message button {
+  background-color: blue;
+}
+
+#preview-message button:hover {
+  background-color: darkblue;
+}
+
+#preview-message button:nth-child(2) {
+  background-color: orange;
+}
+
+#preview-message button:nth-child(2):hover {
+  background-color: darkorange;
+}
