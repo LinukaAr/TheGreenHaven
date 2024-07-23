@@ -57,7 +57,8 @@
 
             <label>Do you have any additional questions or requests?</label>
             <textarea id="additional-comments" name="additional-comments"></textarea>
-
+            
+            <button type="button" onclick="previewFeedback()">Preview</button>
             <button type="submit">Submit</button>
             <button id="back-home">Home</button>
         </form>
@@ -71,6 +72,12 @@
         <div id="final-message">
             <h3>Thank you for your feedback!</h3>
             <p>Your feedback has been submitted successfully.</p>
+        </div>
+        <div id="preview-message" style="display: none;">
+            <h3>Preview of Your Feedback</h3>
+            <p id="preview-content"></p>
+            <button onclick="confirmPreview()">Confirm</button>
+            <button onclick="editForm()">Edit</button>
         </div>
     </div>
 
@@ -120,6 +127,51 @@
 
             return false;
         }
+
+        function previewFeedback() {
+            const form = document.getElementById('feedback-form');
+            const previewContent = document.getElementById('preview-content');
+            let content = '';
+
+            const name = form.name.value;
+            const email = form.email.value;
+            const firstTime = form.querySelector('input[name="first-time"]:checked').value;
+            const informative = form.querySelector('input[name="informative"]:checked').value;
+            const improvements = form.improvements.value;
+            const satisfaction = form.querySelector('input[name="satisfaction"]:checked').value;
+            const recommend = form.querySelector('input[name="recommend"]:checked').value;
+            const updates = form.updates.value;
+            const additionalComments = form['additional-comments'].value;
+
+            content += `<p><strong>Name:</strong> ${name}</p>`;
+            content += `<p><strong>Email:</strong> ${email}</p>`;
+            content += `<p><strong>First Time Visiting:</strong> ${firstTime}</p>`;
+            content += `<p><strong>Informative:</strong> ${informative}</p>`;
+            if (informative === 'no') {
+                content += `<p><strong>Improvements:</strong> ${improvements}</p>`;
+            }
+            content += `<p><strong>Satisfaction:</strong> ${satisfaction}</p>`;
+            content += `<p><strong>Recommend:</strong> ${recommend}</p>`;
+            content += `<p><strong>Updates:</strong> ${updates}</p>`;
+            if (additionalComments) {
+                content += `<p><strong>Additional Comments:</strong> ${additionalComments}</p>`;
+            }
+
+            previewContent.innerHTML = content;
+            form.style.display = 'none';
+            document.getElementById('preview-message').style.display = 'block';
+        }
+
+        function confirmPreview() {
+            document.getElementById('preview-message').style.display = 'none';
+            document.getElementById('confirmation-message').style.display = 'block';
+        }
+
+        function editForm() {
+            document.getElementById('preview-message').style.display = 'none';
+            document.getElementById('feedback-form').style.display = 'block';
+        }
+
 
         document.getElementById('back-home').addEventListener('click', function () {
             const form = document.getElementById('feedback-form');
