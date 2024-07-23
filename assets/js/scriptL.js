@@ -119,7 +119,6 @@ const saveButton = document.querySelector('.save-button');
 saveButton.addEventListener('click', (event) => {
   event.preventDefault(); // Prevent the form from submitting
   validateForms(); // Validate the forms
-  printNameAndAddress(); // Print the name and address
 });
 
 function validateForms() {
@@ -129,6 +128,8 @@ function validateForms() {
   if (personalDetailsValid && billingDetailsValid) {
     // Forms are valid, display success message
     alert('Details saved successfully!');
+    printNameAndAddress(); // Print the name and address
+
   } else {
     // Forms are not valid, display error messages
     console.log('Forms are not valid!');
