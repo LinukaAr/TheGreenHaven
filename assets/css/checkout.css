@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100%;
   /* background-color: #fff; */
-  background-image: url(../images/BG2.webp);
+  background-image: url(../images/BG..webp);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -38,6 +38,8 @@ h1,
 label {
   color: white;
   font-size: 20px;
+  font-weight: 700;
+
 }
 
 .order-summary {
@@ -75,7 +77,7 @@ label {
   background: rgba(255, 255, 255, 0.75);
   color: #1c3329;
   font-weight: 700;
-  border: none;
+  border: 1px solid #1c3329;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;
