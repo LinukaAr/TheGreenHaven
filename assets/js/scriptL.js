@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => { // Wait for the DOM conten
 
   function updateCartSummary() { // Update the cart summary
       const cartSummary = document.querySelector('.cart-summary');
-      cartSummary.innerHTML = '<h2> <i class="fa-solid fa-cart-shopping"></i> Shopping Cart</h2>';
+      cartSummary.innerHTML = '<h2> <i class="fa-solid fa-cart-shopping"></i> Shopping Cart</h2>'; // Cart title
 
       cart.forEach((product, index) => {
           const productItem = document.createElement('div');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => { // Wait for the DOM conten
               <span>$${(product.price * product.quantity).toFixed(2)}</span>
           `;
 
-          const removeButton = document.createElement('button');
+          const removeButton = document.createElement('button'); // Remove button
           removeButton.textContent = 'X';
           removeButton.className = 'remove-button';
           removeButton.addEventListener('click', () => {
@@ -62,15 +62,16 @@ document.addEventListener('DOMContentLoaded', () => { // Wait for the DOM conten
       const hr = document.createElement('hr');
       cartSummary.appendChild(hr);
 
-      const total = cart.reduce((sum, product) => sum + (product.price * product.quantity), 0);
-      const shipping = total * 0.05;
-      const subtotal = total + shipping;
+      const total = cart.reduce((sum, product) => sum + (product.price * product.quantity), 0);// Calculate the total amount
+      const shipping = total * 0.05; // Calculate the shipping amount
+      const subtotal = total + shipping; // Calculate the subtotal amount
 
       const totalElement = document.createElement('div');
       totalElement.className = 'total';
       totalElement.innerHTML = `<strong>Total:</strong> <span>$${total.toFixed(2)}</span>`;
       cartSummary.appendChild(totalElement);
 
+      // Save the total, shipping, and subtotal amounts to local storage
       localStorage.setItem('totalAmount', total.toFixed(2));
       localStorage.setItem('shippingAmount', shipping.toFixed(2));
       localStorage.setItem('subtotalAmount', subtotal.toFixed(2));
@@ -84,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => { // Wait for the DOM conten
         const shippingAmount = localStorage.getItem('shippingAmount');
         const subtotalAmount = localStorage.getItem('subtotalAmount');
 
-        if (totalAmount && shippingAmount && subtotalAmount) {
+        if (totalAmount && shippingAmount && subtotalAmount) { // Display the total, shipping, tax, and subtotal amounts
             document.getElementById('total-price').textContent = `$${totalAmount}`;
             document.getElementById('shipping-price').textContent = `$${shippingAmount}`;
             document.getElementById('tax-price').textContent = `$0.00`;
@@ -114,10 +115,11 @@ const personalDetailsForm = document.getElementById('personal-details-form');
 const billingDetailsForm = document.getElementById('billing-details-form');
 const saveButton = document.querySelector('.save-button');
 
+// save button event listener
 saveButton.addEventListener('click', (event) => {
-  event.preventDefault();
-  validateForms();
-  printNameAndAddress();
+  event.preventDefault(); // Prevent the form from submitting
+  validateForms(); // Validate the forms
+  printNameAndAddress(); // Print the name and address
 });
 
 function validateForms() {
@@ -133,6 +135,7 @@ function validateForms() {
   }
 }
 
+// Validate the personal details form
 function validatePersonalDetails() {
   const firstNameInput = document.getElementById('first-name');
   const lastNameInput = document.getElementById('last-name');
@@ -148,6 +151,7 @@ function validatePersonalDetails() {
 }
 
 function validateBillingDetails() {
+  // Validate the billing details form
   const addressInput = document.getElementById('address');
   const cityInput = document.getElementById('city');
   const stateInput = document.getElementById('state');
@@ -173,7 +177,7 @@ function validateInput(input) {
 }
 
 function validateEmail(emailInput) {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Email regex
   if (!emailRegex.test(emailInput.value)) {
     displayErrorMessage(emailInput, 'Invalid email address.');
     return false;
@@ -185,7 +189,7 @@ function validateEmail(emailInput) {
 }
 
 function validatePhone(phoneInput) {
-  const phoneRegex = /^\d{10}$/;
+  const phoneRegex = /^\d{10}$/; // 10 digits
   if (!phoneRegex.test(phoneInput.value)) {
     displayErrorMessage(phoneInput, 'Invalid phone number.');
     return false;
@@ -202,6 +206,7 @@ function displayErrorMessage(input, message) {
 }
 
 function printNameAndAddress() {
+  // Get the values from the personal details form
     const firstName = document.getElementById("first-name").value;
     const lastName = document.getElementById("last-name").value;
     const address = document.getElementById("address").value;
@@ -215,8 +220,8 @@ function printNameAndAddress() {
     console.log(`Full Name: ${fullName}`);
     console.log(`Full Address: ${fullAddress}`);
 
-    document.getElementById("saved-name").textContent = ` ${fullName}`;
-    document.getElementById("saved-address").textContent = ` ${fullAddress}`;
+    document.getElementById("saved-name").textContent = ` ${fullName}`; // Display the full name
+    document.getElementById("saved-address").textContent = ` ${fullAddress}`;// Display the full address
 
     document.getElementById("saved-details").style.display = 'block';
 }
